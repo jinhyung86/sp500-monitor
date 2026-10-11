@@ -1,0 +1,59 @@
+name: S&P 500 Monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+      timezone: 'Asia/Seoul'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sp500-monitor
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run S&P 500 scanner
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: python sp500_monitor.py
+
+      - name: Upload scan artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sp500-monitor-result
+          path: |
+            result.json
+            report.md
+            sp500_symbols.json
+          retention-days: 30
+
+      - name: Commit latest result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add result.json report.md sp500_symbols.json
+          if git diff --cached --quiet; then
+            echo "No result changes"
+          else
+            git commit -m "Update S&P 500 monitor result"
+            git push
+          fi
