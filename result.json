@@ -1,20 +1,20 @@
 {
   "run": {
-    "started_utc": "2026-10-13T19:05:17+00:00",
-    "finished_utc": "2026-10-13T19:05:51+00:00",
-    "started_kst": "2026-10-14T04:05:17+09:00",
-    "finished_kst": "2026-10-14T04:05:51+09:00",
-    "started_et": "2026-10-13T15:05:17-04:00",
-    "mode": "intraday_delayed_sip",
-    "market_open_estimate": true,
-    "historical_data_end_utc": "2026-10-13T18:49:17+00:00"
+    "started_utc": "2026-10-13T20:05:22+00:00",
+    "finished_utc": "2026-10-13T20:05:34+00:00",
+    "started_kst": "2026-10-14T05:05:22+09:00",
+    "finished_kst": "2026-10-14T05:05:34+09:00",
+    "started_et": "2026-10-13T16:05:22-04:00",
+    "mode": "after_close_daily",
+    "market_open_estimate": false,
+    "historical_data_end_utc": "2026-10-13T19:49:22+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
     "constituent_warning": null,
     "market_data": "Alpaca Market Data",
     "historical_feed": "sip",
-    "snapshot_feed": "delayed_sip",
+    "snapshot_feed": null,
     "adjustment": "split"
   },
   "criteria": {
@@ -48,8 +48,8 @@
       "63": 502,
       "126": 500
     },
-    "candidate_price_breakouts": 49,
-    "candidate_volume_validations": 40,
+    "candidate_price_breakouts": 0,
+    "candidate_volume_validations": 0,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
       "FDXF",
@@ -60,8 +60,8 @@
     "unrequested_symbols": [],
     "http_requests": {
       "daily": 14,
-      "snapshots": 7,
-      "intraday_5m": 80
+      "snapshots": 0,
+      "intraday_5m": 0
     }
   },
   "confirmed_signals": [
@@ -74,42 +74,18 @@
       "last_close": 84.96,
       "first_last_move": 0.0183387270765909,
       "valid_box": true,
-      "price": 88.69,
+      "breakout_date": "2026-10-13",
+      "close": 88.2,
       "prev_close": 84.96,
+      "volume": 2999315.0,
+      "avg20_volume": 1811858.7,
+      "volume_ratio": 1.6553801905192718,
+      "confirmed": true,
+      "strong": false,
       "symbol": "IFF",
       "name": "International Flavors & Fragrances",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-10-13T14:45-04:00",
-      "current_cum_volume": 1579070.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 679199.3,
-      "volume_ratio": 2.32489933367128,
-      "confirmed": true,
-      "strong": true,
-      "signal_key": "IFF:21:86.6750:2026-10-13T14:45-04:00"
-    },
-    {
-      "period": 42,
-      "box_high": 88.64,
-      "box_low": 80.865,
-      "box_width": 0.09614790082235825,
-      "first_close": 84.06,
-      "last_close": 84.96,
-      "first_last_move": 0.01070663811563155,
-      "valid_box": true,
-      "price": 88.69,
-      "prev_close": 84.96,
-      "symbol": "IFF",
-      "name": "International Flavors & Fragrances",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-10-13T14:45-04:00",
-      "current_cum_volume": 1579070.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 679199.3,
-      "volume_ratio": 2.32489933367128,
-      "confirmed": true,
-      "strong": true,
-      "signal_key": "IFF:42:88.6400:2026-10-13T14:45-04:00"
+      "mode": "after_close",
+      "signal_key": "IFF:21:86.6750:2026-10-13"
     }
   ],
   "new_breakout_signals": [
@@ -122,57 +98,80 @@
       "last_close": 84.96,
       "first_last_move": 0.0183387270765909,
       "valid_box": true,
-      "price": 88.69,
+      "breakout_date": "2026-10-13",
+      "close": 88.2,
       "prev_close": 84.96,
+      "volume": 2999315.0,
+      "avg20_volume": 1811858.7,
+      "volume_ratio": 1.6553801905192718,
+      "confirmed": true,
+      "strong": false,
       "symbol": "IFF",
       "name": "International Flavors & Fragrances",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-10-13T14:45-04:00",
-      "current_cum_volume": 1579070.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 679199.3,
-      "volume_ratio": 2.32489933367128,
-      "confirmed": true,
-      "strong": true,
-      "signal_key": "IFF:21:86.6750:2026-10-13T14:45-04:00"
-    },
-    {
-      "period": 42,
-      "box_high": 88.64,
-      "box_low": 80.865,
-      "box_width": 0.09614790082235825,
-      "first_close": 84.06,
-      "last_close": 84.96,
-      "first_last_move": 0.01070663811563155,
-      "valid_box": true,
-      "price": 88.69,
-      "prev_close": 84.96,
-      "symbol": "IFF",
-      "name": "International Flavors & Fragrances",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-10-13T14:45-04:00",
-      "current_cum_volume": 1579070.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 679199.3,
-      "volume_ratio": 2.32489933367128,
-      "confirmed": true,
-      "strong": true,
-      "signal_key": "IFF:42:88.6400:2026-10-13T14:45-04:00"
+      "mode": "after_close",
+      "signal_key": "IFF:21:86.6750:2026-10-13"
     }
   ],
-  "lower_box_candidates": [],
+  "lower_box_candidates": [
+    {
+      "period": 21,
+      "box_high": 475.99,
+      "box_low": 399.33,
+      "box_width": 0.1919715523501866,
+      "first_close": 442.08,
+      "last_close": 413.35,
+      "first_last_move": -0.06498823742309079,
+      "valid_box": true,
+      "as_of_date": "2026-10-13",
+      "close": 413.35,
+      "box_position": 0.18288546830159189,
+      "up_avg_volume": 1315609.0,
+      "down_avg_volume": 931396.0,
+      "up_down_volume_ratio": 1.4125130449347,
+      "up_down_volume_ratio_ex_max_day": 1.1779724556830105,
+      "fresh_support_break": false,
+      "persistent_downtrend": false,
+      "trend_guard_pass": true,
+      "qualifies": true,
+      "symbol": "AXON",
+      "name": "Axon Enterprise"
+    },
+    {
+      "period": 21,
+      "box_high": 90.385,
+      "box_low": 82.86,
+      "box_width": 0.09081583393676085,
+      "first_close": 86.45,
+      "last_close": 85.06,
+      "first_last_move": -0.0160786581839214,
+      "valid_box": true,
+      "as_of_date": "2026-10-13",
+      "close": 85.06,
+      "box_position": 0.2923588039867111,
+      "up_avg_volume": 4918125.111111111,
+      "down_avg_volume": 3044613.272727273,
+      "up_down_volume_ratio": 1.6153529760794882,
+      "up_down_volume_ratio_ex_max_day": 1.218867937429641,
+      "fresh_support_break": false,
+      "persistent_downtrend": false,
+      "trend_guard_pass": true,
+      "qualifies": true,
+      "symbol": "DXCM",
+      "name": "Dexcom"
+    }
+  ],
   "failures": [
     {
       "symbol": "FDXF",
-      "reason": "daily bars insufficient: 93 (need 126 for 126-day scan)"
+      "reason": "daily bars insufficient: 94 (need 127 for 126-day scan)"
     },
     {
       "symbol": "HONA",
-      "reason": "daily bars insufficient: 83 (need 126 for 126-day scan)"
+      "reason": "daily bars insufficient: 84 (need 127 for 126-day scan)"
     },
     {
       "symbol": "VYLR",
-      "reason": "daily bars insufficient: 8 (need 126 for 126-day scan)"
+      "reason": "daily bars insufficient: 9 (need 127 for 126-day scan)"
     }
   ],
   "seen_signal_keys": [
@@ -203,6 +202,7 @@
     "EBAY:63:117.6300:2026-10-12T11:45-04:00",
     "HUM:21:415.7700:2026-10-09",
     "HUM:42:419.9700:2026-10-09",
+    "IFF:21:86.6750:2026-10-13",
     "IFF:21:86.6750:2026-10-13T09:45-04:00",
     "IFF:21:86.6750:2026-10-13T10:45-04:00",
     "IFF:21:86.6750:2026-10-13T11:45-04:00",
