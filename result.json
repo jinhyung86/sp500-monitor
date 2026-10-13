@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-10-13T20:05:22+00:00",
-    "finished_utc": "2026-10-13T20:05:34+00:00",
-    "started_kst": "2026-10-14T05:05:22+09:00",
-    "finished_kst": "2026-10-14T05:05:34+09:00",
-    "started_et": "2026-10-13T16:05:22-04:00",
+    "started_utc": "2026-10-13T21:05:16+00:00",
+    "finished_utc": "2026-10-13T21:05:24+00:00",
+    "started_kst": "2026-10-14T06:05:16+09:00",
+    "finished_kst": "2026-10-14T06:05:24+09:00",
+    "started_et": "2026-10-13T17:05:16-04:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-10-13T19:49:22+00:00"
+    "historical_data_end_utc": "2026-10-13T20:49:16+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -77,9 +77,9 @@
       "breakout_date": "2026-10-13",
       "close": 88.2,
       "prev_close": 84.96,
-      "volume": 2999315.0,
+      "volume": 3000673.0,
       "avg20_volume": 1811858.7,
-      "volume_ratio": 1.6553801905192718,
+      "volume_ratio": 1.6561296970895136,
       "confirmed": true,
       "strong": false,
       "symbol": "IFF",
@@ -88,30 +88,7 @@
       "signal_key": "IFF:21:86.6750:2026-10-13"
     }
   ],
-  "new_breakout_signals": [
-    {
-      "period": 21,
-      "box_high": 86.675,
-      "box_low": 81.54,
-      "box_width": 0.06297522688251145,
-      "first_close": 83.43,
-      "last_close": 84.96,
-      "first_last_move": 0.0183387270765909,
-      "valid_box": true,
-      "breakout_date": "2026-10-13",
-      "close": 88.2,
-      "prev_close": 84.96,
-      "volume": 2999315.0,
-      "avg20_volume": 1811858.7,
-      "volume_ratio": 1.6553801905192718,
-      "confirmed": true,
-      "strong": false,
-      "symbol": "IFF",
-      "name": "International Flavors & Fragrances",
-      "mode": "after_close",
-      "signal_key": "IFF:21:86.6750:2026-10-13"
-    }
-  ],
+  "new_breakout_signals": [],
   "lower_box_candidates": [
     {
       "period": 21,
@@ -126,9 +103,9 @@
       "close": 413.35,
       "box_position": 0.18288546830159189,
       "up_avg_volume": 1315609.0,
-      "down_avg_volume": 931396.0,
-      "up_down_volume_ratio": 1.4125130449347,
-      "up_down_volume_ratio_ex_max_day": 1.1779724556830105,
+      "down_avg_volume": 931488.0769230769,
+      "up_down_volume_ratio": 1.4123734190412447,
+      "up_down_volume_ratio_ex_max_day": 1.1778560139572647,
       "fresh_support_break": false,
       "persistent_downtrend": false,
       "trend_guard_pass": true,
@@ -149,9 +126,9 @@
       "close": 85.06,
       "box_position": 0.2923588039867111,
       "up_avg_volume": 4918125.111111111,
-      "down_avg_volume": 3044613.272727273,
-      "up_down_volume_ratio": 1.6153529760794882,
-      "up_down_volume_ratio_ex_max_day": 1.218867937429641,
+      "down_avg_volume": 3054862.0,
+      "up_down_volume_ratio": 1.6099336438474507,
+      "up_down_volume_ratio_ex_max_day": 1.2147787690573257,
       "fresh_support_break": false,
       "persistent_downtrend": false,
       "trend_guard_pass": true,
