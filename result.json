@@ -1,20 +1,20 @@
 {
   "run": {
-    "started_utc": "2026-10-14T13:05:17+00:00",
-    "finished_utc": "2026-10-14T13:05:22+00:00",
-    "started_kst": "2026-10-14T22:05:17+09:00",
-    "finished_kst": "2026-10-14T22:05:22+09:00",
-    "started_et": "2026-10-14T09:05:17-04:00",
-    "mode": "after_close_daily",
-    "market_open_estimate": false,
-    "historical_data_end_utc": "2026-10-14T12:49:17+00:00"
+    "started_utc": "2026-10-14T14:05:20+00:00",
+    "finished_utc": "2026-10-14T14:05:46+00:00",
+    "started_kst": "2026-10-14T23:05:20+09:00",
+    "finished_kst": "2026-10-14T23:05:46+09:00",
+    "started_et": "2026-10-14T10:05:20-04:00",
+    "mode": "intraday_delayed_sip",
+    "market_open_estimate": true,
+    "historical_data_end_utc": "2026-10-14T13:49:20+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
     "constituent_warning": null,
     "market_data": "Alpaca Market Data",
     "historical_feed": "sip",
-    "snapshot_feed": null,
+    "snapshot_feed": "delayed_sip",
     "adjustment": "split"
   },
   "criteria": {
@@ -48,8 +48,8 @@
       "63": 502,
       "126": 500
     },
-    "candidate_price_breakouts": 0,
-    "candidate_volume_validations": 0,
+    "candidate_price_breakouts": 10,
+    "candidate_volume_validations": 9,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
       "FDXF",
@@ -60,35 +60,152 @@
     "unrequested_symbols": [],
     "http_requests": {
       "daily": 14,
-      "snapshots": 0,
-      "intraday_5m": 0
+      "snapshots": 7,
+      "intraday_5m": 18
     }
   },
   "confirmed_signals": [
     {
       "period": 21,
-      "box_high": 86.675,
-      "box_low": 81.54,
-      "box_width": 0.06297522688251145,
-      "first_close": 83.43,
-      "last_close": 84.96,
-      "first_last_move": 0.0183387270765909,
+      "box_high": 69.7,
+      "box_low": 59.46,
+      "box_width": 0.17221661621258,
+      "first_close": 67.66,
+      "last_close": 68.86,
+      "first_last_move": 0.017735737511084926,
       "valid_box": true,
-      "breakout_date": "2026-10-13",
-      "close": 88.2,
-      "prev_close": 84.96,
-      "volume": 3000693.0,
-      "avg20_volume": 1811858.7,
-      "volume_ratio": 1.6561407354778825,
+      "price": 69.71,
+      "prev_close": 68.86,
+      "symbol": "CNC",
+      "name": "Centene Corporation",
+      "mode": "intraday",
+      "last_5m_time_et": "2026-10-14T09:45-04:00",
+      "current_cum_volume": 483910.0,
+      "prior_session_count": 20,
+      "same_time_avg_volume": 206007.75,
+      "volume_ratio": 2.348989297732731,
+      "confirmed": true,
+      "strong": true,
+      "signal_key": "CNC:21:69.7000:2026-10-14T09:45-04:00"
+    },
+    {
+      "period": 42,
+      "box_high": 69.7,
+      "box_low": 59.46,
+      "box_width": 0.17221661621258,
+      "first_close": 67.47,
+      "last_close": 68.86,
+      "first_last_move": 0.020601748925448415,
+      "valid_box": true,
+      "price": 69.71,
+      "prev_close": 68.86,
+      "symbol": "CNC",
+      "name": "Centene Corporation",
+      "mode": "intraday",
+      "last_5m_time_et": "2026-10-14T09:45-04:00",
+      "current_cum_volume": 483910.0,
+      "prior_session_count": 20,
+      "same_time_avg_volume": 206007.75,
+      "volume_ratio": 2.348989297732731,
+      "confirmed": true,
+      "strong": true,
+      "signal_key": "CNC:42:69.7000:2026-10-14T09:45-04:00"
+    },
+    {
+      "period": 21,
+      "box_high": 28.945,
+      "box_low": 27.12,
+      "box_width": 0.06729351032448383,
+      "first_close": 27.55,
+      "last_close": 28.37,
+      "first_last_move": 0.029764065335753154,
+      "valid_box": true,
+      "price": 29.025,
+      "prev_close": 28.37,
+      "symbol": "PFE",
+      "name": "Pfizer",
+      "mode": "intraday",
+      "last_5m_time_et": "2026-10-14T09:45-04:00",
+      "current_cum_volume": 3464991.0,
+      "prior_session_count": 20,
+      "same_time_avg_volume": 2137856.7,
+      "volume_ratio": 1.6207779501778579,
       "confirmed": true,
       "strong": false,
-      "symbol": "IFF",
-      "name": "International Flavors & Fragrances",
-      "mode": "after_close",
-      "signal_key": "IFF:21:86.6750:2026-10-13"
+      "signal_key": "PFE:21:28.9450:2026-10-14T09:45-04:00"
     }
   ],
-  "new_breakout_signals": [],
+  "new_breakout_signals": [
+    {
+      "period": 21,
+      "box_high": 69.7,
+      "box_low": 59.46,
+      "box_width": 0.17221661621258,
+      "first_close": 67.66,
+      "last_close": 68.86,
+      "first_last_move": 0.017735737511084926,
+      "valid_box": true,
+      "price": 69.71,
+      "prev_close": 68.86,
+      "symbol": "CNC",
+      "name": "Centene Corporation",
+      "mode": "intraday",
+      "last_5m_time_et": "2026-10-14T09:45-04:00",
+      "current_cum_volume": 483910.0,
+      "prior_session_count": 20,
+      "same_time_avg_volume": 206007.75,
+      "volume_ratio": 2.348989297732731,
+      "confirmed": true,
+      "strong": true,
+      "signal_key": "CNC:21:69.7000:2026-10-14T09:45-04:00"
+    },
+    {
+      "period": 42,
+      "box_high": 69.7,
+      "box_low": 59.46,
+      "box_width": 0.17221661621258,
+      "first_close": 67.47,
+      "last_close": 68.86,
+      "first_last_move": 0.020601748925448415,
+      "valid_box": true,
+      "price": 69.71,
+      "prev_close": 68.86,
+      "symbol": "CNC",
+      "name": "Centene Corporation",
+      "mode": "intraday",
+      "last_5m_time_et": "2026-10-14T09:45-04:00",
+      "current_cum_volume": 483910.0,
+      "prior_session_count": 20,
+      "same_time_avg_volume": 206007.75,
+      "volume_ratio": 2.348989297732731,
+      "confirmed": true,
+      "strong": true,
+      "signal_key": "CNC:42:69.7000:2026-10-14T09:45-04:00"
+    },
+    {
+      "period": 21,
+      "box_high": 28.945,
+      "box_low": 27.12,
+      "box_width": 0.06729351032448383,
+      "first_close": 27.55,
+      "last_close": 28.37,
+      "first_last_move": 0.029764065335753154,
+      "valid_box": true,
+      "price": 29.025,
+      "prev_close": 28.37,
+      "symbol": "PFE",
+      "name": "Pfizer",
+      "mode": "intraday",
+      "last_5m_time_et": "2026-10-14T09:45-04:00",
+      "current_cum_volume": 3464991.0,
+      "prior_session_count": 20,
+      "same_time_avg_volume": 2137856.7,
+      "volume_ratio": 1.6207779501778579,
+      "confirmed": true,
+      "strong": false,
+      "signal_key": "PFE:21:28.9450:2026-10-14T09:45-04:00"
+    }
+  ],
   "lower_box_candidates": [
     {
       "period": 21,
@@ -140,15 +257,15 @@
   "failures": [
     {
       "symbol": "FDXF",
-      "reason": "daily bars insufficient: 94 (need 127 for 126-day scan)"
+      "reason": "daily bars insufficient: 94 (need 126 for 126-day scan)"
     },
     {
       "symbol": "HONA",
-      "reason": "daily bars insufficient: 84 (need 127 for 126-day scan)"
+      "reason": "daily bars insufficient: 84 (need 126 for 126-day scan)"
     },
     {
       "symbol": "VYLR",
-      "reason": "daily bars insufficient: 9 (need 127 for 126-day scan)"
+      "reason": "daily bars insufficient: 9 (need 126 for 126-day scan)"
     }
   ],
   "seen_signal_keys": [
@@ -167,7 +284,9 @@
     "CCI:21:75.9200:2026-10-09",
     "CCI:42:77.7450:2026-10-09",
     "CNC:21:69.6300:2026-10-13T13:45-04:00",
+    "CNC:21:69.7000:2026-10-14T09:45-04:00",
     "CNC:42:69.6300:2026-10-13T13:45-04:00",
+    "CNC:42:69.7000:2026-10-14T09:45-04:00",
     "DECK:21:84.3450:2026-10-13T09:45-04:00",
     "DIS:21:109.4200:2026-10-13T09:45-04:00",
     "EBAY:21:113.6250:2026-10-12T09:45-04:00",
@@ -190,6 +309,7 @@
     "KDP:21:32.1400:2026-10-12T12:45-04:00",
     "KDP:21:32.7800:2026-10-13T11:45-04:00",
     "MA:21:598.9500:2026-10-13T10:45-04:00",
+    "PFE:21:28.9450:2026-10-14T09:45-04:00",
     "STE:21:216.6700:2026-10-12T10:45-04:00",
     "STE:21:216.6700:2026-10-12T11:45-04:00",
     "STE:21:216.6700:2026-10-12T12:45-04:00",
