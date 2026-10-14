@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-10-14T06:05:18+00:00",
-    "finished_utc": "2026-10-14T06:05:22+00:00",
-    "started_kst": "2026-10-14T15:05:18+09:00",
-    "finished_kst": "2026-10-14T15:05:22+09:00",
-    "started_et": "2026-10-14T02:05:18-04:00",
+    "started_utc": "2026-10-14T07:05:19+00:00",
+    "finished_utc": "2026-10-14T07:05:22+00:00",
+    "started_kst": "2026-10-14T16:05:19+09:00",
+    "finished_kst": "2026-10-14T16:05:22+09:00",
+    "started_et": "2026-10-14T03:05:19-04:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-10-14T05:49:18+00:00"
+    "historical_data_end_utc": "2026-10-14T06:49:19+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -103,9 +103,9 @@
       "close": 413.35,
       "box_position": 0.18288546830159189,
       "up_avg_volume": 1315609.0,
-      "down_avg_volume": 931504.2307692308,
-      "up_down_volume_ratio": 1.412348926116608,
-      "up_down_volume_ratio_ex_max_day": 1.177835587957884,
+      "down_avg_volume": 931504.1538461539,
+      "up_down_volume_ratio": 1.4123490427475693,
+      "up_down_volume_ratio_ex_max_day": 1.1778356852228689,
       "fresh_support_break": false,
       "persistent_downtrend": false,
       "trend_guard_pass": true,
