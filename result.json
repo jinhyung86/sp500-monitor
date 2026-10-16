@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-10-16T10:05:16+00:00",
-    "finished_utc": "2026-10-16T10:05:21+00:00",
-    "started_kst": "2026-10-16T19:05:16+09:00",
-    "finished_kst": "2026-10-16T19:05:21+09:00",
-    "started_et": "2026-10-16T06:05:16-04:00",
+    "started_utc": "2026-10-16T11:05:23+00:00",
+    "finished_utc": "2026-10-16T11:05:35+00:00",
+    "started_kst": "2026-10-16T20:05:23+09:00",
+    "finished_kst": "2026-10-16T20:05:35+09:00",
+    "started_et": "2026-10-16T07:05:23-04:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-10-16T09:49:16+00:00"
+    "historical_data_end_utc": "2026-10-16T10:49:23+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
