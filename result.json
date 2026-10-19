@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-10-19T15:05:20+00:00",
-    "finished_utc": "2026-10-19T15:05:39+00:00",
-    "started_kst": "2026-10-20T00:05:20+09:00",
-    "finished_kst": "2026-10-20T00:05:39+09:00",
-    "started_et": "2026-10-19T11:05:20-04:00",
+    "started_utc": "2026-10-19T16:05:18+00:00",
+    "finished_utc": "2026-10-19T16:05:33+00:00",
+    "started_kst": "2026-10-20T01:05:18+09:00",
+    "finished_kst": "2026-10-20T01:05:33+09:00",
+    "started_et": "2026-10-19T12:05:18-04:00",
     "mode": "intraday_delayed_sip",
     "market_open_estimate": true,
-    "historical_data_end_utc": "2026-10-19T14:49:20+00:00"
+    "historical_data_end_utc": "2026-10-19T15:49:18+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -74,19 +74,19 @@
       "last_close": 80.74,
       "first_last_move": 0.06657859973579905,
       "valid_box": true,
-      "price": 80.93,
+      "price": 80.92,
       "prev_close": 80.74,
       "symbol": "AIG",
       "name": "American International Group",
       "mode": "intraday",
-      "last_5m_time_et": "2026-10-19T10:45-04:00",
-      "current_cum_volume": 1256400.0,
+      "last_5m_time_et": "2026-10-19T11:45-04:00",
+      "current_cum_volume": 1914347.0,
       "prior_session_count": 20,
-      "same_time_avg_volume": 635918.25,
-      "volume_ratio": 1.9757256534153564,
+      "same_time_avg_volume": 1094903.45,
+      "volume_ratio": 1.7484162644660588,
       "confirmed": true,
       "strong": false,
-      "signal_key": "AIG:42:80.8700:2026-10-19T10:45-04:00"
+      "signal_key": "AIG:42:80.8700:2026-10-19T11:45-04:00"
     }
   ],
   "new_breakout_signals": [
@@ -99,19 +99,19 @@
       "last_close": 80.74,
       "first_last_move": 0.06657859973579905,
       "valid_box": true,
-      "price": 80.93,
+      "price": 80.92,
       "prev_close": 80.74,
       "symbol": "AIG",
       "name": "American International Group",
       "mode": "intraday",
-      "last_5m_time_et": "2026-10-19T10:45-04:00",
-      "current_cum_volume": 1256400.0,
+      "last_5m_time_et": "2026-10-19T11:45-04:00",
+      "current_cum_volume": 1914347.0,
       "prior_session_count": 20,
-      "same_time_avg_volume": 635918.25,
-      "volume_ratio": 1.9757256534153564,
+      "same_time_avg_volume": 1094903.45,
+      "volume_ratio": 1.7484162644660588,
       "confirmed": true,
       "strong": false,
-      "signal_key": "AIG:42:80.8700:2026-10-19T10:45-04:00"
+      "signal_key": "AIG:42:80.8700:2026-10-19T11:45-04:00"
     }
   ],
   "lower_box_candidates": [],
@@ -158,6 +158,7 @@
     "AIG:42:79.5600:2026-10-16T14:45-04:00",
     "AIG:42:80.8700:2026-10-19T09:45-04:00",
     "AIG:42:80.8700:2026-10-19T10:45-04:00",
+    "AIG:42:80.8700:2026-10-19T11:45-04:00",
     "AJG:21:246.4100:2026-10-15",
     "AJG:21:246.4100:2026-10-15T09:45-04:00",
     "AJG:21:246.4100:2026-10-15T10:45-04:00",
