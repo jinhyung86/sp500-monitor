@@ -1,20 +1,20 @@
 {
   "run": {
-    "started_utc": "2026-10-19T19:05:22+00:00",
-    "finished_utc": "2026-10-19T19:05:40+00:00",
-    "started_kst": "2026-10-20T04:05:22+09:00",
-    "finished_kst": "2026-10-20T04:05:40+09:00",
-    "started_et": "2026-10-19T15:05:22-04:00",
-    "mode": "intraday_delayed_sip",
-    "market_open_estimate": true,
-    "historical_data_end_utc": "2026-10-19T18:49:22+00:00"
+    "started_utc": "2026-10-19T20:05:25+00:00",
+    "finished_utc": "2026-10-19T20:05:34+00:00",
+    "started_kst": "2026-10-20T05:05:25+09:00",
+    "finished_kst": "2026-10-20T05:05:34+09:00",
+    "started_et": "2026-10-19T16:05:25-04:00",
+    "mode": "after_close_daily",
+    "market_open_estimate": false,
+    "historical_data_end_utc": "2026-10-19T19:49:25+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
     "constituent_warning": null,
     "market_data": "Alpaca Market Data",
     "historical_feed": "sip",
-    "snapshot_feed": "delayed_sip",
+    "snapshot_feed": null,
     "adjustment": "split"
   },
   "criteria": {
@@ -48,8 +48,8 @@
       "63": 502,
       "126": 500
     },
-    "candidate_price_breakouts": 13,
-    "candidate_volume_validations": 11,
+    "candidate_price_breakouts": 0,
+    "candidate_volume_validations": 0,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
       "FDXF",
@@ -60,8 +60,8 @@
     "unrequested_symbols": [],
     "http_requests": {
       "daily": 14,
-      "snapshots": 7,
-      "intraday_5m": 22
+      "snapshots": 0,
+      "intraday_5m": 0
     }
   },
   "confirmed_signals": [],
@@ -70,15 +70,15 @@
   "failures": [
     {
       "symbol": "FDXF",
-      "reason": "daily bars insufficient: 97 (need 126 for 126-day scan)"
+      "reason": "daily bars insufficient: 98 (need 127 for 126-day scan)"
     },
     {
       "symbol": "HONA",
-      "reason": "daily bars insufficient: 87 (need 126 for 126-day scan)"
+      "reason": "daily bars insufficient: 88 (need 127 for 126-day scan)"
     },
     {
       "symbol": "VYLR",
-      "reason": "daily bars insufficient: 12 (need 126 for 126-day scan)"
+      "reason": "daily bars insufficient: 13 (need 127 for 126-day scan)"
     }
   ],
   "seen_signal_keys": [
