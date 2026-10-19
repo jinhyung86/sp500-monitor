@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-10-19T17:05:21+00:00",
-    "finished_utc": "2026-10-19T17:05:37+00:00",
-    "started_kst": "2026-10-20T02:05:21+09:00",
-    "finished_kst": "2026-10-20T02:05:37+09:00",
-    "started_et": "2026-10-19T13:05:21-04:00",
+    "started_utc": "2026-10-19T18:05:21+00:00",
+    "finished_utc": "2026-10-19T18:05:44+00:00",
+    "started_kst": "2026-10-20T03:05:21+09:00",
+    "finished_kst": "2026-10-20T03:05:44+09:00",
+    "started_et": "2026-10-19T14:05:21-04:00",
     "mode": "intraday_delayed_sip",
     "market_open_estimate": true,
-    "historical_data_end_utc": "2026-10-19T16:49:21+00:00"
+    "historical_data_end_utc": "2026-10-19T17:49:21+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -64,56 +64,8 @@
       "intraday_5m": 10
     }
   },
-  "confirmed_signals": [
-    {
-      "period": 42,
-      "box_high": 80.87,
-      "box_low": 72.63,
-      "box_width": 0.11345174170452998,
-      "first_close": 75.7,
-      "last_close": 80.74,
-      "first_last_move": 0.06657859973579905,
-      "valid_box": true,
-      "price": 80.905,
-      "prev_close": 80.74,
-      "symbol": "AIG",
-      "name": "American International Group",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-10-19T12:45-04:00",
-      "current_cum_volume": 2319236.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 1494775.25,
-      "volume_ratio": 1.5515616812627853,
-      "confirmed": true,
-      "strong": false,
-      "signal_key": "AIG:42:80.8700:2026-10-19T12:45-04:00"
-    }
-  ],
-  "new_breakout_signals": [
-    {
-      "period": 42,
-      "box_high": 80.87,
-      "box_low": 72.63,
-      "box_width": 0.11345174170452998,
-      "first_close": 75.7,
-      "last_close": 80.74,
-      "first_last_move": 0.06657859973579905,
-      "valid_box": true,
-      "price": 80.905,
-      "prev_close": 80.74,
-      "symbol": "AIG",
-      "name": "American International Group",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-10-19T12:45-04:00",
-      "current_cum_volume": 2319236.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 1494775.25,
-      "volume_ratio": 1.5515616812627853,
-      "confirmed": true,
-      "strong": false,
-      "signal_key": "AIG:42:80.8700:2026-10-19T12:45-04:00"
-    }
-  ],
+  "confirmed_signals": [],
+  "new_breakout_signals": [],
   "lower_box_candidates": [],
   "failures": [
     {
