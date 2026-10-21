@@ -1,13 +1,13 @@
 # S&P 500 전수검사
 
-- 실행 시작(KST): 2026-10-22T04:05:21+09:00
-- 실행 종료(KST): 2026-10-22T04:05:57+09:00
-- 모드: intraday_delayed_sip
+- 실행 시작(KST): 2026-10-22T05:05:26+09:00
+- 실행 종료(KST): 2026-10-22T05:05:43+09:00
+- 모드: after_close_daily
 - 전체 대상: 503
 - 고유 요청: 503
 - 상단돌파 계산 완료(21 / 42 / 63 / 126): 502 / 502 / 502 / 500
 - 하단후보 계산 완료(21 / 42 / 63 / 126): 502 / 502 / 502 / 500
-- 후보 5분봉 검증: 36
+- 후보 5분봉 검증: 0
 - 자료부족: 3
 - 미요청: 0
 
@@ -15,14 +15,15 @@
 
 | 티커 | 기간 | 가격/종가 | 박스상단 | 거래량비율 | 강한신호 |
 |---|---:|---:|---:|---:|---|
-| MMM | 21 | 173.44 | 172.95 | 1.89x | 아니오 |
-| COF | 21 | 207.79 | 207.00 | 1.83x | 아니오 |
-| UDR | 21 | 35.20 | 34.56 | 2.98x | 예 |
+| MMM | 21 | 174.74 | 172.95 | 1.74x | 아니오 |
+| DHR | 21 | 233.86 | 233.02 | 1.91x | 아니오 |
+| DHR | 42 | 233.86 | 233.02 | 1.91x | 아니오 |
+| UDR | 21 | 35.04 | 34.56 | 2.06x | 예 |
 
 ## 박스권 하단 후보
 - 없음
 
 ## 실패/누락
-- FDXF: daily bars insufficient: 99 (need 126 for 126-day scan)
-- HONA: daily bars insufficient: 89 (need 126 for 126-day scan)
-- VYLR: daily bars insufficient: 14 (need 126 for 126-day scan)
+- FDXF: daily bars insufficient: 100 (need 127 for 126-day scan)
+- HONA: daily bars insufficient: 90 (need 127 for 126-day scan)
+- VYLR: daily bars insufficient: 15 (need 127 for 126-day scan)
