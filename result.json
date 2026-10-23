@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-10-23T14:05:21+00:00",
-    "finished_utc": "2026-10-23T14:06:03+00:00",
-    "started_kst": "2026-10-23T23:05:21+09:00",
-    "finished_kst": "2026-10-23T23:06:03+09:00",
-    "started_et": "2026-10-23T10:05:21-04:00",
+    "started_utc": "2026-10-23T15:05:20+00:00",
+    "finished_utc": "2026-10-23T15:05:59+00:00",
+    "started_kst": "2026-10-24T00:05:20+09:00",
+    "finished_kst": "2026-10-24T00:05:59+09:00",
+    "started_et": "2026-10-23T11:05:20-04:00",
     "mode": "intraday_delayed_sip",
     "market_open_estimate": true,
-    "historical_data_end_utc": "2026-10-23T13:49:21+00:00"
+    "historical_data_end_utc": "2026-10-23T14:49:20+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -48,8 +48,8 @@
       "63": 502,
       "126": 500
     },
-    "candidate_price_breakouts": 5,
-    "candidate_volume_validations": 4,
+    "candidate_price_breakouts": 7,
+    "candidate_volume_validations": 7,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
       "FDXF",
@@ -61,7 +61,7 @@
     "http_requests": {
       "daily": 14,
       "snapshots": 7,
-      "intraday_5m": 9
+      "intraday_5m": 14
     }
   },
   "confirmed_signals": [
@@ -74,19 +74,42 @@
       "last_close": 181.57,
       "first_last_move": 0.016800134401075306,
       "valid_box": true,
-      "price": 194.3675,
+      "price": 188.685,
       "prev_close": 181.57,
       "symbol": "AMT",
       "name": "American Tower",
       "mode": "intraday",
-      "last_5m_time_et": "2026-10-23T09:45-04:00",
-      "current_cum_volume": 1308311.0,
+      "last_5m_time_et": "2026-10-23T10:45-04:00",
+      "current_cum_volume": 3047978.0,
       "prior_session_count": 20,
-      "same_time_avg_volume": 180054.35,
-      "volume_ratio": 7.266200455584661,
+      "same_time_avg_volume": 517581.0,
+      "volume_ratio": 5.888890820953629,
       "confirmed": true,
       "strong": true,
-      "signal_key": "AMT:42:186.0000:2026-10-23T09:45-04:00"
+      "signal_key": "AMT:42:186.0000:2026-10-23T10:45-04:00"
+    },
+    {
+      "period": 21,
+      "box_high": 27.585,
+      "box_low": 25.82,
+      "box_width": 0.0683578621223857,
+      "first_close": 26.5,
+      "last_close": 27.53,
+      "first_last_move": 0.0388679245283019,
+      "valid_box": true,
+      "price": 27.61,
+      "prev_close": 27.53,
+      "symbol": "INVH",
+      "name": "Invitation Homes",
+      "mode": "intraday",
+      "last_5m_time_et": "2026-10-23T10:45-04:00",
+      "current_cum_volume": 1238018.0,
+      "prior_session_count": 20,
+      "same_time_avg_volume": 717316.05,
+      "volume_ratio": 1.7259031078420732,
+      "confirmed": true,
+      "strong": false,
+      "signal_key": "INVH:21:27.5850:2026-10-23T10:45-04:00"
     }
   ],
   "new_breakout_signals": [
@@ -99,19 +122,42 @@
       "last_close": 181.57,
       "first_last_move": 0.016800134401075306,
       "valid_box": true,
-      "price": 194.3675,
+      "price": 188.685,
       "prev_close": 181.57,
       "symbol": "AMT",
       "name": "American Tower",
       "mode": "intraday",
-      "last_5m_time_et": "2026-10-23T09:45-04:00",
-      "current_cum_volume": 1308311.0,
+      "last_5m_time_et": "2026-10-23T10:45-04:00",
+      "current_cum_volume": 3047978.0,
       "prior_session_count": 20,
-      "same_time_avg_volume": 180054.35,
-      "volume_ratio": 7.266200455584661,
+      "same_time_avg_volume": 517581.0,
+      "volume_ratio": 5.888890820953629,
       "confirmed": true,
       "strong": true,
-      "signal_key": "AMT:42:186.0000:2026-10-23T09:45-04:00"
+      "signal_key": "AMT:42:186.0000:2026-10-23T10:45-04:00"
+    },
+    {
+      "period": 21,
+      "box_high": 27.585,
+      "box_low": 25.82,
+      "box_width": 0.0683578621223857,
+      "first_close": 26.5,
+      "last_close": 27.53,
+      "first_last_move": 0.0388679245283019,
+      "valid_box": true,
+      "price": 27.61,
+      "prev_close": 27.53,
+      "symbol": "INVH",
+      "name": "Invitation Homes",
+      "mode": "intraday",
+      "last_5m_time_et": "2026-10-23T10:45-04:00",
+      "current_cum_volume": 1238018.0,
+      "prior_session_count": 20,
+      "same_time_avg_volume": 717316.05,
+      "volume_ratio": 1.7259031078420732,
+      "confirmed": true,
+      "strong": false,
+      "signal_key": "INVH:21:27.5850:2026-10-23T10:45-04:00"
     }
   ],
   "lower_box_candidates": [],
@@ -208,6 +254,7 @@
     "AMT:21:179.8000:2026-10-09",
     "AMT:42:180.9800:2026-10-09",
     "AMT:42:186.0000:2026-10-23T09:45-04:00",
+    "AMT:42:186.0000:2026-10-23T10:45-04:00",
     "AMT:63:180.9800:2026-10-09",
     "AOS:21:58.9450:2026-10-15T09:45-04:00",
     "AOS:21:59.8500:2026-10-16T09:45-04:00",
@@ -545,6 +592,7 @@
     "IFF:21:89.7000:2026-10-15T12:55-04:00",
     "IFF:42:88.6400:2026-10-13T14:45-04:00",
     "INVH:21:27.2300:2026-10-22T10:45-04:00",
+    "INVH:21:27.5850:2026-10-23T10:45-04:00",
     "IQV:21:277.4000:2026-10-22T09:45-04:00",
     "IQV:21:277.4000:2026-10-22T10:45-04:00",
     "IQV:42:277.4000:2026-10-22T09:45-04:00",
