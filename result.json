@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-10-23T21:05:24+00:00",
-    "finished_utc": "2026-10-23T21:05:35+00:00",
-    "started_kst": "2026-10-24T06:05:24+09:00",
-    "finished_kst": "2026-10-24T06:05:35+09:00",
-    "started_et": "2026-10-23T17:05:24-04:00",
+    "started_utc": "2026-10-23T22:05:23+00:00",
+    "finished_utc": "2026-10-23T22:05:34+00:00",
+    "started_kst": "2026-10-24T07:05:23+09:00",
+    "finished_kst": "2026-10-24T07:05:34+09:00",
+    "started_et": "2026-10-23T18:05:23-04:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-10-23T20:49:24+00:00"
+    "historical_data_end_utc": "2026-10-23T21:49:23+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -77,9 +77,9 @@
       "breakout_date": "2026-10-23",
       "close": 188.97,
       "prev_close": 181.57,
-      "volume": 8708292.0,
+      "volume": 8853750.0,
       "avg20_volume": 3209796.65,
-      "volume_ratio": 2.7130354192375394,
+      "volume_ratio": 2.7583523087046653,
       "confirmed": true,
       "strong": true,
       "symbol": "AMT",
@@ -99,9 +99,9 @@
       "breakout_date": "2026-10-23",
       "close": 481.83,
       "prev_close": 477.81,
-      "volume": 1419120.0,
+      "volume": 1419166.0,
       "avg20_volume": 792631.1,
-      "volume_ratio": 1.7903915200904936,
+      "volume_ratio": 1.7904495546541135,
       "confirmed": true,
       "strong": false,
       "symbol": "MSI",
@@ -143,9 +143,9 @@
       "breakout_date": "2026-10-23",
       "close": 53.06,
       "prev_close": 49.55,
-      "volume": 19042625.0,
+      "volume": 19056477.0,
       "avg20_volume": 12319934.95,
-      "volume_ratio": 1.5456757748546393,
+      "volume_ratio": 1.5468001314406292,
       "confirmed": true,
       "strong": false,
       "symbol": "SLB",
@@ -154,30 +154,7 @@
       "signal_key": "SLB:21:52.6000:2026-10-23"
     }
   ],
-  "new_breakout_signals": [
-    {
-      "period": 21,
-      "box_high": 479.48,
-      "box_low": 441.05,
-      "box_width": 0.08713297812039444,
-      "first_close": 454.91,
-      "last_close": 477.81,
-      "first_last_move": 0.05033962761864985,
-      "valid_box": true,
-      "breakout_date": "2026-10-23",
-      "close": 481.83,
-      "prev_close": 477.81,
-      "volume": 1419120.0,
-      "avg20_volume": 792631.1,
-      "volume_ratio": 1.7903915200904936,
-      "confirmed": true,
-      "strong": false,
-      "symbol": "MSI",
-      "name": "Motorola Solutions",
-      "mode": "after_close",
-      "signal_key": "MSI:21:479.4800:2026-10-23"
-    }
-  ],
+  "new_breakout_signals": [],
   "lower_box_candidates": [],
   "failures": [
     {
