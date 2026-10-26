@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-10-26T17:05:17+00:00",
-    "finished_utc": "2026-10-26T17:05:43+00:00",
-    "started_kst": "2026-10-27T02:05:17+09:00",
-    "finished_kst": "2026-10-27T02:05:43+09:00",
-    "started_et": "2026-10-26T13:05:17-04:00",
+    "started_utc": "2026-10-26T18:05:28+00:00",
+    "finished_utc": "2026-10-26T18:05:51+00:00",
+    "started_kst": "2026-10-27T03:05:28+09:00",
+    "finished_kst": "2026-10-27T03:05:51+09:00",
+    "started_et": "2026-10-26T14:05:28-04:00",
     "mode": "intraday_delayed_sip",
     "market_open_estimate": true,
-    "historical_data_end_utc": "2026-10-26T16:49:17+00:00"
+    "historical_data_end_utc": "2026-10-26T17:49:28+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -74,19 +74,19 @@
       "last_close": 372.22,
       "first_last_move": 0.000295611512724836,
       "valid_box": true,
-      "price": 394.9,
+      "price": 395.54,
       "prev_close": 372.22,
       "symbol": "TSLA",
       "name": "Tesla, Inc.",
       "mode": "intraday",
-      "last_5m_time_et": "2026-10-26T12:45-04:00",
-      "current_cum_volume": 31388316.0,
+      "last_5m_time_et": "2026-10-26T13:45-04:00",
+      "current_cum_volume": 35802729.0,
       "prior_session_count": 20,
-      "same_time_avg_volume": 20076287.9,
-      "volume_ratio": 1.5634521758377455,
+      "same_time_avg_volume": 23106674.85,
+      "volume_ratio": 1.5494539665450824,
       "confirmed": true,
       "strong": false,
-      "signal_key": "TSLA:21:388.8595:2026-10-26T12:45-04:00"
+      "signal_key": "TSLA:21:388.8595:2026-10-26T13:45-04:00"
     }
   ],
   "new_breakout_signals": [
@@ -99,19 +99,19 @@
       "last_close": 372.22,
       "first_last_move": 0.000295611512724836,
       "valid_box": true,
-      "price": 394.9,
+      "price": 395.54,
       "prev_close": 372.22,
       "symbol": "TSLA",
       "name": "Tesla, Inc.",
       "mode": "intraday",
-      "last_5m_time_et": "2026-10-26T12:45-04:00",
-      "current_cum_volume": 31388316.0,
+      "last_5m_time_et": "2026-10-26T13:45-04:00",
+      "current_cum_volume": 35802729.0,
       "prior_session_count": 20,
-      "same_time_avg_volume": 20076287.9,
-      "volume_ratio": 1.5634521758377455,
+      "same_time_avg_volume": 23106674.85,
+      "volume_ratio": 1.5494539665450824,
       "confirmed": true,
       "strong": false,
-      "signal_key": "TSLA:21:388.8595:2026-10-26T12:45-04:00"
+      "signal_key": "TSLA:21:388.8595:2026-10-26T13:45-04:00"
     }
   ],
   "lower_box_candidates": [],
@@ -1009,6 +1009,7 @@
     "TSLA:21:388.8595:2026-10-26T10:45-04:00",
     "TSLA:21:388.8595:2026-10-26T11:45-04:00",
     "TSLA:21:388.8595:2026-10-26T12:45-04:00",
+    "TSLA:21:388.8595:2026-10-26T13:45-04:00",
     "TYL:21:351.5750:2026-10-15T10:45-04:00",
     "TYL:21:351.5750:2026-10-15T11:45-04:00",
     "TYL:21:351.5750:2026-10-15T12:45-04:00",
