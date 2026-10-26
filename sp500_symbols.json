@@ -1516,20 +1516,20 @@
     "name": "PulteGroup"
   },
   {
-    "symbol": "PWR",
-    "name": "Quanta Services"
+    "symbol": "Q",
+    "name": "Qnity Electronics"
   },
   {
     "symbol": "QCOM",
     "name": "Qualcomm"
   },
   {
-    "symbol": "DGX",
-    "name": "Quest Diagnostics"
+    "symbol": "PWR",
+    "name": "Quanta Services"
   },
   {
-    "symbol": "Q",
-    "name": "Qnity Electronics"
+    "symbol": "DGX",
+    "name": "Quest Diagnostics"
   },
   {
     "symbol": "RL",
@@ -1542,10 +1542,6 @@
   {
     "symbol": "RDDT",
     "name": "Reddit"
-  },
-  {
-    "symbol": "RTX",
-    "name": "RTX Corporation"
   },
   {
     "symbol": "O",
@@ -1598,6 +1594,10 @@
   {
     "symbol": "RCL",
     "name": "Royal Caribbean Group"
+  },
+  {
+    "symbol": "RTX",
+    "name": "RTX Corporation"
   },
   {
     "symbol": "SPGI",
