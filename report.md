@@ -1,28 +1,23 @@
 # S&P 500 전수검사
 
-- 실행 시작(KST): 2026-10-27T04:05:21+09:00
-- 실행 종료(KST): 2026-10-27T04:05:41+09:00
-- 모드: intraday_delayed_sip
+- 실행 시작(KST): 2026-10-27T05:05:20+09:00
+- 실행 종료(KST): 2026-10-27T05:05:28+09:00
+- 모드: after_close_daily
 - 전체 대상: 503
 - 고유 요청: 503
 - 상단돌파 계산 완료(21 / 42 / 63 / 126): 502 / 502 / 502 / 500
 - 하단후보 계산 완료(21 / 42 / 63 / 126): 502 / 502 / 502 / 500
-- 후보 5분봉 검증: 14
+- 후보 5분봉 검증: 0
 - 자료부족: 3
 - 미요청: 0
 
 ## 신규 상단 돌파 신호
-
-| 티커 | 기간 | 가격/종가 | 박스상단 | 거래량비율 | 강한신호 |
-|---|---:|---:|---:|---:|---|
-| PKG | 21 | 252.30 | 249.58 | 1.50x | 아니오 |
-| PKG | 42 | 252.30 | 250.88 | 1.50x | 아니오 |
-| TSLA | 21 | 394.38 | 388.86 | 1.54x | 아니오 |
+- 없음
 
 ## 박스권 하단 후보
 - 없음
 
 ## 실패/누락
-- FDXF: daily bars insufficient: 102 (need 126 for 126-day scan)
-- HONA: daily bars insufficient: 92 (need 126 for 126-day scan)
-- VYLR: daily bars insufficient: 17 (need 126 for 126-day scan)
+- FDXF: daily bars insufficient: 103 (need 127 for 126-day scan)
+- HONA: daily bars insufficient: 93 (need 127 for 126-day scan)
+- VYLR: daily bars insufficient: 18 (need 127 for 126-day scan)

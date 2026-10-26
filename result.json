@@ -1,20 +1,20 @@
 {
   "run": {
-    "started_utc": "2026-10-26T19:05:21+00:00",
-    "finished_utc": "2026-10-26T19:05:41+00:00",
-    "started_kst": "2026-10-27T04:05:21+09:00",
-    "finished_kst": "2026-10-27T04:05:41+09:00",
-    "started_et": "2026-10-26T15:05:21-04:00",
-    "mode": "intraday_delayed_sip",
-    "market_open_estimate": true,
-    "historical_data_end_utc": "2026-10-26T18:49:21+00:00"
+    "started_utc": "2026-10-26T20:05:20+00:00",
+    "finished_utc": "2026-10-26T20:05:28+00:00",
+    "started_kst": "2026-10-27T05:05:20+09:00",
+    "finished_kst": "2026-10-27T05:05:28+09:00",
+    "started_et": "2026-10-26T16:05:20-04:00",
+    "mode": "after_close_daily",
+    "market_open_estimate": false,
+    "historical_data_end_utc": "2026-10-26T19:49:20+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
     "constituent_warning": null,
     "market_data": "Alpaca Market Data",
     "historical_feed": "sip",
-    "snapshot_feed": "delayed_sip",
+    "snapshot_feed": null,
     "adjustment": "split"
   },
   "criteria": {
@@ -48,8 +48,8 @@
       "63": 502,
       "126": 500
     },
-    "candidate_price_breakouts": 16,
-    "candidate_volume_validations": 14,
+    "candidate_price_breakouts": 0,
+    "candidate_volume_validations": 0,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
       "FDXF",
@@ -60,165 +60,25 @@
     "unrequested_symbols": [],
     "http_requests": {
       "daily": 14,
-      "snapshots": 7,
-      "intraday_5m": 26
+      "snapshots": 0,
+      "intraday_5m": 0
     }
   },
-  "confirmed_signals": [
-    {
-      "period": 21,
-      "box_high": 249.58,
-      "box_low": 224.801,
-      "box_width": 0.11022637799653934,
-      "first_close": 237.18,
-      "last_close": 247.29,
-      "first_last_move": 0.04262585378193773,
-      "valid_box": true,
-      "price": 252.3,
-      "prev_close": 247.29,
-      "symbol": "PKG",
-      "name": "Packaging Corporation of America",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-10-26T14:45-04:00",
-      "current_cum_volume": 374872.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 249812.9,
-      "volume_ratio": 1.5006110573152949,
-      "confirmed": true,
-      "strong": false,
-      "signal_key": "PKG:21:249.5800:2026-10-26T14:45-04:00"
-    },
-    {
-      "period": 42,
-      "box_high": 250.875,
-      "box_low": 224.801,
-      "box_width": 0.11598702852745313,
-      "first_close": 246.68,
-      "last_close": 247.29,
-      "first_last_move": 0.0024728393059834097,
-      "valid_box": true,
-      "price": 252.3,
-      "prev_close": 247.29,
-      "symbol": "PKG",
-      "name": "Packaging Corporation of America",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-10-26T14:45-04:00",
-      "current_cum_volume": 374872.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 249812.9,
-      "volume_ratio": 1.5006110573152949,
-      "confirmed": true,
-      "strong": false,
-      "signal_key": "PKG:42:250.8750:2026-10-26T14:45-04:00"
-    },
-    {
-      "period": 21,
-      "box_high": 388.8595,
-      "box_low": 345.88,
-      "box_width": 0.12426130449867023,
-      "first_close": 372.11,
-      "last_close": 372.22,
-      "first_last_move": 0.000295611512724836,
-      "valid_box": true,
-      "price": 394.375,
-      "prev_close": 372.22,
-      "symbol": "TSLA",
-      "name": "Tesla, Inc.",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-10-26T14:45-04:00",
-      "current_cum_volume": 39170534.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 25512117.45,
-      "volume_ratio": 1.5353697738640664,
-      "confirmed": true,
-      "strong": false,
-      "signal_key": "TSLA:21:388.8595:2026-10-26T14:45-04:00"
-    }
-  ],
-  "new_breakout_signals": [
-    {
-      "period": 21,
-      "box_high": 249.58,
-      "box_low": 224.801,
-      "box_width": 0.11022637799653934,
-      "first_close": 237.18,
-      "last_close": 247.29,
-      "first_last_move": 0.04262585378193773,
-      "valid_box": true,
-      "price": 252.3,
-      "prev_close": 247.29,
-      "symbol": "PKG",
-      "name": "Packaging Corporation of America",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-10-26T14:45-04:00",
-      "current_cum_volume": 374872.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 249812.9,
-      "volume_ratio": 1.5006110573152949,
-      "confirmed": true,
-      "strong": false,
-      "signal_key": "PKG:21:249.5800:2026-10-26T14:45-04:00"
-    },
-    {
-      "period": 42,
-      "box_high": 250.875,
-      "box_low": 224.801,
-      "box_width": 0.11598702852745313,
-      "first_close": 246.68,
-      "last_close": 247.29,
-      "first_last_move": 0.0024728393059834097,
-      "valid_box": true,
-      "price": 252.3,
-      "prev_close": 247.29,
-      "symbol": "PKG",
-      "name": "Packaging Corporation of America",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-10-26T14:45-04:00",
-      "current_cum_volume": 374872.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 249812.9,
-      "volume_ratio": 1.5006110573152949,
-      "confirmed": true,
-      "strong": false,
-      "signal_key": "PKG:42:250.8750:2026-10-26T14:45-04:00"
-    },
-    {
-      "period": 21,
-      "box_high": 388.8595,
-      "box_low": 345.88,
-      "box_width": 0.12426130449867023,
-      "first_close": 372.11,
-      "last_close": 372.22,
-      "first_last_move": 0.000295611512724836,
-      "valid_box": true,
-      "price": 394.375,
-      "prev_close": 372.22,
-      "symbol": "TSLA",
-      "name": "Tesla, Inc.",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-10-26T14:45-04:00",
-      "current_cum_volume": 39170534.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 25512117.45,
-      "volume_ratio": 1.5353697738640664,
-      "confirmed": true,
-      "strong": false,
-      "signal_key": "TSLA:21:388.8595:2026-10-26T14:45-04:00"
-    }
-  ],
+  "confirmed_signals": [],
+  "new_breakout_signals": [],
   "lower_box_candidates": [],
   "failures": [
     {
       "symbol": "FDXF",
-      "reason": "daily bars insufficient: 102 (need 126 for 126-day scan)"
+      "reason": "daily bars insufficient: 103 (need 127 for 126-day scan)"
     },
     {
       "symbol": "HONA",
-      "reason": "daily bars insufficient: 92 (need 126 for 126-day scan)"
+      "reason": "daily bars insufficient: 93 (need 127 for 126-day scan)"
     },
     {
       "symbol": "VYLR",
-      "reason": "daily bars insufficient: 17 (need 126 for 126-day scan)"
+      "reason": "daily bars insufficient: 18 (need 127 for 126-day scan)"
     }
   ],
   "seen_signal_keys": [
