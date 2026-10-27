@@ -1500,12 +1500,12 @@
     "name": "Prudential Financial"
   },
   {
-    "symbol": "PEG",
-    "name": "Public Service Enterprise Group"
-  },
-  {
     "symbol": "PTC",
     "name": "PTC Inc."
+  },
+  {
+    "symbol": "PEG",
+    "name": "Public Service Enterprise Group"
   },
   {
     "symbol": "PSA",
