@@ -1,23 +1,34 @@
 # S&P 500 전수검사
 
-- 실행 시작(KST): 2026-11-02T23:05:19+09:00
-- 실행 종료(KST): 2026-11-02T23:05:27+09:00
-- 모드: after_close_daily
+- 실행 시작(KST): 2026-11-03T00:05:23+09:00
+- 실행 종료(KST): 2026-11-03T00:06:08+09:00
+- 모드: intraday_delayed_sip
 - 전체 대상: 503
 - 고유 요청: 503
 - 상단돌파 계산 완료(21 / 42 / 63 / 126): 503 / 502 / 502 / 500
 - 하단후보 계산 완료(21 / 42 / 63 / 126): 503 / 502 / 502 / 500
-- 후보 5분봉 검증: 0
+- 후보 5분봉 검증: 34
 - 자료부족: 3
 - 미요청: 0
 
 ## 신규 상단 돌파 신호
-- 없음
+
+| 티커 | 기간 | 가격/종가 | 박스상단 | 거래량비율 | 강한신호 |
+|---|---:|---:|---:|---:|---|
+| BXP | 21 | 63.85 | 63.55 | 2.76x | 예 |
+| IDXX | 21 | 656.71 | 586.00 | 11.93x | 예 |
+| IDXX | 42 | 656.71 | 586.00 | 11.93x | 예 |
+| IFF | 42 | 94.86 | 94.65 | 1.53x | 아니오 |
+| KIM | 42 | 24.82 | 24.70 | 1.67x | 아니오 |
+| LOW | 42 | 214.51 | 211.71 | 1.65x | 아니오 |
+| MLM | 42 | 554.01 | 545.28 | 3.10x | 예 |
+| TKO | 21 | 185.62 | 183.36 | 2.60x | 예 |
+| YUM | 42 | 157.75 | 157.49 | 1.83x | 아니오 |
 
 ## 박스권 하단 후보
 - 없음
 
 ## 실패/누락
-- FDXF: daily bars insufficient: 107 (need 127 for 126-day scan)
-- HONA: daily bars insufficient: 97 (need 127 for 126-day scan)
-- VYLR: daily bars insufficient: 22 (need 127 for 126-day scan)
+- FDXF: daily bars insufficient: 107 (need 126 for 126-day scan)
+- HONA: daily bars insufficient: 97 (need 126 for 126-day scan)
+- VYLR: daily bars insufficient: 22 (need 126 for 126-day scan)
