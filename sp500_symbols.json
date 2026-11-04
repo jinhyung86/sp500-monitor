@@ -1076,10 +1076,6 @@
     "name": "JPMorgan Chase"
   },
   {
-    "symbol": "KVUE",
-    "name": "Kenvue"
-  },
-  {
     "symbol": "KDP",
     "name": "Keurig Dr Pepper"
   },
@@ -1386,6 +1382,10 @@
   {
     "symbol": "OXY",
     "name": "Occidental Petroleum"
+  },
+  {
+    "symbol": "OKTA",
+    "name": "Okta, Inc."
   },
   {
     "symbol": "ODFL",
