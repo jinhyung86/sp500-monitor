@@ -1,8 +1,8 @@
 # S&P 500 전수검사
 
-- 실행 시작(KST): 2026-11-10T23:05:17+09:00
-- 실행 종료(KST): 2026-11-10T23:05:30+09:00
-- 모드: after_close_daily
+- 실행 시작(KST): 2026-11-11T00:05:26+09:00
+- 실행 종료(KST): 2026-11-11T00:05:54+09:00
+- 모드: intraday_delayed_sip
 - 전체 대상: 503
 - 고유 요청: 503
 - 상단돌파 계산 완료(21 / 42 / 63 / 126): 503 / 502 / 502 / 500
@@ -18,6 +18,6 @@
 - 없음
 
 ## 실패/누락
-- FDXF: daily bars insufficient: 113 (need 127 for 126-day scan)
-- HONA: daily bars insufficient: 103 (need 127 for 126-day scan)
-- VYLR: daily bars insufficient: 28 (need 127 for 126-day scan)
+- FDXF: daily bars insufficient: 113 (need 126 for 126-day scan)
+- HONA: daily bars insufficient: 103 (need 126 for 126-day scan)
+- VYLR: daily bars insufficient: 28 (need 126 for 126-day scan)

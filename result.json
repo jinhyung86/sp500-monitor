@@ -1,20 +1,20 @@
 {
   "run": {
-    "started_utc": "2026-11-10T14:05:17+00:00",
-    "finished_utc": "2026-11-10T14:05:30+00:00",
-    "started_kst": "2026-11-10T23:05:17+09:00",
-    "finished_kst": "2026-11-10T23:05:30+09:00",
-    "started_et": "2026-11-10T09:05:17-05:00",
-    "mode": "after_close_daily",
-    "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-10T13:49:17+00:00"
+    "started_utc": "2026-11-10T15:05:26+00:00",
+    "finished_utc": "2026-11-10T15:05:54+00:00",
+    "started_kst": "2026-11-11T00:05:26+09:00",
+    "finished_kst": "2026-11-11T00:05:54+09:00",
+    "started_et": "2026-11-10T10:05:26-05:00",
+    "mode": "intraday_delayed_sip",
+    "market_open_estimate": true,
+    "historical_data_end_utc": "2026-11-10T14:49:26+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
     "constituent_warning": null,
     "market_data": "Alpaca Market Data",
     "historical_feed": "sip",
-    "snapshot_feed": null,
+    "snapshot_feed": "delayed_sip",
     "adjustment": "split"
   },
   "criteria": {
@@ -60,136 +60,25 @@
     "unrequested_symbols": [],
     "http_requests": {
       "daily": 14,
-      "snapshots": 0,
+      "snapshots": 7,
       "intraday_5m": 0
     }
   },
-  "confirmed_signals": [
-    {
-      "period": 21,
-      "box_high": 249.0,
-      "box_low": 215.865,
-      "box_width": 0.15349871447432428,
-      "first_close": 220.04,
-      "last_close": 233.7,
-      "first_last_move": 0.062079621886929726,
-      "valid_box": true,
-      "breakout_date": "2026-11-09",
-      "close": 259.93,
-      "prev_close": 233.7,
-      "volume": 3761057.0,
-      "avg20_volume": 1429009.4,
-      "volume_ratio": 2.631933001980253,
-      "confirmed": true,
-      "strong": true,
-      "symbol": "FERG",
-      "name": "Ferguson Enterprises",
-      "mode": "after_close",
-      "signal_key": "FERG:21:249.0000:2026-11-09"
-    },
-    {
-      "period": 42,
-      "box_high": 249.0,
-      "box_low": 212.13,
-      "box_width": 0.17380851364729177,
-      "first_close": 220.97,
-      "last_close": 233.7,
-      "first_last_move": 0.05760963026655208,
-      "valid_box": true,
-      "breakout_date": "2026-11-09",
-      "close": 259.93,
-      "prev_close": 233.7,
-      "volume": 3761057.0,
-      "avg20_volume": 1429009.4,
-      "volume_ratio": 2.631933001980253,
-      "confirmed": true,
-      "strong": true,
-      "symbol": "FERG",
-      "name": "Ferguson Enterprises",
-      "mode": "after_close",
-      "signal_key": "FERG:42:249.0000:2026-11-09"
-    },
-    {
-      "period": 21,
-      "box_high": 34.39,
-      "box_low": 30.09,
-      "box_width": 0.14290461947490862,
-      "first_close": 32.0,
-      "last_close": 33.73,
-      "first_last_move": 0.0540624999999999,
-      "valid_box": true,
-      "breakout_date": "2026-11-09",
-      "close": 35.87,
-      "prev_close": 33.73,
-      "volume": 6257691.0,
-      "avg20_volume": 3941099.7,
-      "volume_ratio": 1.5878032722694124,
-      "confirmed": true,
-      "strong": false,
-      "symbol": "BEN",
-      "name": "Franklin Resources",
-      "mode": "after_close",
-      "signal_key": "BEN:21:34.3900:2026-11-09"
-    },
-    {
-      "period": 42,
-      "box_high": 34.39,
-      "box_low": 30.09,
-      "box_width": 0.14290461947490862,
-      "first_close": 33.66,
-      "last_close": 33.73,
-      "first_last_move": 0.002079619726678583,
-      "valid_box": true,
-      "breakout_date": "2026-11-09",
-      "close": 35.87,
-      "prev_close": 33.73,
-      "volume": 6257691.0,
-      "avg20_volume": 3941099.7,
-      "volume_ratio": 1.5878032722694124,
-      "confirmed": true,
-      "strong": false,
-      "symbol": "BEN",
-      "name": "Franklin Resources",
-      "mode": "after_close",
-      "signal_key": "BEN:42:34.3900:2026-11-09"
-    },
-    {
-      "period": 63,
-      "box_high": 35.385,
-      "box_low": 30.09,
-      "box_width": 0.17597208374875373,
-      "first_close": 33.36,
-      "last_close": 33.73,
-      "first_last_move": 0.011091127098321163,
-      "valid_box": true,
-      "breakout_date": "2026-11-09",
-      "close": 35.87,
-      "prev_close": 33.73,
-      "volume": 6257691.0,
-      "avg20_volume": 3941099.7,
-      "volume_ratio": 1.5878032722694124,
-      "confirmed": true,
-      "strong": false,
-      "symbol": "BEN",
-      "name": "Franklin Resources",
-      "mode": "after_close",
-      "signal_key": "BEN:63:35.3850:2026-11-09"
-    }
-  ],
+  "confirmed_signals": [],
   "new_breakout_signals": [],
   "lower_box_candidates": [],
   "failures": [
     {
       "symbol": "FDXF",
-      "reason": "daily bars insufficient: 113 (need 127 for 126-day scan)"
+      "reason": "daily bars insufficient: 113 (need 126 for 126-day scan)"
     },
     {
       "symbol": "HONA",
-      "reason": "daily bars insufficient: 103 (need 127 for 126-day scan)"
+      "reason": "daily bars insufficient: 103 (need 126 for 126-day scan)"
     },
     {
       "symbol": "VYLR",
-      "reason": "daily bars insufficient: 28 (need 127 for 126-day scan)"
+      "reason": "daily bars insufficient: 28 (need 126 for 126-day scan)"
     }
   ],
   "seen_signal_keys": [
