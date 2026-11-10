@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-10T21:05:22+00:00",
-    "finished_utc": "2026-11-10T21:05:43+00:00",
-    "started_kst": "2026-11-11T06:05:22+09:00",
-    "finished_kst": "2026-11-11T06:05:43+09:00",
-    "started_et": "2026-11-10T16:05:22-05:00",
+    "started_utc": "2026-11-10T22:05:23+00:00",
+    "finished_utc": "2026-11-10T22:05:35+00:00",
+    "started_kst": "2026-11-11T07:05:23+09:00",
+    "finished_kst": "2026-11-11T07:05:35+09:00",
+    "started_et": "2026-11-10T17:05:23-05:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-10T20:49:22+00:00"
+    "historical_data_end_utc": "2026-11-10T21:49:23+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -77,9 +77,9 @@
       "breakout_date": "2026-11-10",
       "close": 224.64,
       "prev_close": 207.4,
-      "volume": 8197923.0,
+      "volume": 8444058.0,
       "avg20_volume": 2962090.5,
-      "volume_ratio": 2.767613953726262,
+      "volume_ratio": 2.8507089840772926,
       "confirmed": true,
       "strong": true,
       "symbol": "TTWO",
@@ -88,30 +88,7 @@
       "signal_key": "TTWO:21:218.7819:2026-11-10"
     }
   ],
-  "new_breakout_signals": [
-    {
-      "period": 21,
-      "box_high": 218.7819,
-      "box_low": 183.86,
-      "box_width": 0.18993745240944193,
-      "first_close": 208.82,
-      "last_close": 207.4,
-      "first_last_move": -0.006800114931519885,
-      "valid_box": true,
-      "breakout_date": "2026-11-10",
-      "close": 224.64,
-      "prev_close": 207.4,
-      "volume": 8197923.0,
-      "avg20_volume": 2962090.5,
-      "volume_ratio": 2.767613953726262,
-      "confirmed": true,
-      "strong": true,
-      "symbol": "TTWO",
-      "name": "Take-Two Interactive",
-      "mode": "after_close",
-      "signal_key": "TTWO:21:218.7819:2026-11-10"
-    }
-  ],
+  "new_breakout_signals": [],
   "lower_box_candidates": [
     {
       "period": 42,
@@ -126,9 +103,9 @@
       "close": 79.92,
       "box_position": 0.24522178146411852,
       "up_avg_volume": 5243665.166666667,
-      "down_avg_volume": 3960515.304347826,
-      "up_down_volume_ratio": 1.3239855836209515,
-      "up_down_volume_ratio_ex_max_day": 1.1853879203158588,
+      "down_avg_volume": 3962212.6086956523,
+      "up_down_volume_ratio": 1.3234184241296594,
+      "up_down_volume_ratio_ex_max_day": 1.1848801323020108,
       "fresh_support_break": false,
       "persistent_downtrend": false,
       "trend_guard_pass": true,
