@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-10T18:05:32+00:00",
-    "finished_utc": "2026-11-10T18:06:12+00:00",
-    "started_kst": "2026-11-11T03:05:32+09:00",
-    "finished_kst": "2026-11-11T03:06:12+09:00",
-    "started_et": "2026-11-10T13:05:32-05:00",
+    "started_utc": "2026-11-10T19:05:27+00:00",
+    "finished_utc": "2026-11-10T19:06:01+00:00",
+    "started_kst": "2026-11-11T04:05:27+09:00",
+    "finished_kst": "2026-11-11T04:06:01+09:00",
+    "started_et": "2026-11-10T14:05:27-05:00",
     "mode": "intraday_delayed_sip",
     "market_open_estimate": true,
-    "historical_data_end_utc": "2026-11-10T17:49:32+00:00"
+    "historical_data_end_utc": "2026-11-10T18:49:27+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -48,8 +48,8 @@
       "63": 502,
       "126": 500
     },
-    "candidate_price_breakouts": 2,
-    "candidate_volume_validations": 2,
+    "candidate_price_breakouts": 5,
+    "candidate_volume_validations": 4,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
       "FDXF",
@@ -61,7 +61,7 @@
     "http_requests": {
       "daily": 14,
       "snapshots": 7,
-      "intraday_5m": 4
+      "intraday_5m": 8
     }
   },
   "confirmed_signals": [
@@ -74,42 +74,19 @@
       "last_close": 207.4,
       "first_last_move": -0.006800114931519885,
       "valid_box": true,
-      "price": 222.0,
+      "price": 222.02,
       "prev_close": 207.4,
       "symbol": "TTWO",
       "name": "Take-Two Interactive",
       "mode": "intraday",
-      "last_5m_time_et": "2026-11-10T12:45-05:00",
-      "current_cum_volume": 4956590.0,
+      "last_5m_time_et": "2026-11-10T13:45-05:00",
+      "current_cum_volume": 5372147.0,
       "prior_session_count": 20,
-      "same_time_avg_volume": 1107212.75,
-      "volume_ratio": 4.476637394213533,
+      "same_time_avg_volume": 1356131.3,
+      "volume_ratio": 3.961376748696826,
       "confirmed": true,
       "strong": true,
-      "signal_key": "TTWO:21:218.7819:2026-11-10T12:45-05:00"
-    },
-    {
-      "period": 42,
-      "box_high": 1242.83,
-      "box_low": 1071.25,
-      "box_width": 0.16016802800466734,
-      "first_close": 1140.32,
-      "last_close": 1218.85,
-      "first_last_move": 0.06886663392731873,
-      "valid_box": true,
-      "price": 1244.0,
-      "prev_close": 1218.85,
-      "symbol": "TDG",
-      "name": "TransDigm Group",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-11-10T12:45-05:00",
-      "current_cum_volume": 233756.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 132004.05,
-      "volume_ratio": 1.7708244557648043,
-      "confirmed": true,
-      "strong": false,
-      "signal_key": "TDG:42:1242.8300:2026-11-10T12:45-05:00"
+      "signal_key": "TTWO:21:218.7819:2026-11-10T13:45-05:00"
     }
   ],
   "new_breakout_signals": [
@@ -122,42 +99,19 @@
       "last_close": 207.4,
       "first_last_move": -0.006800114931519885,
       "valid_box": true,
-      "price": 222.0,
+      "price": 222.02,
       "prev_close": 207.4,
       "symbol": "TTWO",
       "name": "Take-Two Interactive",
       "mode": "intraday",
-      "last_5m_time_et": "2026-11-10T12:45-05:00",
-      "current_cum_volume": 4956590.0,
+      "last_5m_time_et": "2026-11-10T13:45-05:00",
+      "current_cum_volume": 5372147.0,
       "prior_session_count": 20,
-      "same_time_avg_volume": 1107212.75,
-      "volume_ratio": 4.476637394213533,
+      "same_time_avg_volume": 1356131.3,
+      "volume_ratio": 3.961376748696826,
       "confirmed": true,
       "strong": true,
-      "signal_key": "TTWO:21:218.7819:2026-11-10T12:45-05:00"
-    },
-    {
-      "period": 42,
-      "box_high": 1242.83,
-      "box_low": 1071.25,
-      "box_width": 0.16016802800466734,
-      "first_close": 1140.32,
-      "last_close": 1218.85,
-      "first_last_move": 0.06886663392731873,
-      "valid_box": true,
-      "price": 1244.0,
-      "prev_close": 1218.85,
-      "symbol": "TDG",
-      "name": "TransDigm Group",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-11-10T12:45-05:00",
-      "current_cum_volume": 233756.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 132004.05,
-      "volume_ratio": 1.7708244557648043,
-      "confirmed": true,
-      "strong": false,
-      "signal_key": "TDG:42:1242.8300:2026-11-10T12:45-05:00"
+      "signal_key": "TTWO:21:218.7819:2026-11-10T13:45-05:00"
     }
   ],
   "lower_box_candidates": [],
@@ -2201,6 +2155,7 @@
     "TTWO:21:218.7819:2026-11-10T10:45-05:00",
     "TTWO:21:218.7819:2026-11-10T11:45-05:00",
     "TTWO:21:218.7819:2026-11-10T12:45-05:00",
+    "TTWO:21:218.7819:2026-11-10T13:45-05:00",
     "TXN:21:313.0700:2026-11-03T11:45-05:00",
     "TXN:21:313.0700:2026-11-03T12:45-05:00",
     "TXT:21:78.6650:2026-10-29",
