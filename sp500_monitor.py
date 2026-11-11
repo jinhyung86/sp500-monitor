@@ -867,98 +867,113 @@ def append_fundamental_report(lines, result):
     lines.append("")
     lines.append("- 출처: Financial Modeling Prep. 데이터 제공 범위/요금제에 따라 N/A 표시. 목표가 상승여력은 보고서 종가 기준이며 실시간 수익률이 아닙니다.")
 
+def candidate_fund_line(result, item):
+    x = result.get("fundamentals", {}).get(item["symbol"]) or {}
+    theme = str(x.get("industry") or x.get("sector") or "N/A").replace("|", "/")
+    opinion = str(x.get("analyst_consensus") or "N/A").replace("|", "/")
+    buy = (f"{x['analyst_buy_count']}/{x['analyst_total']}"
+           if x.get("analyst_buy_count") is not None and x.get("analyst_total") else "N/A")
+    target = safe_float(x.get("price_target_usd"))
+    price = safe_float(item.get("close", item.get("price")))
+    upside = (100 * (target / price - 1) if target is not None and price and price > 0 else None)
+    ratios = "/".join(fmt_fund(x.get(k), 1) for k in ("pe", "pb", "ps"))
+    actual = "/".join(fmt_billions(x.get(k)) for k in ("revenue_usd", "operating_income_usd", "net_income_usd"))
+    forecast = "/".join(fmt_billions(x.get(k)) for k in ("estimated_revenue_usd", "estimated_operating_income_usd", "estimated_net_income_usd"))
+    return (f"| ↳ 재무 | {theme} | {opinion} · 매수 {buy} ({fmt_fund(x.get('analyst_buy_pct'), 1, '%')}) | "
+            f"목표 USD {fmt_fund(target, 2)} · 여력 {fmt_fund(upside, 1, '%')} | "
+            f"PER/PBR/PSR {ratios} | 실적 매출/영업/순익 {actual} | "
+            f"예상 매출/영업/순익 {forecast} | {x.get('statement_period') or 'N/A'} |")
+
+
 def build_markdown(result):
-    lines = []
-    lines.append("# S&P 500 전수검사")
-    lines.append("")
-    lines.append("## 신규 상단 돌파 신호")
+    lines = ["# S&P 500 전수검사", ""]
+    header = "| 종목 | 회사명/테마 | 점수/투자의견 | 가격/목표가 | 지표/PER·PBR·PSR | 거래량/실적(십억 USD) | 추세/예상(십억 USD) | 기간/실적기준일 |"
+    divider = "|---|---|---|---|---|---|---|---|"
+
+    def begin_section(title):
+        lines.extend(["", "## " + title, "", header, divider])
+
+    def add_stock(item, technical):
+        lines.append("| " + " | ".join(str(v) for v in technical) + " |")
+        lines.append(candidate_fund_line(result, item))
+
+    begin_section("신규 상단 돌파 신호")
     if result["new_breakout_signals"]:
-        lines.append("")
-        lines.append("| 티커 | 기간 | 가격/종가 | 박스상단 | 거래량비율 | 강한신호 |")
-        lines.append("|---|---:|---:|---:|---:|---|")
-        for s in result["new_breakout_signals"]:
-            px = s.get("close", s.get("price"))
-            vr = s.get("volume_ratio")
-            lines.append(f"| {s['symbol']} | {s['period']} | {px:.2f} | {s['box_high']:.2f} | {vr:.2f}x | {'예' if s.get('strong') else '아니오'} |")
+        for x in result["new_breakout_signals"]:
+            add_stock(x, [
+                x["symbol"], x.get("name", ""), "상단돌파" + (" · 강함" if x.get("strong") else ""),
+                fmt_fund(x.get("close", x.get("price")), 2), "상단 " + fmt_fund(x.get("box_high"), 2),
+                "거래량 " + fmt_fund(x.get("volume_ratio"), 2, "x"), "-", str(x["period"]) + "일"])
     else:
-        lines.append("- 없음")
+        lines.append("| 없음 | - | - | - | - | - | - | - |")
 
-    lines.append("")
-    lines.append("## 박스권 하단 후보")
+    begin_section("박스권 하단 후보")
     if result["lower_box_candidates"]:
-        lines.append("")
-        lines.append("| 티커 | 기간 | 종가 | 박스하단 | 박스상단 | 위치 | 상승/하락 거래량 | 최대거래량일 제외 |")
-        lines.append("|---|---:|---:|---:|---:|---:|---:|---:|")
-        for s in result["lower_box_candidates"]:
-            lines.append(
-                f"| {s['symbol']} | {s['period']} | {s['close']:.2f} | {s['box_low']:.2f} | {s['box_high']:.2f} | "
-                f"{s['box_position']*100:.1f}% | {s['up_down_volume_ratio']:.2f}x | {s['up_down_volume_ratio_ex_max_day']:.2f}x |"
-            )
+        for x in result["lower_box_candidates"]:
+            add_stock(x, [
+                x["symbol"], x.get("name", ""), "하단 감시", fmt_fund(x.get("close"), 2),
+                "위치 " + fmt_fund(100*x["box_position"], 1, "%"),
+                "상승/하락 " + fmt_fund(x.get("up_down_volume_ratio"), 2, "x"),
+                "최대일 제외 " + fmt_fund(x.get("up_down_volume_ratio_ex_max_day"), 2, "x"),
+                str(x["period"]) + "일"])
     else:
-        lines.append("- 없음")
+        lines.append("| 없음 | - | - | - | - | - | - | - |")
 
-    lines.append("")
-    lines.append("## 박스권 상단 감시 후보 (감시점수 85점 이상)")
-    items = result["upper_box_watch_candidates"]
-    lines.append("")
-    if not items:
-        lines.append("- 없음")
+    begin_section("박스권 상단 감시 후보 (85점 이상)")
+    if result["upper_box_watch_candidates"]:
+        for x in result["upper_box_watch_candidates"]:
+            add_stock(x, [
+                x["symbol"], x.get("name", ""), fmt_fund(x.get("watch_score"), 1) + "점 · " + x["tier"] + "등급",
+                fmt_fund(x.get("close"), 2),
+                "위치 " + fmt_fund(100*x["box_position"], 1, "%") + " · 상단 " + fmt_fund(x.get("box_high"), 2),
+                "거래량 " + fmt_fund(x.get("volume_growth_ratio"), 2, "x"),
+                "5일 " + fmt_fund(x.get("recent_5_return_pct"), 2, "%"),
+                str(x["period"]) + "일"])
     else:
-        lines.append("| 티커 | 회사명 | 등급 | 기간 | 종가 | 박스상단 | 박스위치 | 5일 등락 | 거래량 변화 | 감시점수 |")
-        lines.append("|---|---|:---:|---:|---:|---:|---:|---:|---:|---:|")
-        for x in items:
-            r = f"{x['recent_5_return_pct']:+.2f}%" if x['recent_5_return_pct'] is not None else "-"
-            v = f"{x['volume_growth_ratio']:.2f}x" if x['volume_growth_ratio'] is not None else "-"
-            lines.append(f"| {x['symbol']} | {x['name']} | {x['tier']} | {x['period']} | {x['close']:.2f} | {x['box_high']:.2f} | {x['box_position']*100:.1f}% | {r} | {v} | {x['watch_score']:.1f} |")
-    lines.append("")
+        lines.append("| 없음 | - | - | - | - | - | - | - |")
 
-    lines.append("## 우상향 종목 (완료된 일봉 기준)")
+    lines.extend(["", "## 우상향 종목 (완료된 일봉 기준)"])
     for period in UPTREND_PERIODS:
         candidates = result["uptrend_candidates"][f"{period}d"]
-        lines.append("")
-        lines.append(f"### 최근 {period}거래일: {len(candidates)}종목")
-        if candidates:
-            lines.append("| 티커 | 회사명 | 점수 | 기간 수익률 | R² | 일평균 추세기울기 | 거래량증가 | 상승/하락 거래량 | 고점대비 | 기준일 |")
-            lines.append("|---|---|---:|---:|---:|---:|---:|---:|---:|---|")
-            for item in candidates:
-                lines.append(
-                    f"| {item['symbol']} | {item['name']} | {item['quality_score']:.1f} | {item['return_pct']:+.2f}% | "
-                    f"{item['r2']:.3f} | {item['slope_pct_per_day']:+.3f}% | "
-                    f"{item['volume_growth_ratio']:.2f}x | {item['up_down_volume_ratio']:.2f}x | "
-                    f"-{item['drawdown_from_20d_close_high_pct']:.2f}% | {item['as_of_date']} |"
-                )
-        else:
-            lines.append("- 없음")
-    lines.append("")
+        lines.extend(["", f"### 최근 {period}거래일: {len(candidates)}종목", header, divider])
+        if not candidates:
+            lines.append("| 없음 | - | - | - | - | - | - | - |")
+        for x in candidates:
+            add_stock(x, [
+                x["symbol"], x.get("name", ""), fmt_fund(x.get("quality_score"), 1) + "점",
+                "수익률 " + fmt_fund(x.get("return_pct"), 2, "%"),
+                "R² " + fmt_fund(x.get("r2"), 3),
+                "거래량 " + fmt_fund(x.get("volume_growth_ratio"), 2, "x"),
+                "기울기 " + fmt_fund(x.get("slope_pct_per_day"), 3, "%"),
+                str(period) + "일"])
 
-    append_fundamental_report(lines, result)
-
+    lines.extend(["", "※ 각 종목 첫 줄은 기술적 지표, 둘째 줄은 테마·애널리스트·재무정보입니다. "
+                  "실적/예상 값은 매출·영업이익·순이익 순서이며 단위는 십억 USD입니다. "
+                  "목표가 상승여력은 해당 후보 종가 기준입니다. 데이터가 없으면 N/A입니다."])
     if result["failures"]:
-        lines.append("")
-        lines.append("## 실패/누락")
+        lines.extend(["", "## 실패/누락"])
         for item in result["failures"][:100]:
             lines.append(f"- {item['symbol']}: {item['reason']}")
         if len(result["failures"]) > 100:
             lines.append(f"- ... 추가 {len(result['failures']) - 100}건은 result.json 참고")
 
-    lines.append("## 실행 결과 요약")
-    lines.append(f"- 실행 시작(KST): {result['run']['started_kst']}")
-    lines.append(f"- 실행 종료(KST): {result['run']['finished_kst']}")
-    lines.append(f"- 모드: {result['run']['mode']}")
-    lines.append(f"- 전체 대상: {result['coverage']['target_count']}")
-    lines.append(f"- 고유 요청: {result['coverage']['unique_requested_count']}")
+    lines.extend(["", "## 실행 결과 요약",
+        f"- 실행 시작(KST): {result['run']['started_kst']}",
+        f"- 실행 종료(KST): {result['run']['finished_kst']}",
+        f"- 모드: {result['run']['mode']}",
+        f"- 전체 대상: {result['coverage']['target_count']}",
+        f"- 고유 요청: {result['coverage']['unique_requested_count']}"])
     period_summary = ' / '.join(str(p) for p in result['criteria']['box_periods'])
     breakout_complete = ' / '.join(str(result['coverage']['breakout_calc_complete'][str(p)]) for p in result['criteria']['box_periods'])
     lower_complete = ' / '.join(str(result['coverage']['lower_box_calc_complete'][str(p)]) for p in result['criteria']['box_periods'])
-    lines.append(f"- 상단돌파 계산 완료({period_summary}): {breakout_complete}")
-    lines.append(f"- 하단후보 계산 완료({period_summary}): {lower_complete}")
-    lines.append(f"- 후보 5분봉 검증: {result['coverage']['candidate_volume_validations']}")
-    lines.append(f"- 자료부족: {result['coverage']['data_shortage_count']}")
-    lines.append(f"- 미요청: {result['coverage']['unrequested_count']}")
-    lines.append("")
-
-
+    lines.extend([
+        f"- 상단돌파 계산 완료({period_summary}): {breakout_complete}",
+        f"- 하단후보 계산 완료({period_summary}): {lower_complete}",
+        f"- 후보 5분봉 검증: {result['coverage']['candidate_volume_validations']}",
+        f"- 자료부족: {result['coverage']['data_shortage_count']}",
+        f"- 미요청: {result['coverage']['unrequested_count']}", ""])
     return "\n".join(lines) + "\n"
+
 
 # 보고서 회사명 한글 표기 (미등록 종목은 원문 유지)
 KOREAN_COMPANY_NAMES = {
