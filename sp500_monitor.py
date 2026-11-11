@@ -716,6 +716,157 @@ def signal_key(sig):
     return f"{sig['symbol']}:{sig['period']}:{sig['box_high']:.4f}:{sig.get('breakout_date') or sig.get('last_5m_time_et','intraday')}"
 
 
+# Optional fundamentals/analyst enrichment. Requires FMP_API_KEY GitHub secret.
+# Only selected stocks are queried; missing/unauthorized data remain N/A.
+FMP_API_KEY = os.environ.get("FMP_API_KEY", "").strip()
+FMP_URL = "https://financialmodelingprep.com/stable"
+FMP_CACHE = Path("fmp_cache.json")
+FMP_CACHE_HOURS = 24
+
+def fmp_get(endpoint, symbol):
+    try:
+        response = requests.get(
+            FMP_URL + "/" + endpoint,
+            params={"symbol": symbol, "apikey": FMP_API_KEY},
+            timeout=12,
+        )
+        if response.status_code != 200:
+            return None
+        data = response.json()
+        return data[0] if isinstance(data, list) and data else (data if isinstance(data, dict) else None)
+    except (requests.RequestException, ValueError, TypeError):
+        return None
+
+def fmp_number(data, *keys):
+    if not isinstance(data, dict):
+        return None
+    for key in keys:
+        v = safe_float(data.get(key))
+        if v is not None and math.isfinite(v):
+            return v
+    return None
+
+def fmp_enrich(result):
+    symbols = sorted({
+        item["symbol"]
+        for group in (
+            result["upper_box_watch_candidates"],
+            result["lower_box_candidates"],
+            *result["uptrend_candidates"].values(),
+            result["new_breakout_signals"],
+        )
+        for item in group
+    })
+    cache = {}
+    if FMP_CACHE.exists():
+        try:
+            cache = json.loads(FMP_CACHE.read_text(encoding="utf-8"))
+        except (ValueError, OSError):
+            cache = {}
+    now = time.time()
+    enriched = {}
+    for symbol in symbols:
+        saved = cache.get(symbol, {})
+        if saved and now - saved.get("timestamp", 0) < FMP_CACHE_HOURS * 3600:
+            enriched[symbol] = saved.get("data", {})
+            continue
+        if not FMP_API_KEY:
+            enriched[symbol] = {}
+            continue
+        profile = fmp_get("profile", symbol)
+        ratios = fmp_get("ratios-ttm", symbol)
+        grades = fmp_get("grades-consensus", symbol)
+        target = fmp_get("price-target-consensus", symbol)
+        statement = fmp_get("income-statement", symbol)
+        estimates = None
+        try:
+            response = requests.get(FMP_URL + "/analyst-estimates",
+                params={"symbol": symbol, "period": "annual", "page": 0, "limit": 10, "apikey": FMP_API_KEY}, timeout=12)
+            if response.status_code == 200:
+                rows = response.json()
+                if isinstance(rows, list):
+                    estimates = next((x for x in rows if isinstance(x, dict) and str(x.get("date", "")) >= datetime.now(UTC).strftime("%Y-%m-%d")), None)
+        except (requests.RequestException, ValueError):
+            pass
+        strong_buy = fmp_number(grades, "strongBuy")
+        buy = fmp_number(grades, "buy")
+        hold = fmp_number(grades, "hold")
+        sell = fmp_number(grades, "sell")
+        strong_sell = fmp_number(grades, "strongSell")
+        counts = [strong_buy, buy, hold, sell, strong_sell]
+        total = sum(counts) if all(x is not None for x in counts) else None
+        price_target = fmp_number(target, "targetConsensus")
+        data = {
+            "sector": (profile or {}).get("sector"),
+            "industry": (profile or {}).get("industry"),
+            "analyst_consensus": (grades or {}).get("consensus"),
+            "analyst_buy_count": int(strong_buy + buy) if strong_buy is not None and buy is not None else None,
+            "analyst_total": int(total) if total else None,
+            "analyst_buy_pct": round((strong_buy + buy) / total * 100, 1) if total and strong_buy is not None and buy is not None else None,
+            "price_target_usd": price_target,
+            "pe": fmp_number(ratios, "priceToEarningsRatioTTM", "peRatioTTM"),
+            "pb": fmp_number(ratios, "priceToBookRatioTTM", "pbRatioTTM"),
+            "ps": fmp_number(ratios, "priceToSalesRatioTTM", "priceToSalesRatio"),
+            "revenue_usd": fmp_number(statement, "revenue"),
+            "operating_income_usd": fmp_number(statement, "operatingIncome"),
+            "net_income_usd": fmp_number(statement, "netIncome"),
+            "statement_period": (statement or {}).get("date"),
+            "estimated_revenue_usd": fmp_number(estimates, "revenueAvg"),
+            "estimated_operating_income_usd": fmp_number(estimates, "ebitAvg"),
+            "estimated_net_income_usd": fmp_number(estimates, "netIncomeAvg"),
+            "estimate_period": (estimates or {}).get("date"),
+            "source": "Financial Modeling Prep",
+            "fetched_utc": iso(now_utc()),
+        }
+        enriched[symbol] = data
+        cache[symbol] = {"timestamp": now, "data": data}
+        time.sleep(0.2)
+    if FMP_API_KEY:
+        try:
+            FMP_CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
+        except OSError:
+            pass
+    result["fundamentals"] = enriched
+    result["fundamentals_source"] = "Financial Modeling Prep" if FMP_API_KEY else "unavailable: FMP_API_KEY not configured"
+
+def fmt_fund(v, decimals=1, suffix=""):
+    n = safe_float(v)
+    return f"{n:,.{decimals}f}{suffix}" if n is not None else "N/A"
+
+def fmt_billions(v):
+    n = safe_float(v)
+    return f"{n / 1_000_000_000:,.2f}B" if n is not None else "N/A"
+
+def append_fundamental_report(lines, result):
+    data = result.get("fundamentals", {})
+    if not data:
+        return
+    lines.append("")
+    lines.append("## 종목별 테마·애널리스트·가치평가 (USD)")
+    lines.append("| 티커 | 업종/테마 | 투자의견 | 매수/전체 | 매수비율 | 목표가($) | 상승여력 | PER | PBR | PSR |")
+    lines.append("|---|---|---|---:|---:|---:|---:|---:|---:|---:|")
+    price_map = {}
+    for group in (result["upper_box_watch_candidates"], result["lower_box_candidates"], *result["uptrend_candidates"].values()):
+        for item in group:
+            price_map[item["symbol"]] = item.get("close", price_map.get(item["symbol"]))
+    for symbol, x in sorted(data.items()):
+        if not x:
+            x = {}
+        price = safe_float(price_map.get(symbol))
+        target = safe_float(x.get("price_target_usd"))
+        upside = (target / price - 1) * 100 if price and price > 0 and target is not None else None
+        count = f"{x['analyst_buy_count']}/{x['analyst_total']}" if x.get("analyst_buy_count") is not None and x.get("analyst_total") else "N/A"
+        theme = str(x.get("industry") or x.get("sector") or "N/A").replace("|", "/")
+        lines.append(f"| {symbol} | {theme} | {x.get('analyst_consensus') or 'N/A'} | {count} | {fmt_fund(x.get('analyst_buy_pct'), 1, '%')} | {fmt_fund(target, 2)} | {fmt_fund(upside, 1, '%')} | {fmt_fund(x.get('pe'))} | {fmt_fund(x.get('pb'))} | {fmt_fund(x.get('ps'))} |")
+    lines.append("")
+    lines.append("### 연간 재무실적 및 예상치 (십억 USD)")
+    lines.append("| 티커 | 실적기준일 | 매출 | 영업이익 | 순이익 | 예상기준일 | 예상매출 | 예상영업이익 | 예상순이익 |")
+    lines.append("|---|---|---:|---:|---:|---|---:|---:|---:|")
+    for symbol, x in sorted(data.items()):
+        lines.append(f"| {symbol} | {x.get('statement_period') or 'N/A'} | {fmt_billions(x.get('revenue_usd'))} | {fmt_billions(x.get('operating_income_usd'))} | {fmt_billions(x.get('net_income_usd'))} | {x.get('estimate_period') or 'N/A'} | {fmt_billions(x.get('estimated_revenue_usd'))} | {fmt_billions(x.get('estimated_operating_income_usd'))} | {fmt_billions(x.get('estimated_net_income_usd'))} |")
+    lines.append("")
+    lines.append("- 출처: Financial Modeling Prep. 데이터 제공 범위/요금제에 따라 N/A 표시. 목표가 상승여력은 보고서 종가 기준이며 실시간 수익률이 아닙니다.")
+
 def build_markdown(result):
     lines = []
     lines.append("# S&P 500 전수검사")
@@ -779,6 +930,8 @@ def build_markdown(result):
         else:
             lines.append("- 없음")
     lines.append("")
+
+    append_fundamental_report(lines, result)
 
     if result["failures"]:
         lines.append("")
@@ -1172,6 +1325,7 @@ def main():
         "seen_signal_keys": sorted(seen_signal_keys)[-5000:],
     }
 
+    fmp_enrich(result)
     RESULT_FILE.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     REPORT_FILE.write_text(build_markdown(result), encoding="utf-8")
 
