@@ -81,6 +81,28 @@ def yahoo_info(symbol):
         value = info.get(src)
         if value is not None:
             out[dest] = value
+    # Annual statement fallback when SEC ticker mapping is unavailable.
+    try:
+        statement = yf.Ticker(symbol.replace(".", "-")).income_stmt
+        if statement is not None and not statement.empty:
+            col = sorted(statement.columns, reverse=True)[0]
+            values = statement[col]
+            for key, aliases in (
+                ("revenue_usd", ("Total Revenue", "Operating Revenue")),
+                ("operating_income_usd", ("Operating Income",)),
+                ("net_income_usd", ("Net Income", "Net Income Common Stockholders")),
+            ):
+                for alias in aliases:
+                    if alias in values.index:
+                        value = values.loc[alias]
+                        if value is not None and str(value).lower() not in ("nan", "nat", "none"):
+                            out[key] = float(value)
+                            break
+            if any(key in out for key in ("revenue_usd", "operating_income_usd", "net_income_usd")):
+                out["statement_period"] = str(col.date()) if hasattr(col, "date") else str(col)[:10]
+                out["financial_source"] = "Yahoo Finance annual income statement (unofficial)"
+    except Exception:
+        pass
     # Yahoo does not consistently provide analyst buy counts. Do not invent them.
     rec = info.get("recommendationKey")
     if isinstance(rec, str) and rec.lower() not in ("none", ""):
@@ -126,15 +148,16 @@ def enrich(result, constituents):
         record = records[symbol]
         data = record.setdefault("data", {})
         fallback = index.get(symbol, {})
-        data.setdefault("sector", fallback.get("sector"))
-        data.setdefault("industry", fallback.get("industry"))
+        if not data.get("sector") and fallback.get("sector"):
+            data["sector"] = fallback["sector"]
+        if not data.get("industry") and fallback.get("industry"):
+            data["industry"] = fallback["industry"]
         if sec_requests >= 20:
             break
         if now - record.get("sec_at", 0) < 7 * DAY:
             continue
         cik = cik_map.get(symbol)
         if not cik:
-            record["sec_at"] = now
             continue
         sec_requests += 1
         try:
@@ -147,11 +170,12 @@ def enrich(result, constituents):
             errors.append(f"SEC {symbol}: {type(exc).__name__}")
             record["sec_at"] = now - 6 * DAY  # retry tomorrow, not every hour
         time.sleep(0.13)
-    # Unofficial Yahoo fields: small batch per run, 7-day TTL. Prioritize missing PER.
-    ordered = sorted(symbols, key=lambda sym: (records[sym]["data"].get("pe") is not None,
+    # Prioritize missing annual financial statements, then missing target prices.
+    ordered = sorted(symbols, key=lambda sym: (bool(records[sym]["data"].get("revenue_usd")),
+                                                bool(records[sym]["data"].get("price_target_usd")),
                                                 records[sym].get("yahoo_at", 0)))
     for symbol in ordered:
-        if yahoo_requests >= 8:
+        if yahoo_requests >= 24:
             break
         record = records[symbol]
         if now - record.get("yahoo_at", 0) < 7 * DAY:
@@ -160,7 +184,14 @@ def enrich(result, constituents):
         try:
             fresh = yahoo_info(symbol)
             if fresh:
-                record["data"].update({k: v for k, v in fresh.items() if v is not None})
+                data = record["data"]
+                new_period = fresh.get("statement_period")
+                old_period = data.get("statement_period")
+                if old_period and new_period and new_period < old_period:
+                    fresh = {k: v for k, v in fresh.items()
+                             if k not in ("revenue_usd", "operating_income_usd",
+                                          "net_income_usd", "statement_period", "financial_source")}
+                data.update({k: v for k, v in fresh.items() if v is not None})
                 record["data"]["market_source"] = "Yahoo Finance (unofficial)"
             record["yahoo_at"] = now
         except Exception as exc:
@@ -168,7 +199,15 @@ def enrich(result, constituents):
             record["yahoo_at"] = now - 6 * DAY
         time.sleep(0.3)
     for symbol in symbols:
-        records[symbol]["data"].setdefault("source", "SEC EDGAR / Yahoo Finance")
+        data = records[symbol]["data"]
+        forecast_date = str(data.get("estimate_period") or "")
+        actual_date = str(data.get("statement_period") or "")
+        if forecast_date and actual_date and forecast_date[:4].isdigit() and actual_date[:4].isdigit():
+            if int(forecast_date[:4]) - int(actual_date[:4]) > 2:
+                for key in ("estimated_revenue_usd", "estimated_operating_income_usd",
+                            "estimated_net_income_usd", "estimate_period"):
+                    data[key] = None
+        data.setdefault("source", "SEC EDGAR / Yahoo Finance")
     result["fundamentals"] = {symbol: records[symbol]["data"] for symbol in symbols}
     result["fundamentals_source"] = "SEC EDGAR + Yahoo Finance (unofficial), cached"
     result["fundamentals_api_usage"] = {
