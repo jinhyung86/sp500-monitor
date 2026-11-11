@@ -926,9 +926,12 @@ def fmt_margin(revenue, profit):
 
 def fmt_financial_triplet(data, keys):
     revenue, operating, net = (data.get(k) for k in keys)
-    return (f"{fmt_billions(revenue)} / "
-            f"{fmt_billions(operating)}{fmt_margin(revenue, operating)} / "
-            f"{fmt_billions(net)}{fmt_margin(revenue, net)}")
+    values = [fmt_billions(revenue),
+              fmt_billions(operating) + fmt_margin(revenue, operating),
+              fmt_billions(net) + fmt_margin(revenue, net)]
+    if not any(values):
+        return ""
+    return " / ".join(values)
 
 
 def candidate_fund_line(result, item):
