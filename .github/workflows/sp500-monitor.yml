@@ -54,13 +54,13 @@ jobs:
             echo "No result changes"
           else
             git commit -m "Update S&P 500 monitor result"
-            # Rebase only the generated result commit onto the latest main.
-            # Retry if another workflow updates main during the push.
+            # Generated result files are replaceable snapshots, not source code.
+            # Keep the freshly generated snapshot while rebasing on newer main.
             for attempt in 1 2 3 4 5; do
               git fetch origin main
-              if ! git rebase origin/main; then
+              if ! git -c merge.conflictstyle=merge rebase -X theirs origin/main; then
                 git rebase --abort || true
-                echo "Result commit rebase conflict; refusing to overwrite remote changes"
+                echo "Unable to rebase result snapshot"
                 exit 1
               fi
               if git push origin HEAD:main; then
