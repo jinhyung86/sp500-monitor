@@ -103,6 +103,24 @@ def yahoo_info(symbol):
                 out["financial_source"] = "Yahoo Finance annual income statement (unofficial)"
     except Exception:
         pass
+    # Reconcile recommendation counts from one Yahoo snapshot only.
+    try:
+        trend = yf.Ticker(symbol.replace(".", "-")).recommendations
+        if trend is not None and not trend.empty:
+            row = trend.iloc[0]
+            strong = int(row.get("strongBuy", 0) or 0)
+            buy = int(row.get("buy", 0) or 0)
+            hold = int(row.get("hold", 0) or 0)
+            sell = int(row.get("sell", 0) or 0)
+            strong_sell = int(row.get("strongSell", 0) or 0)
+            total = strong + buy + hold + sell + strong_sell
+            if total > 0:
+                out["analyst_buy_count"] = strong + buy
+                out["analyst_total"] = total
+                out["analyst_buy_pct"] = round((strong + buy) / total * 100, 1)
+                out["analyst_count_source"] = "Yahoo Finance recommendation trend (unofficial)"
+    except Exception:
+        pass
     # Yahoo does not consistently provide analyst buy counts. Do not invent them.
     rec = info.get("recommendationKey")
     if isinstance(rec, str) and rec.lower() not in ("none", ""):
@@ -213,6 +231,11 @@ def enrich(result, constituents):
                     fresh = {k: v for k, v in fresh.items()
                              if k not in ("revenue_usd", "operating_income_usd",
                                           "net_income_usd", "statement_period", "financial_source")}
+                # Never mix legacy FMP buy counts with Yahoo totals.
+                for key in ("analyst_buy_count", "analyst_buy_pct"):
+                    data[key] = None
+                if "analyst_count_source" not in fresh:
+                    data["analyst_total"] = None
                 data.update({k: v for k, v in fresh.items() if v is not None})
                 record["data"]["market_source"] = "Yahoo Finance (unofficial)"
             record["yahoo_at"] = now
@@ -222,6 +245,10 @@ def enrich(result, constituents):
         time.sleep(0.3)
     for symbol in symbols:
         data = records[symbol]["data"]
+        if data.get("analyst_count_source") != "Yahoo Finance recommendation trend (unofficial)":
+            data["analyst_buy_count"] = None
+            data["analyst_buy_pct"] = None
+            data["analyst_total"] = None
         forecast_date = str(data.get("estimate_period") or "")
         actual_date = str(data.get("statement_period") or "")
         if forecast_date and actual_date and forecast_date[:4].isdigit() and actual_date[:4].isdigit():
