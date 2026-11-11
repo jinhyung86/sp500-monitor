@@ -962,6 +962,32 @@ def candidate_fund_line(result, item):
             f"{x.get('statement_period') or ''} |")
 
 
+def breakout_quality_score(item):
+    """0-100: 40 volume confirmation, 30 breakout distance, 20 box duration, 10 strength."""
+    volume = safe_float(item.get("volume_ratio"))
+    if volume is None:
+        volume = safe_float(item.get("volume_growth_ratio"))
+    close = safe_float(item.get("close", item.get("price")))
+    high = safe_float(item.get("box_high"))
+    distance = max(0, (close / high - 1) * 100) if close is not None and high and high > 0 else 0
+    duration = safe_float(item.get("period")) or 0
+    return round(min(40, max(0, (volume or 0) - 1) * 40)
+                 + min(30, distance * 15)
+                 + min(20, duration / 126 * 20)
+                 + (10 if item.get("strong") else 0), 1)
+
+
+def lower_box_quality_score(item):
+    """0-100: 40 support proximity, 40 up/down volume, 20 outlier-resistant volume."""
+    pos = safe_float(item.get("box_position"))
+    ratio = safe_float(item.get("up_down_volume_ratio"))
+    clean = safe_float(item.get("up_down_volume_ratio_ex_max_day"))
+    support = max(0, 1 - (pos or 0) / 0.30)
+    return round(min(40, support * 40)
+                 + min(40, max(0, (ratio or 0) - 1) * 40)
+                 + min(20, max(0, (clean or 0) - 1) * 20), 1)
+
+
 def build_markdown(result):
     lines = ["# S&P 500 전수검사", ""]
     header = ("<table><thead><tr>"
@@ -989,7 +1015,7 @@ def build_markdown(result):
     if result["new_breakout_signals"]:
         for x in result["new_breakout_signals"]:
             add_stock(x, [
-                x["symbol"], x.get("name", ""), "상단돌파" + (" · 강함" if x.get("strong") else ""),
+                x["symbol"], x.get("name", ""), fmt_fund(x.get("quality_score"), 1) + "점 · 상단돌파" + (" · 강함" if x.get("strong") else ""),
                 fmt_fund(x.get("close", x.get("price")), 2), "상단 " + fmt_fund(x.get("box_high"), 2),
                 "거래량 " + fmt_fund(x.get("volume_ratio"), 2, "x"), "-", str(x["period"]) + "일"])
     else:
@@ -1000,7 +1026,7 @@ def build_markdown(result):
     if result["lower_box_candidates"]:
         for x in result["lower_box_candidates"]:
             add_stock(x, [
-                x["symbol"], x.get("name", ""), "하단 감시", fmt_fund(x.get("close"), 2),
+                x["symbol"], x.get("name", ""), fmt_fund(x.get("quality_score"), 1) + "점 · 하단 감시", fmt_fund(x.get("close"), 2),
                 "위치 " + fmt_fund(100*x["box_position"], 1, "%"),
                 "상승/하락 " + fmt_fund(x.get("up_down_volume_ratio"), 2, "x"),
                 "최대일 제외 " + fmt_fund(x.get("up_down_volume_ratio_ex_max_day"), 2, "x"),
@@ -1432,6 +1458,13 @@ def main():
         "failures": failure_list,
         "seen_signal_keys": sorted(seen_signal_keys)[-5000:],
     }
+
+    for item in result["new_breakout_signals"]:
+        item["quality_score"] = breakout_quality_score(item)
+    for item in result["lower_box_candidates"]:
+        item["quality_score"] = lower_box_quality_score(item)
+    result["new_breakout_signals"].sort(key=lambda x: (-x["quality_score"], x["symbol"]))
+    result["lower_box_candidates"].sort(key=lambda x: (-x["quality_score"], x["symbol"]))
 
     from fundamentals_sources import enrich as enrich_fundamentals
     enrich_fundamentals(result, constituents)
