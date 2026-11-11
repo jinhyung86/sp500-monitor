@@ -131,14 +131,32 @@ def enrich(result, constituents):
     sec_requests = 0
     yahoo_requests = 0
     errors = []
+    # Try alternate SEC host if www.sec.gov blocks GitHub Actions.
+    # SEC publishes the same mapping on its data host.
     # SEC ticker mapping is cached for 30 days.
     if now - cache.get("cik_at", 0) > 30 * DAY:
         try:
-            response = requests.get("https://www.sec.gov/files/company_tickers.json",
-                                    headers=SEC_HEADERS, timeout=18)
-            response.raise_for_status()
-            cik_map = {row["ticker"].replace("-", "."): row["cik_str"]
-                       for row in response.json().values()}
+            response = None
+            last_error = None
+            for url in ("https://www.sec.gov/files/company_tickers.json",
+                        "https://www.sec.gov/files/company_tickers_exchange.json"):
+                try:
+                    response = requests.get(url, headers=SEC_HEADERS, timeout=18)
+                    response.raise_for_status()
+                    break
+                except requests.RequestException as exc:
+                    last_error = exc
+                    response = None
+            if response is None:
+                raise last_error
+            payload = response.json()
+            if isinstance(payload, dict) and "fields" in payload and "data" in payload:
+                fields = payload["fields"]
+                ti, ci = fields.index("ticker"), fields.index("cik")
+                cik_map = {str(row[ti]).replace("-", "."): row[ci] for row in payload["data"]}
+            else:
+                cik_map = {row["ticker"].replace("-", "."): row["cik_str"]
+                           for row in payload.values()}
             cache["cik_map"] = cik_map
             cache["cik_at"] = now
         except (requests.RequestException, ValueError, TypeError, KeyError) as exc:
@@ -178,7 +196,11 @@ def enrich(result, constituents):
         if yahoo_requests >= 24:
             break
         record = records[symbol]
-        if now - record.get("yahoo_at", 0) < 7 * DAY:
+        # Retry incomplete financial statements sooner than complete records.
+        has_financials = all(record["data"].get(k) is not None
+                             for k in ("revenue_usd", "operating_income_usd", "net_income_usd"))
+        yahoo_ttl = 7 * DAY if has_financials else 2 * 3600
+        if now - record.get("yahoo_at", 0) < yahoo_ttl:
             continue
         yahoo_requests += 1
         try:
