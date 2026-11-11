@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-11T15:05:17+00:00",
-    "finished_utc": "2026-11-11T15:05:58+00:00",
-    "started_kst": "2026-11-12T00:05:17+09:00",
-    "finished_kst": "2026-11-12T00:05:58+09:00",
-    "started_et": "2026-11-11T10:05:17-05:00",
+    "started_utc": "2026-11-11T16:05:34+00:00",
+    "finished_utc": "2026-11-11T16:06:19+00:00",
+    "started_kst": "2026-11-12T01:05:34+09:00",
+    "finished_kst": "2026-11-12T01:06:19+09:00",
+    "started_et": "2026-11-11T11:05:34-05:00",
     "mode": "intraday_delayed_sip",
     "market_open_estimate": true,
-    "historical_data_end_utc": "2026-11-11T14:49:17+00:00"
+    "historical_data_end_utc": "2026-11-11T15:49:34+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -109,7 +109,7 @@
       "10d": 7,
       "20d": 3
     },
-    "candidate_price_breakouts": 4,
+    "candidate_price_breakouts": 3,
     "candidate_volume_validations": 2,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
@@ -125,8 +125,62 @@
       "intraday_5m": 4
     }
   },
-  "confirmed_signals": [],
-  "new_breakout_signals": [],
+  "confirmed_signals": [
+    {
+      "period": 21,
+      "box_high": 303.9,
+      "box_low": 271.14,
+      "box_width": 0.12082319097145389,
+      "first_close": 286.51,
+      "last_close": 303.49,
+      "first_last_move": 0.0592649471222646,
+      "valid_box": true,
+      "price": 303.915,
+      "prev_close": 303.49,
+      "symbol": "WAB",
+      "name": "Wabtec",
+      "mode": "intraday",
+      "last_5m_time_et": "2026-11-11T10:45-05:00",
+      "current_cum_volume": 270220.0,
+      "prior_session_count": 20,
+      "same_time_avg_volume": 175044.0,
+      "volume_ratio": 1.5437261488540024,
+      "confirmed": true,
+      "strong": false,
+      "signal_key": "WAB:21:303.9000:2026-11-11T10:45-05:00",
+      "quality_score": 25.2,
+      "sector": "Industrials",
+      "industry": "Construction Machinery & Heavy Transportation Equipment"
+    }
+  ],
+  "new_breakout_signals": [
+    {
+      "period": 21,
+      "box_high": 303.9,
+      "box_low": 271.14,
+      "box_width": 0.12082319097145389,
+      "first_close": 286.51,
+      "last_close": 303.49,
+      "first_last_move": 0.0592649471222646,
+      "valid_box": true,
+      "price": 303.915,
+      "prev_close": 303.49,
+      "symbol": "WAB",
+      "name": "Wabtec",
+      "mode": "intraday",
+      "last_5m_time_et": "2026-11-11T10:45-05:00",
+      "current_cum_volume": 270220.0,
+      "prior_session_count": 20,
+      "same_time_avg_volume": 175044.0,
+      "volume_ratio": 1.5437261488540024,
+      "confirmed": true,
+      "strong": false,
+      "signal_key": "WAB:21:303.9000:2026-11-11T10:45-05:00",
+      "quality_score": 25.2,
+      "sector": "Industrials",
+      "industry": "Construction Machinery & Heavy Transportation Equipment"
+    }
+  ],
   "upper_box_watch_candidates": [
     {
       "period": 63,
@@ -3041,6 +3095,7 @@
     "VRTX:42:563.7995:2026-11-02T12:45-05:00",
     "VTRS:21:18.9300:2026-10-29T09:45-04:00",
     "VTRS:63:18.9300:2026-10-29T09:45-04:00",
+    "WAB:21:303.9000:2026-11-11T10:45-05:00",
     "WEC:42:112.2400:2026-10-29",
     "WEC:42:112.2400:2026-10-29T09:45-04:00",
     "WEC:42:112.2400:2026-10-29T10:45-04:00",
@@ -3182,7 +3237,7 @@
       "analyst_total": 15,
       "analyst_buy_pct": 20.0,
       "price_target_usd": 118.73333,
-      "pe": 18.370802,
+      "pe": 18.381752,
       "pb": null,
       "ps": null,
       "revenue_usd": 17355000000.0,
@@ -3209,7 +3264,7 @@
       "analyst_total": 7,
       "analyst_buy_pct": 100.0,
       "price_target_usd": 350.16666,
-      "pe": 15.161792,
+      "pe": 15.141745,
       "pb": null,
       "ps": null,
       "revenue_usd": 12814300000.0,
@@ -3479,7 +3534,7 @@
       "analyst_total": 26,
       "analyst_buy_pct": 61.5,
       "price_target_usd": 479.33334,
-      "pe": 43.17561,
+      "pe": 43.03073,
       "pb": null,
       "ps": null,
       "revenue_usd": 129664000000.0,
@@ -3794,6 +3849,28 @@
       "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
       "estimated_net_income_method": "EPS consensus x current shares (approximation)",
       "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+    },
+    "WAB": {
+      "sector": "Industrials",
+      "industry": "Railroads",
+      "analyst_buy_count": 10,
+      "analyst_buy_pct": 83.3,
+      "analyst_total": 12,
+      "pe": 37.818012,
+      "price_target_usd": 332.83334,
+      "revenue_usd": 11167000000.0,
+      "operating_income_usd": 1793000000.0,
+      "net_income_usd": 1170000000.0,
+      "statement_period": "2025-12-31",
+      "financial_source": "Yahoo Finance annual income statement (unofficial)",
+      "estimated_revenue_usd": 13359954280.0,
+      "estimate_period": "+1y",
+      "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+      "estimated_net_income_usd": 2111054672.1504002,
+      "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+      "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+      "market_source": "Yahoo Finance (unofficial)",
+      "source": "SEC EDGAR / Yahoo Finance"
     }
   },
   "fundamentals_source": "SEC EDGAR + Yahoo Finance (unofficial), cached",
@@ -3801,9 +3878,9 @@
     "missing_actuals": 3,
     "missing_forecasts": 0,
     "sec_companyfacts_requests_this_run": 0,
-    "yahoo_symbol_requests_this_run": 3,
+    "yahoo_symbol_requests_this_run": 4,
     "fmp_requests_this_run": 0,
-    "cache_stocks": 24,
+    "cache_stocks": 25,
     "errors": [
       "SEC ticker map: HTTPError"
     ]

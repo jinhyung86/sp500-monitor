@@ -4,7 +4,8 @@
 ## 신규 상단 돌파 신호
 
 <table><thead><tr><th>종목</th><th>회사명<br>테마</th><th>점수<br>투자의견</th><th>가격(USD)<br>목표가(USD)</th><th>기술지표</th><th>거래량<br>실적(십억 USD)</th><th>추세<br>예상(십억 USD)</th><th>기간<br>실적기준일</th></tr></thead><tbody>
-<tr><td colspan="8">없음</td></tr>
+<tr><td rowspan="2">WAB</td><td>Wabtec</td><td>25.2점 · 상단돌파</td><td>303.92</td><td rowspan="2">상단 303.90</td><td>거래량 1.54x</td><td>-</td><td>21일</td></tr>
+<tr><td>산업재</td><td>매수 10/12 · 매수비율 83.3%</td><td>332.83 · 여력 9.5%</td><td>11.17B / 1.79B (+16.1%) / 1.17B (+10.5%)</td><td>13.36B (+19.6%) /  / 2.11B (+15.8%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
 </tbody></table>
 
 ## 박스권 하단 후보
@@ -96,8 +97,8 @@
 - VYLR: daily bars insufficient: 29 (need 126 for 126-day scan)
 
 ## 실행 결과 요약
-- 실행 시작(KST): 2026-11-12T00:05:17+09:00
-- 실행 종료(KST): 2026-11-12T00:05:58+09:00
+- 실행 시작(KST): 2026-11-12T01:05:34+09:00
+- 실행 종료(KST): 2026-11-12T01:06:19+09:00
 - 모드: intraday_delayed_sip
 - 전체 대상: 503
 - 고유 요청: 503
