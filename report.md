@@ -54,37 +54,37 @@
 ### 최근 5거래일: 1종목
 
 <table><thead><tr><th>종목</th><th>회사명<br>테마</th><th>점수<br>투자의견</th><th>가격<br>목표가</th><th>기술지표</th><th>거래량<br>실적(십억 USD)</th><th>추세<br>예상(십억 USD)</th><th>기간<br>실적기준일</th></tr></thead><tbody>
-<tr><td rowspan="2">EW</td><td>에드워즈 라이프사이언시스</td><td>90.4점</td><td>수익률 4.67%</td><td rowspan="2">R² 0.890</td><td>거래량 1.54x</td><td>일평균 +1.288%</td><td>5일</td></tr>
+<tr><td rowspan="2">EW</td><td>에드워즈 라이프사이언시스</td><td>90.4점</td><td>수익률 4.67%</td><td rowspan="2">위치 93.4% · 상단 105.37</td><td>거래량 1.54x</td><td>일평균 +1.288%</td><td>5일</td></tr>
 <tr><td>의료기기</td><td>Buy</td><td>목표 USD 111.64 · 여력 7.3%</td><td></td><td></td><td> </td></tr>
 </tbody></table>
 
 ### 최근 10거래일: 7종목
 
 <table><thead><tr><th>종목</th><th>회사명<br>테마</th><th>점수<br>투자의견</th><th>가격<br>목표가</th><th>기술지표</th><th>거래량<br>실적(십억 USD)</th><th>추세<br>예상(십억 USD)</th><th>기간<br>실적기준일</th></tr></thead><tbody>
-<tr><td rowspan="2">CPAY</td><td>코페이</td><td>92.9점</td><td>수익률 16.11%</td><td rowspan="2">R² 0.906</td><td>거래량 1.99x</td><td>일평균 +1.983%</td><td>10일</td></tr>
+<tr><td rowspan="2">CPAY</td><td>코페이</td><td>92.9점</td><td>수익률 16.11%</td><td rowspan="2">위치 77.8% · 상단 479.53</td><td>거래량 1.99x</td><td>일평균 +1.983%</td><td>10일</td></tr>
 <tr><td>인프라 소프트웨어</td><td>Buy</td><td>목표 USD 492.00 · 여력 7.0%</td><td></td><td></td><td> </td></tr>
-<tr><td rowspan="2">EW</td><td>에드워즈 라이프사이언시스</td><td>91.6점</td><td>수익률 13.32%</td><td rowspan="2">R² 0.906</td><td>거래량 1.54x</td><td>일평균 +1.608%</td><td>10일</td></tr>
+<tr><td rowspan="2">EW</td><td>에드워즈 라이프사이언시스</td><td>91.6점</td><td>수익률 13.32%</td><td rowspan="2">위치 93.4% · 상단 105.37</td><td>거래량 1.54x</td><td>일평균 +1.608%</td><td>10일</td></tr>
 <tr><td>의료기기</td><td>Buy</td><td>목표 USD 111.64 · 여력 7.3%</td><td></td><td></td><td> </td></tr>
-<tr><td rowspan="2">TPR</td><td>태피스트리</td><td>87.6점</td><td>수익률 21.92%</td><td rowspan="2">R² 0.932</td><td>거래량 1.55x</td><td>일평균 +2.297%</td><td>10일</td></tr>
+<tr><td rowspan="2">TPR</td><td>태피스트리</td><td>87.6점</td><td>수익률 21.92%</td><td rowspan="2">위치 75.5% · 상단 144.23</td><td>거래량 1.55x</td><td>일평균 +2.297%</td><td>10일</td></tr>
 <tr><td>경기소비재</td><td>Buy</td><td>목표 USD 163.55 · 여력 20.6%</td><td>8.00B / 1.91B (+23.9%) / 1.53B (+19.1%)</td><td></td><td>2026-06-30 </td></tr>
-<tr><td rowspan="2">MSI</td><td>모토로라 솔루션스</td><td>86.6점</td><td>수익률 9.10%</td><td rowspan="2">R² 0.854</td><td>거래량 2.03x</td><td>일평균 +1.033%</td><td>10일</td></tr>
+<tr><td rowspan="2">MSI</td><td>모토로라 솔루션스</td><td>86.6점</td><td>수익률 9.10%</td><td rowspan="2">위치 80.0% · 상단 548.28</td><td>거래량 2.03x</td><td>일평균 +1.033%</td><td>10일</td></tr>
 <tr><td>통신장비</td><td>Buy</td><td>목표 USD 547.18 · 여력 3.8%</td><td></td><td></td><td> </td></tr>
-<tr><td rowspan="2">AIZ</td><td>어슈어런트</td><td>86.1점</td><td>수익률 13.04%</td><td rowspan="2">R² 0.932</td><td>거래량 1.72x</td><td>일평균 +1.239%</td><td>10일</td></tr>
+<tr><td rowspan="2">AIZ</td><td>어슈어런트</td><td>86.1점</td><td>수익률 13.04%</td><td rowspan="2">위치 98.6% · 상단 322.93</td><td>거래량 1.72x</td><td>일평균 +1.239%</td><td>10일</td></tr>
 <tr><td>손해보험</td><td>Strong_buy</td><td>목표 USD 350.17 · 여력 8.7%</td><td></td><td></td><td> </td></tr>
-<tr><td rowspan="2">COST</td><td>코스트코</td><td>81.3점</td><td>수익률 8.49%</td><td rowspan="2">R² 0.867</td><td>거래량 1.23x</td><td>일평균 +0.908%</td><td>10일</td></tr>
+<tr><td rowspan="2">COST</td><td>코스트코</td><td>81.3점</td><td>수익률 8.49%</td><td rowspan="2">위치 87.9% · 상단 1,081.55</td><td>거래량 1.23x</td><td>일평균 +0.908%</td><td>10일</td></tr>
 <tr><td>할인 유통</td><td>Buy</td><td>목표 USD 1,073.35 · 여력 0.7%</td><td>303.15B / 11.69B (+3.9%) / 9.23B (+3.0%)</td><td></td><td>2026-08-31 </td></tr>
-<tr><td rowspan="2">MCK</td><td>맥케슨</td><td>76.2점</td><td>수익률 12.70%</td><td rowspan="2">R² 0.855</td><td>거래량 1.26x</td><td>일평균 +1.338%</td><td>10일</td></tr>
+<tr><td rowspan="2">MCK</td><td>맥케슨</td><td>76.2점</td><td>수익률 12.70%</td><td rowspan="2">위치 76.8% · 상단 1,121.50</td><td>거래량 1.26x</td><td>일평균 +1.338%</td><td>10일</td></tr>
 <tr><td>의료 유통</td><td>Buy</td><td>목표 USD 1,144.29 · 여력 5.7%</td><td></td><td></td><td> </td></tr>
 </tbody></table>
 
 ### 최근 20거래일: 3종목
 
 <table><thead><tr><th>종목</th><th>회사명<br>테마</th><th>점수<br>투자의견</th><th>가격<br>목표가</th><th>기술지표</th><th>거래량<br>실적(십억 USD)</th><th>추세<br>예상(십억 USD)</th><th>기간<br>실적기준일</th></tr></thead><tbody>
-<tr><td rowspan="2">SPG</td><td>사이먼 프로퍼티 그룹</td><td>88.3점</td><td>수익률 18.01%</td><td rowspan="2">R² 0.953</td><td>거래량 1.37x</td><td>일평균 +0.814%</td><td>20일</td></tr>
+<tr><td rowspan="2">SPG</td><td>사이먼 프로퍼티 그룹</td><td>88.3점</td><td>수익률 18.01%</td><td rowspan="2">위치 98.5% · 상단 235.05</td><td>거래량 1.37x</td><td>일평균 +0.814%</td><td>20일</td></tr>
 <tr><td>리테일 리츠</td><td>Buy</td><td>목표 USD 232.29 · 여력 -0.9%</td><td></td><td></td><td> </td></tr>
-<tr><td rowspan="2">MSI</td><td>모토로라 솔루션스</td><td>86.9점</td><td>수익률 16.75%</td><td rowspan="2">R² 0.927</td><td>거래량 2.03x</td><td>일평균 +0.757%</td><td>20일</td></tr>
+<tr><td rowspan="2">MSI</td><td>모토로라 솔루션스</td><td>86.9점</td><td>수익률 16.75%</td><td rowspan="2">위치 80.0% · 상단 548.28</td><td>거래량 2.03x</td><td>일평균 +0.757%</td><td>20일</td></tr>
 <tr><td>통신장비</td><td>Buy</td><td>목표 USD 547.18 · 여력 3.8%</td><td></td><td></td><td> </td></tr>
-<tr><td rowspan="2">HD</td><td>홈디포</td><td>75.2점</td><td>수익률 18.78%</td><td rowspan="2">R² 0.881</td><td>거래량 1.28x</td><td>일평균 +0.836%</td><td>20일</td></tr>
+<tr><td rowspan="2">HD</td><td>홈디포</td><td>75.2점</td><td>수익률 18.78%</td><td rowspan="2">위치 84.3% · 상단 362.44</td><td>거래량 1.28x</td><td>일평균 +0.836%</td><td>20일</td></tr>
 <tr><td>경기소비재</td><td>Buy</td><td>목표 USD 378.81 · 여력 7.9%</td><td></td><td></td><td> </td></tr>
 </tbody></table>
 
@@ -96,8 +96,8 @@
 - VYLR: daily bars insufficient: 29 (need 127 for 126-day scan)
 
 ## 실행 결과 요약
-- 실행 시작(KST): 2026-11-11T17:02:23+09:00
-- 실행 종료(KST): 2026-11-11T17:02:27+09:00
+- 실행 시작(KST): 2026-11-11T17:05:22+09:00
+- 실행 종료(KST): 2026-11-11T17:05:27+09:00
 - 모드: after_close_daily
 - 전체 대상: 503
 - 고유 요청: 503
