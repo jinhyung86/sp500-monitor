@@ -156,7 +156,7 @@ def load_sp500_constituents():
         for _, row in df.iterrows():
             symbol = normalize_symbol(row[symbol_col])
             name = str(row[name_col]).strip()
-            rows.append({"symbol": symbol, "name": name})
+            rows.append({"symbol": symbol, "name": name, "sector": str(row.get("GICS Sector", "")).strip(), "industry": str(row.get("GICS Sub-Industry", "")).strip()})
         if len(rows) < 490:
             raise RuntimeError(f"unexpected constituent count: {len(rows)}")
         SYMBOL_FILE.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -747,6 +747,10 @@ THEME_KO = {
     "Internet Retail": "온라인 유통", "Auto Manufacturers": "자동차 제조",
     "Banks - Diversified": "대형은행", "Capital Markets": "자본시장",
     "Oil & Gas Integrated": "종합 석유·가스", "Oil & Gas E&P": "석유·가스 탐사·생산",
+    "Discount Stores": "할인 유통", "Agricultural - Machinery": "농기계",
+    "Medical - Devices": "의료기기", "Home Improvement": "주택개선·건자재 유통",
+    "Medical - Distribution": "의료 유통", "Medical - Healthcare Plans": "건강보험",
+    "Communication Equipment": "통신장비", "Medical - Instruments & Supplies": "의료기기·소모품",
     "Specialty Business Services": "전문 기업서비스",
     "Healthcare Plans": "건강보험", "Diagnostics & Research": "진단·연구",
     "Medical Distribution": "의료 유통", "Electronic Components": "전자부품",
@@ -754,9 +758,9 @@ THEME_KO = {
 
 def theme_korean(industry, sector):
     for name in (industry, sector):
-        if name in THEME_KO:
-            return THEME_KO[name]
-    return "미분류"
+        if isinstance(name, str) and name.strip() in THEME_KO:
+            return THEME_KO[name.strip()]
+    return ""
 
 def fmp_number(data, *keys):
     if not isinstance(data, dict):
@@ -877,11 +881,11 @@ def fmp_enrich(result):
 
 def fmt_fund(v, decimals=1, suffix=""):
     n = safe_float(v)
-    return f"{n:,.{decimals}f}{suffix}" if n is not None else "N/A"
+    return f"{n:,.{decimals}f}{suffix}" if n is not None else ""
 
 def fmt_billions(v):
     n = safe_float(v)
-    return f"{n / 1_000_000_000:,.2f}B" if n is not None else "N/A"
+    return f"{n / 1_000_000_000:,.2f}B" if n is not None else ""
 
 def append_fundamental_report(lines, result):
     data = result.get("fundamentals", {})
@@ -913,18 +917,31 @@ def append_fundamental_report(lines, result):
     lines.append("")
     lines.append("- 출처: Financial Modeling Prep. 데이터 제공 범위/요금제에 따라 N/A 표시. 목표가 상승여력은 보고서 종가 기준이며 실시간 수익률이 아닙니다.")
 
+def fmt_margin(revenue, profit):
+    revenue = safe_float(revenue)
+    profit = safe_float(profit)
+    return f" ({profit / revenue * 100:+.1f}%)" if revenue is not None and revenue != 0 and profit is not None else ""
+
+
+def fmt_financial_triplet(data, keys):
+    revenue, operating, net = (data.get(k) for k in keys)
+    return (f"{fmt_billions(revenue)} / "
+            f"{fmt_billions(operating)}{fmt_margin(revenue, operating)} / "
+            f"{fmt_billions(net)}{fmt_margin(revenue, net)}")
+
+
 def candidate_fund_line(result, item):
     x = result.get("fundamentals", {}).get(item["symbol"]) or {}
-    theme = str(x.get("industry") or x.get("sector") or "N/A").replace("|", "/")
-    opinion = str(x.get("analyst_consensus") or "N/A").replace("|", "/")
+    theme = theme_korean(x.get("industry") or item.get("industry"), x.get("sector") or item.get("sector"))
+    opinion = str(x.get("analyst_consensus") or "").replace("|", "/")
     buy = (f"{x['analyst_buy_count']}/{x['analyst_total']}"
-           if x.get("analyst_buy_count") is not None and x.get("analyst_total") else "N/A")
+           if x.get("analyst_buy_count") is not None and x.get("analyst_total") else "")
     target = safe_float(x.get("price_target_usd"))
     price = safe_float(item.get("close", item.get("price")))
     upside = (100 * (target / price - 1) if target is not None and price and price > 0 else None)
     pe_value = fmt_fund(x.get("pe"), 1)
-    actual = "/".join(fmt_billions(x.get(k)) for k in ("revenue_usd", "operating_income_usd", "net_income_usd"))
-    forecast = "/".join(fmt_billions(x.get(k)) for k in ("estimated_revenue_usd", "estimated_operating_income_usd", "estimated_net_income_usd"))
+    actual = fmt_financial_triplet(x, ("revenue_usd", "operating_income_usd", "net_income_usd"))
+    forecast = fmt_financial_triplet(x, ("estimated_revenue_usd", "estimated_operating_income_usd", "estimated_net_income_usd"))
     return (f"| 정보 | {theme} | {opinion} · 매수 {buy} ({fmt_fund(x.get('analyst_buy_pct'), 1, '%')}) | "
             f"목표 USD {fmt_fund(target, 2)} · 여력 {fmt_fund(upside, 1, '%')} | "
             f"{pe_value}배 | 실적 매출/영업/순익 {actual} | "
@@ -1155,6 +1172,7 @@ def main():
 
     constituents, constituent_source, constituent_warning = load_sp500_constituents()
     symbol_to_name = {x["symbol"]: KOREAN_COMPANY_NAMES.get(x["symbol"], x["name"]) for x in constituents}
+    symbol_to_theme = {x["symbol"]: {"sector": x.get("sector"), "industry": x.get("industry")} for x in constituents}
     symbols = list(symbol_to_name)
 
     stats = {
@@ -1387,6 +1405,9 @@ def main():
     }
 
     fmp_enrich(result)
+    for group in (result["upper_box_watch_candidates"], result["lower_box_candidates"], result["new_breakout_signals"], *result["uptrend_candidates"].values()):
+        for item in group:
+            item.update({k: v for k, v in symbol_to_theme.get(item["symbol"], {}).items() if k not in item})
     RESULT_FILE.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     REPORT_FILE.write_text(build_markdown(result), encoding="utf-8")
 
