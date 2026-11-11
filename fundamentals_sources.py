@@ -107,6 +107,35 @@ def yahoo_info(symbol):
                 out["financial_source"] = "Yahoo Finance annual income statement (unofficial)"
     except Exception:
         pass
+    # Yahoo analyst annual revenue / EPS estimates. These are forecasts, not actuals.
+    try:
+        estimates = ticker.revenue_estimate
+        if estimates is not None and not estimates.empty:
+            for period in ("+1y", "0y"):
+                if period in estimates.index:
+                    value = estimates.loc[period].get("avg")
+                    if value is not None and str(value).lower() not in ("nan", "none"):
+                        out["estimated_revenue_usd"] = float(value)
+                        out["estimate_period"] = period
+                        out["estimate_source"] = "Yahoo Finance analyst revenue estimates (unofficial)"
+                        break
+    except Exception:
+        pass
+    try:
+        earnings = ticker.earnings_estimate
+        shares = info.get("sharesOutstanding")
+        if earnings is not None and not earnings.empty and shares:
+            period = out.get("estimate_period", "+1y")
+            if period in earnings.index:
+                eps = earnings.loc[period].get("avg")
+                if eps is not None and str(eps).lower() not in ("nan", "none"):
+                    # EPS times current shares is an approximation, NOT an analyst
+                    # consensus forecast for aggregate net income.
+                    out["estimated_net_income_usd"] = float(eps) * float(shares)
+                    out["estimated_net_income_method"] = "EPS consensus x current shares (approximation)"
+                    out.setdefault("estimate_period", period)
+    except Exception:
+        pass
     # Reconcile recommendation counts from one Yahoo snapshot only.
     try:
         trend = ticker.recommendations
@@ -210,10 +239,13 @@ def enrich(result, constituents):
             errors.append(f"SEC {symbol}: {type(exc).__name__}")
             record["sec_at"] = now - 6 * DAY  # retry tomorrow, not every hour
         time.sleep(0.13)
-    # Prioritize missing annual financial statements, then missing target prices.
-    ordered = sorted(symbols, key=lambda sym: (bool(records[sym]["data"].get("revenue_usd")),
-                                                bool(records[sym]["data"].get("price_target_usd")),
-                                                records[sym].get("yahoo_at", 0)))
+    # Prioritize missing actuals, forecasts, and analyst recommendation counts.
+    ordered = sorted(symbols, key=lambda sym: (
+        all(records[sym]["data"].get(k) is not None
+            for k in ("revenue_usd", "operating_income_usd", "net_income_usd")),
+        records[sym]["data"].get("estimated_revenue_usd") is not None,
+        records[sym]["data"].get("analyst_buy_count") is not None,
+        records[sym].get("yahoo_at", 0)))
     for symbol in ordered:
         if yahoo_requests >= 24:
             break
@@ -221,7 +253,9 @@ def enrich(result, constituents):
         # Retry incomplete financial statements sooner than complete records.
         has_financials = all(record["data"].get(k) is not None
                              for k in ("revenue_usd", "operating_income_usd", "net_income_usd"))
-        yahoo_ttl = 7 * DAY if has_financials else 15 * 60
+        has_forecast = record["data"].get("estimated_revenue_usd") is not None
+        has_recommendations = record["data"].get("analyst_buy_count") is not None
+        yahoo_ttl = 7 * DAY if (has_financials and has_forecast and has_recommendations) else 15 * 60
         if now - record.get("yahoo_at", 0) < yahoo_ttl:
             continue
         yahoo_requests += 1
@@ -235,11 +269,11 @@ def enrich(result, constituents):
                     fresh = {k: v for k, v in fresh.items()
                              if k not in ("revenue_usd", "operating_income_usd",
                                           "net_income_usd", "statement_period", "financial_source")}
-                # Never mix legacy FMP buy counts with Yahoo totals.
-                for key in ("analyst_buy_count", "analyst_buy_pct"):
-                    data[key] = None
-                if "analyst_count_source" not in fresh:
-                    data["analyst_total"] = None
+                # Only update counts as a consistent snapshot. Keep previous
+                # Yahoo snapshot if this request returns no recommendations.
+                if "analyst_count_source" in fresh:
+                    for key in ("analyst_buy_count", "analyst_buy_pct", "analyst_total"):
+                        data[key] = None
                 data.update({k: v for k, v in fresh.items() if v is not None})
                 record["data"]["market_source"] = "Yahoo Finance (unofficial)"
             # Incomplete results remain eligible for an earlier retry.
@@ -256,6 +290,8 @@ def enrich(result, constituents):
             data["analyst_total"] = None
         forecast_date = str(data.get("estimate_period") or "")
         actual_date = str(data.get("statement_period") or "")
+        if forecast_date in ("0y", "+1y"):
+            forecast_date = ""
         if forecast_date and actual_date and forecast_date[:4].isdigit() and actual_date[:4].isdigit():
             if int(forecast_date[:4]) - int(actual_date[:4]) > 2:
                 for key in ("estimated_revenue_usd", "estimated_operating_income_usd",
