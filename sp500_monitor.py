@@ -3,6 +3,7 @@ import json
 import math
 import time
 from io import StringIO
+from html import escape
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
@@ -955,15 +956,26 @@ def candidate_fund_line(result, item):
 
 def build_markdown(result):
     lines = ["# S&P 500 전수검사", ""]
-    header = "| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |"
-    divider = "|---|---|---|---|---|---|---|---|"
+    header = ("<table><thead><tr>"
+              "<th>종목</th><th>회사명<br>테마</th><th>점수<br>투자의견</th>"
+              "<th>가격<br>목표가</th><th>기술지표<br>PER</th>"
+              "<th>거래량<br>실적(십억 USD)</th><th>추세<br>예상(십억 USD)</th>"
+              "<th>기간<br>실적기준일</th></tr></thead><tbody>")
 
     def begin_section(title):
-        lines.extend(["", "## " + title, "", header, divider])
+        lines.extend(["", "## " + title, "", header])
 
     def add_stock(item, technical):
-        lines.append("| " + " | ".join(str(v) for v in technical) + " |")
-        lines.append(candidate_fund_line(result, item))
+        # GitHub Markdown tables cannot merge cells; HTML rowspan merges ticker vertically.
+        info = candidate_fund_line(result, item).strip("|").split(" | ")
+        if len(info) != 8:
+            raise ValueError(f"Unexpected fundamentals columns for {item['symbol']}: {len(info)}")
+        def td(value, rowspan=False):
+            attr = ' rowspan="2"' if rowspan else ""
+            return f"<td{attr}>{escape(str(value))}</td>"
+        lines.append("<tr>" + td(technical[0], rowspan=True) +
+                     "".join(td(value) for value in technical[1:]) + "</tr>")
+        lines.append("<tr>" + "".join(td(value) for value in info[1:]) + "</tr>")
 
     begin_section("신규 상단 돌파 신호")
     if result["new_breakout_signals"]:
@@ -973,8 +985,9 @@ def build_markdown(result):
                 fmt_fund(x.get("close", x.get("price")), 2), "상단 " + fmt_fund(x.get("box_high"), 2),
                 "거래량 " + fmt_fund(x.get("volume_ratio"), 2, "x"), "-", str(x["period"]) + "일"])
     else:
-        lines.append("| 없음 | - | - | - | - | - | - | - |")
+        lines.append('<tr><td colspan="8">없음</td></tr>')
 
+    lines.append("</tbody></table>")
     begin_section("박스권 하단 후보")
     if result["lower_box_candidates"]:
         for x in result["lower_box_candidates"]:
@@ -987,6 +1000,7 @@ def build_markdown(result):
     else:
         lines.append("| 없음 | - | - | - | - | - | - | - |")
 
+    lines.append("</tbody></table>")
     begin_section("박스권 상단 감시 후보 (85점 이상)")
     if result["upper_box_watch_candidates"]:
         for x in result["upper_box_watch_candidates"]:
@@ -1000,10 +1014,11 @@ def build_markdown(result):
     else:
         lines.append("| 없음 | - | - | - | - | - | - | - |")
 
+    lines.append("</tbody></table>")
     lines.extend(["", "## 우상향 종목 (완료된 일봉 기준)"])
     for period in UPTREND_PERIODS:
         candidates = result["uptrend_candidates"][f"{period}d"]
-        lines.extend(["", f"### 최근 {period}거래일: {len(candidates)}종목", header, divider])
+        lines.extend(["", f"### 최근 {period}거래일: {len(candidates)}종목", "", header])
         if not candidates:
             lines.append("| 없음 | - | - | - | - | - | - | - |")
         for x in candidates:
@@ -1014,10 +1029,11 @@ def build_markdown(result):
                 "거래량 " + fmt_fund(x.get("volume_growth_ratio"), 2, "x"),
                 "기울기 " + fmt_fund(x.get("slope_pct_per_day"), 3, "%"),
                 str(period) + "일"])
+        lines.append("</tbody></table>")
 
     lines.extend(["", "※ 각 종목 첫 줄은 기술적 지표, 둘째 줄은 테마·애널리스트·재무정보입니다. "
                   "실적/예상 값은 매출·영업이익·순이익 순서이며 단위는 십억 USD입니다. "
-                  "목표가 상승여력은 해당 후보 종가 기준입니다. 데이터가 없으면 N/A입니다."])
+                  "목표가 상승여력은 해당 후보 종가 기준입니다. 데이터가 없으면 공백으로 표시합니다."])
     if result["failures"]:
         lines.extend(["", "## 실패/누락"])
         for item in result["failures"][:100]:
