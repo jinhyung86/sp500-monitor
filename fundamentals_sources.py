@@ -71,10 +71,14 @@ def sec_companyfacts(cik):
 
 def yahoo_info(symbol):
     import yfinance as yf
-    info = yf.Ticker(symbol.replace(".", "-")).info
-    if not isinstance(info, dict):
-        return {}
+    ticker = yf.Ticker(symbol.replace(".", "-"))
     out = {}
+    try:
+        info = ticker.info
+        if not isinstance(info, dict):
+            info = {}
+    except Exception:
+        info = {}
     for src, dest in (("trailingPE", "pe"), ("targetMeanPrice", "price_target_usd"),
                       ("sector", "sector"), ("industry", "industry"),
                       ("numberOfAnalystOpinions", "analyst_total")):
@@ -83,7 +87,7 @@ def yahoo_info(symbol):
             out[dest] = value
     # Annual statement fallback when SEC ticker mapping is unavailable.
     try:
-        statement = yf.Ticker(symbol.replace(".", "-")).income_stmt
+        statement = ticker.income_stmt
         if statement is not None and not statement.empty:
             col = sorted(statement.columns, reverse=True)[0]
             values = statement[col]
@@ -105,7 +109,7 @@ def yahoo_info(symbol):
         pass
     # Reconcile recommendation counts from one Yahoo snapshot only.
     try:
-        trend = yf.Ticker(symbol.replace(".", "-")).recommendations
+        trend = ticker.recommendations
         if trend is not None and not trend.empty:
             row = trend.iloc[0]
             strong = int(row.get("strongBuy", 0) or 0)
@@ -217,7 +221,7 @@ def enrich(result, constituents):
         # Retry incomplete financial statements sooner than complete records.
         has_financials = all(record["data"].get(k) is not None
                              for k in ("revenue_usd", "operating_income_usd", "net_income_usd"))
-        yahoo_ttl = 7 * DAY if has_financials else 2 * 3600
+        yahoo_ttl = 7 * DAY if has_financials else 15 * 60
         if now - record.get("yahoo_at", 0) < yahoo_ttl:
             continue
         yahoo_requests += 1
@@ -238,6 +242,7 @@ def enrich(result, constituents):
                     data["analyst_total"] = None
                 data.update({k: v for k, v in fresh.items() if v is not None})
                 record["data"]["market_source"] = "Yahoo Finance (unofficial)"
+            # Incomplete results remain eligible for an earlier retry.
             record["yahoo_at"] = now
         except Exception as exc:
             errors.append(f"Yahoo {symbol}: {type(exc).__name__}")
@@ -259,7 +264,16 @@ def enrich(result, constituents):
         data.setdefault("source", "SEC EDGAR / Yahoo Finance")
     result["fundamentals"] = {symbol: records[symbol]["data"] for symbol in symbols}
     result["fundamentals_source"] = "SEC EDGAR + Yahoo Finance (unofficial), cached"
+    missing_actuals = sum(not all(records[s]["data"].get(k) is not None
+                                  for k in ("revenue_usd", "operating_income_usd", "net_income_usd"))
+                          for s in symbols)
+    missing_forecasts = sum(not any(records[s]["data"].get(k) is not None
+                                    for k in ("estimated_revenue_usd", "estimated_operating_income_usd",
+                                              "estimated_net_income_usd"))
+                            for s in symbols)
     result["fundamentals_api_usage"] = {
+        "missing_actuals": missing_actuals,
+        "missing_forecasts": missing_forecasts,
         "sec_companyfacts_requests_this_run": sec_requests,
         "yahoo_symbol_requests_this_run": yahoo_requests,
         "fmp_requests_this_run": 0,
