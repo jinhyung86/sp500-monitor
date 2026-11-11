@@ -936,16 +936,21 @@ def candidate_fund_line(result, item):
     opinion = str(x.get("analyst_consensus") or "").replace("|", "/")
     buy = (f"{x['analyst_buy_count']}/{x['analyst_total']}"
            if x.get("analyst_buy_count") is not None and x.get("analyst_total") else "")
+    buy_pct = fmt_fund(x.get("analyst_buy_pct"), 1, "%")
+    opinion_info = " · ".join(filter(None, (opinion, f"매수 {buy}" if buy else "",
+                                               f"매수비율 {buy_pct}" if buy_pct else "")))
     target = safe_float(x.get("price_target_usd"))
     price = safe_float(item.get("close", item.get("price")))
     upside = (100 * (target / price - 1) if target is not None and price and price > 0 else None)
-    pe_value = fmt_fund(x.get("pe"), 1)
+    target_info = " · ".join(filter(None, (
+        f"목표 USD {fmt_fund(target, 2)}" if target is not None else "",
+        f"여력 {fmt_fund(upside, 1, '%')}" if upside is not None else "")))
+    pe = fmt_fund(x.get("pe"), 1)
     actual = fmt_financial_triplet(x, ("revenue_usd", "operating_income_usd", "net_income_usd"))
     forecast = fmt_financial_triplet(x, ("estimated_revenue_usd", "estimated_operating_income_usd", "estimated_net_income_usd"))
-    return (f"| 정보 | {theme} | {opinion} · 매수 {buy} ({fmt_fund(x.get('analyst_buy_pct'), 1, '%')}) | "
-            f"목표 USD {fmt_fund(target, 2)} · 여력 {fmt_fund(upside, 1, '%')} | "
-            f"{pe_value}배 | 실적 매출/영업/순익 {actual} | "
-            f"예상 매출/영업/순익 {forecast} | {x.get('statement_period') or 'N/A'} |")
+    return (f"| 정보 | {theme} | {opinion_info} | {target_info} | "
+            f"{pe + '배' if pe else ''} | {actual} | {forecast} | "
+            f"{x.get('statement_period') or ''} |")
 
 
 def build_markdown(result):
