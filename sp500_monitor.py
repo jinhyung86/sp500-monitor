@@ -879,7 +879,7 @@ def candidate_fund_line(result, item):
     ratios = "/".join(fmt_fund(x.get(k), 1) for k in ("pe", "pb", "ps"))
     actual = "/".join(fmt_billions(x.get(k)) for k in ("revenue_usd", "operating_income_usd", "net_income_usd"))
     forecast = "/".join(fmt_billions(x.get(k)) for k in ("estimated_revenue_usd", "estimated_operating_income_usd", "estimated_net_income_usd"))
-    return (f"| ↳ 재무 | {theme} | {opinion} · 매수 {buy} ({fmt_fund(x.get('analyst_buy_pct'), 1, '%')}) | "
+    return (f"| 정보 | {theme} | {opinion} · 매수 {buy} ({fmt_fund(x.get('analyst_buy_pct'), 1, '%')}) | "
             f"목표 USD {fmt_fund(target, 2)} · 여력 {fmt_fund(upside, 1, '%')} | "
             f"PER/PBR/PSR {ratios} | 실적 매출/영업/순익 {actual} | "
             f"예상 매출/영업/순익 {forecast} | {x.get('statement_period') or 'N/A'} |")
@@ -887,7 +887,7 @@ def candidate_fund_line(result, item):
 
 def build_markdown(result):
     lines = ["# S&P 500 전수검사", ""]
-    header = "| 종목 | 회사명/테마 | 점수/투자의견 | 가격/목표가 | 지표/PER·PBR·PSR | 거래량/실적(십억 USD) | 추세/예상(십억 USD) | 기간/실적기준일 |"
+    header = "| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER·PBR·PSR | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |"
     divider = "|---|---|---|---|---|---|---|---|"
 
     def begin_section(title):
