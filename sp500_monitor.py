@@ -747,7 +747,7 @@ def build_markdown(result):
         lines.append("- 없음")
 
     lines.append("")
-    lines.append("## 박스권 상단 접근 후보 (위치 70~100%)")
+    lines.append("## 박스권 상단 감시 후보 (감시점수 85점 이상)")
     items = result["upper_box_watch_candidates"]
     lines.append("")
     if not items:
