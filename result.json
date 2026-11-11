@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-11T07:34:21+00:00",
-    "finished_utc": "2026-11-11T07:34:25+00:00",
-    "started_kst": "2026-11-11T16:34:21+09:00",
-    "finished_kst": "2026-11-11T16:34:25+09:00",
-    "started_et": "2026-11-11T02:34:21-05:00",
+    "started_utc": "2026-11-11T07:38:41+00:00",
+    "finished_utc": "2026-11-11T07:38:45+00:00",
+    "started_kst": "2026-11-11T16:38:41+09:00",
+    "finished_kst": "2026-11-11T16:38:45+09:00",
+    "started_et": "2026-11-11T02:38:41-05:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-11T07:18:21+00:00"
+    "historical_data_end_utc": "2026-11-11T07:22:41+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -3611,5 +3611,10 @@
       "fetched_utc": "2026-11-11T07:35:08+00:00"
     }
   },
-  "fundamentals_source": "Financial Modeling Prep"
+  "fundamentals_source": "Financial Modeling Prep (cached)",
+  "fundamentals_api_usage": {
+    "date_kst": "2026-11-11",
+    "requests_used_today_by_monitor": 6,
+    "daily_budget": 6
+  }
 }

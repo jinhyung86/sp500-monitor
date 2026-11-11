@@ -3,87 +3,87 @@
 
 ## 신규 상단 돌파 신호
 
-| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER·PBR·PSR | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |
+| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |
 |---|---|---|---|---|---|---|---|
 | 없음 | - | - | - | - | - | - | - |
 
 ## 박스권 하단 후보
 
-| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER·PBR·PSR | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |
+| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |
 |---|---|---|---|---|---|---|---|
 | DXCM | 덱스컴 | 하단 감시 | 79.92 | 위치 24.5% | 상승/하락 1.32x | 최대일 제외 1.18x | 42일 |
-| 정보 | Medical - Devices | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Medical - Devices | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 
 ## 박스권 상단 감시 후보 (85점 이상)
 
-| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER·PBR·PSR | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |
+| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |
 |---|---|---|---|---|---|---|---|
 | SPG | 사이먼 프로퍼티 그룹 | 99.4점 · A등급 | 234.48 | 위치 98.5% · 상단 235.05 | 거래량 1.37x | 5일 2.62% | 63일 |
-| 정보 | REIT - Retail | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | REIT - Retail | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | TKO | TKO 그룹 홀딩스 | 99.0점 · A등급 | 199.22 | 위치 97.4% · 상단 199.98 | 거래량 1.88x | 5일 2.97% | 42일 |
-| 정보 | N/A | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | N/A | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | DTE | DTE 에너지 | 98.2점 · A등급 | 138.99 | 위치 95.5% · 상단 139.89 | 거래량 1.60x | 5일 1.06% | 42일 |
-| 정보 | Regulated Electric | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Regulated Electric | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | JNJ | 존슨앤드존슨 | 97.4점 · B등급 | 280.78 | 위치 93.5% · 상단 283.25 | 거래량 1.12x | 5일 1.61% | 42일 |
-| 정보 | Drug Manufacturers - General | Buy · 매수 21/40 (52.5%) | 목표 USD 285.31 · 여력 1.6% | PER/PBR/PSR 42.6/8.4/6.8 | 실적 매출/영업/순익 94.19B/25.60B/26.80B | 예상 매출/영업/순익 135.29B/47.25B/42.63B | 2025-12-28 |
+| 정보 | Drug Manufacturers - General | Buy · 매수 21/40 (52.5%) | 목표 USD 285.31 · 여력 1.6% | 42.6배 | 실적 매출/영업/순익 94.19B/25.60B/26.80B | 예상 매출/영업/순익 135.29B/47.25B/42.63B | 2025-12-28 |
 | TECH | 바이오테크네 | 97.1점 · B등급 | 72.82 | 위치 92.7% · 상단 72.88 | 거래량 1.20x | 5일 0.12% | 63일 |
-| 정보 | N/A | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | N/A | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | HSIC | 헨리 샤인 | 96.4점 · B등급 | 88.74 | 위치 90.9% · 상단 89.68 | 거래량 1.43x | 5일 0.57% | 42일 |
-| 정보 | Medical - Distribution | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Medical - Distribution | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | AEE | 아메렌 | 96.2점 · B등급 | 113.68 | 위치 90.5% · 상단 115.31 | 거래량 1.46x | 5일 0.53% | 63일 |
-| 정보 | Regulated Electric | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Regulated Electric | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | EVRG | 에버지 | 96.1점 · B등급 | 88.44 | 위치 90.3% · 상단 89.66 | 거래량 2.14x | 5일 2.59% | 63일 |
-| 정보 | Regulated Electric | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Regulated Electric | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | VMRK | 비브마크 레지덴셜 | 95.0점 · B등급 | 65.75 | 위치 87.6% · 상단 66.75 | 거래량 1.71x | 5일 3.19% | 42일 |
-| 정보 | N/A | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | N/A | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | DE | 디어 | 94.8점 · B등급 | 687.64 | 위치 87.0% · 상단 697.00 | 거래량 1.23x | 5일 1.65% | 21일 |
-| 정보 | Agricultural - Machinery | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Agricultural - Machinery | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | TDG | 트랜스다임 그룹 | 91.7점 · C등급 | 1,225.54 | 위치 79.3% · 상단 1,265.76 | 거래량 1.36x | 5일 0.71% | 63일 |
-| 정보 | N/A | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | N/A | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | HUM | 휴매나 | 91.5점 · C등급 | 438.06 | 위치 78.9% · 상단 448.44 | 거래량 1.30x | 5일 4.95% | 21일 |
-| 정보 | Medical - Healthcare Plans | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Medical - Healthcare Plans | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | AFL | 애플랙 | 91.4점 · C등급 | 126.64 | 위치 78.5% · 상단 131.19 | 거래량 1.31x | 5일 1.07% | 63일 |
-| 정보 | Insurance - Life | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Insurance - Life | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | SOLV | 솔벤텀 | 90.2점 · C등급 | 90.08 | 위치 75.5% · 상단 93.10 | 거래량 1.75x | 5일 0.82% | 42일 |
-| 정보 | Medical - Instruments & Supplies | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Medical - Instruments & Supplies | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | UBER | 우버 | 88.4점 · C등급 | 70.05 | 위치 71.0% · 상단 72.50 | 거래량 1.41x | 5일 0.26% | 21일 |
-| 정보 | N/A | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | N/A | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 
 ## 우상향 종목 (완료된 일봉 기준)
 
 ### 최근 5거래일: 1종목
-| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER·PBR·PSR | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |
+| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |
 |---|---|---|---|---|---|---|---|
 | EW | 에드워즈 라이프사이언시스 | 90.4점 | 수익률 4.67% | R² 0.890 | 거래량 1.54x | 기울기 1.288% | 5일 |
-| 정보 | Medical - Devices | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Medical - Devices | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 
 ### 최근 10거래일: 7종목
-| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER·PBR·PSR | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |
+| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |
 |---|---|---|---|---|---|---|---|
 | CPAY | 코페이 | 92.9점 | 수익률 16.11% | R² 0.906 | 거래량 1.99x | 기울기 1.983% | 10일 |
-| 정보 | Software - Infrastructure | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Software - Infrastructure | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | EW | 에드워즈 라이프사이언시스 | 91.6점 | 수익률 13.32% | R² 0.906 | 거래량 1.54x | 기울기 1.608% | 10일 |
-| 정보 | Medical - Devices | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Medical - Devices | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | TPR | 태피스트리 | 87.6점 | 수익률 21.92% | R² 0.932 | 거래량 1.55x | 기울기 2.297% | 10일 |
-| 정보 | N/A | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | N/A | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | MSI | 모토로라 솔루션스 | 86.6점 | 수익률 9.10% | R² 0.854 | 거래량 2.03x | 기울기 1.033% | 10일 |
-| 정보 | Communication Equipment | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Communication Equipment | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | AIZ | 어슈어런트 | 86.1점 | 수익률 13.04% | R² 0.932 | 거래량 1.72x | 기울기 1.239% | 10일 |
-| 정보 | Insurance - Property & Casualty | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Insurance - Property & Casualty | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | COST | 코스트코 | 81.3점 | 수익률 8.49% | R² 0.867 | 거래량 1.23x | 기울기 0.908% | 10일 |
-| 정보 | Discount Stores | Buy · 매수 39/59 (66.1%) | 목표 USD 1,111.55 · 여력 4.3% | PER/PBR/PSR 51.3/13.2/1.6 | 실적 매출/영업/순익 303.15B/11.69B/9.23B | 예상 매출/영업/순익 437.07B/19.52B/14.50B | 2026-08-30 |
+| 정보 | Discount Stores | Buy · 매수 39/59 (66.1%) | 목표 USD 1,111.55 · 여력 4.3% | 51.3배 | 실적 매출/영업/순익 303.15B/11.69B/9.23B | 예상 매출/영업/순익 437.07B/19.52B/14.50B | 2026-08-30 |
 | MCK | 맥케슨 | 76.2점 | 수익률 12.70% | R² 0.855 | 거래량 1.26x | 기울기 1.338% | 10일 |
-| 정보 | Medical - Distribution | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Medical - Distribution | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 
 ### 최근 20거래일: 3종목
-| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER·PBR·PSR | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |
+| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |
 |---|---|---|---|---|---|---|---|
 | SPG | 사이먼 프로퍼티 그룹 | 88.3점 | 수익률 18.01% | R² 0.953 | 거래량 1.37x | 기울기 0.814% | 20일 |
-| 정보 | REIT - Retail | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | REIT - Retail | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | MSI | 모토로라 솔루션스 | 86.9점 | 수익률 16.75% | R² 0.927 | 거래량 2.03x | 기울기 0.757% | 20일 |
-| 정보 | Communication Equipment | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Communication Equipment | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 | HD | 홈디포 | 75.2점 | 수익률 18.78% | R² 0.881 | 거래량 1.28x | 기울기 0.836% | 20일 |
-| 정보 | Home Improvement | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | PER/PBR/PSR N/A/N/A/N/A | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
+| 정보 | Home Improvement | N/A · 매수 N/A (N/A) | 목표 USD N/A · 여력 N/A | N/A배 | 실적 매출/영업/순익 N/A/N/A/N/A | 예상 매출/영업/순익 N/A/N/A/N/A | N/A |
 
 ※ 각 종목 첫 줄은 기술적 지표, 둘째 줄은 테마·애널리스트·재무정보입니다. 실적/예상 값은 매출·영업이익·순이익 순서이며 단위는 십억 USD입니다. 목표가 상승여력은 해당 후보 종가 기준입니다. 데이터가 없으면 N/A입니다.
 
@@ -93,8 +93,8 @@
 - VYLR: daily bars insufficient: 29 (need 127 for 126-day scan)
 
 ## 실행 결과 요약
-- 실행 시작(KST): 2026-11-11T16:34:21+09:00
-- 실행 종료(KST): 2026-11-11T16:34:25+09:00
+- 실행 시작(KST): 2026-11-11T16:38:41+09:00
+- 실행 종료(KST): 2026-11-11T16:38:45+09:00
 - 모드: after_close_daily
 - 전체 대상: 503
 - 고유 요청: 503
