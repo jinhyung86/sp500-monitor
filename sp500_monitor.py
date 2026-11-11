@@ -721,21 +721,42 @@ def signal_key(sig):
 FMP_API_KEY = os.environ.get("FMP_API_KEY", "").strip()
 FMP_URL = "https://financialmodelingprep.com/stable"
 FMP_CACHE = Path("fmp_cache.json")
-FMP_CACHE_HOURS = 24
+FMP_DAILY_BUDGET = 6  # Conservative cap; 250/day free-plan quota is shared.
+FMP_CACHE_TTL_DAYS = 30
+FMP_ENDPOINTS = ("profile", "ratios-ttm", "grades-consensus", "price-target-consensus", "income-statement", "analyst-estimates")
 
-def fmp_get(endpoint, symbol):
-    try:
-        response = requests.get(
-            FMP_URL + "/" + endpoint,
-            params={"symbol": symbol, "apikey": FMP_API_KEY},
-            timeout=12,
-        )
-        if response.status_code != 200:
-            return None
-        data = response.json()
-        return data[0] if isinstance(data, list) and data else (data if isinstance(data, dict) else None)
-    except (requests.RequestException, ValueError, TypeError):
-        return None
+THEME_KO = {
+    "Utilities": "유틸리티", "Financial Services": "금융", "Technology": "기술",
+    "Healthcare": "헬스케어", "Consumer Cyclical": "경기소비재",
+    "Consumer Defensive": "필수소비재", "Industrials": "산업재",
+    "Real Estate": "부동산", "Energy": "에너지",
+    "Communication Services": "통신·미디어", "Basic Materials": "소재",
+    "Regulated Electric": "규제 전력", "Utilities - Regulated Electric": "규제 전력",
+    "Utilities - Renewable": "재생에너지", "Renewable Utilities": "재생에너지",
+    "Insurance - Life": "생명보험", "Insurance - Property & Casualty": "손해보험",
+    "REIT - Retail": "리테일 리츠", "REIT - Residential": "주거용 리츠",
+    "REIT - Specialty": "특수목적 리츠", "REIT - Office": "오피스 리츠",
+    "REIT - Industrial": "물류·산업 리츠", "REIT - Healthcare Facilities": "헬스케어 리츠",
+    "Semiconductors": "반도체", "Software - Infrastructure": "인프라 소프트웨어",
+    "Software - Application": "응용 소프트웨어", "Information Technology Services": "IT 서비스",
+    "Biotechnology": "바이오", "Medical Devices": "의료기기",
+    "Medical Instruments & Supplies": "의료장비·소모품",
+    "Drug Manufacturers - General": "제약", "Drug Manufacturers - Specialty & Generic": "전문·제네릭 의약품",
+    "Aerospace & Defense": "항공우주·방산", "Farm & Heavy Construction Machinery": "농기계·중장비",
+    "Entertainment": "엔터테인먼트", "Internet Content & Information": "인터넷 플랫폼",
+    "Internet Retail": "온라인 유통", "Auto Manufacturers": "자동차 제조",
+    "Banks - Diversified": "대형은행", "Capital Markets": "자본시장",
+    "Oil & Gas Integrated": "종합 석유·가스", "Oil & Gas E&P": "석유·가스 탐사·생산",
+    "Specialty Business Services": "전문 기업서비스",
+    "Healthcare Plans": "건강보험", "Diagnostics & Research": "진단·연구",
+    "Medical Distribution": "의료 유통", "Electronic Components": "전자부품",
+}
+
+def theme_korean(industry, sector):
+    for name in (industry, sector):
+        if name in THEME_KO:
+            return THEME_KO[name]
+    return "미분류"
 
 def fmp_number(data, *keys):
     if not isinstance(data, dict):
@@ -748,86 +769,111 @@ def fmp_number(data, *keys):
 
 def fmp_enrich(result):
     symbols = sorted({
-        item["symbol"]
-        for group in (
-            result["upper_box_watch_candidates"],
-            result["lower_box_candidates"],
-            *result["uptrend_candidates"].values(),
-            result["new_breakout_signals"],
-        )
-        for item in group
+        item["symbol"] for group in (
+            result["upper_box_watch_candidates"], result["lower_box_candidates"],
+            *result["uptrend_candidates"].values(), result["new_breakout_signals"]
+        ) for item in group
     })
-    cache = {}
+    cache = {"stocks": {}, "daily_usage": {}, "blocked": {}}
     if FMP_CACHE.exists():
         try:
-            cache = json.loads(FMP_CACHE.read_text(encoding="utf-8"))
-        except (ValueError, OSError):
-            cache = {}
+            stored = json.loads(FMP_CACHE.read_text(encoding="utf-8"))
+            if isinstance(stored, dict) and isinstance(stored.get("stocks"), dict):
+                cache.update(stored)
+        except (OSError, ValueError):
+            pass
+    # Preserve existing results when migrating from the old uncached version.
+    if RESULT_FILE.exists():
+        try:
+            old = json.loads(RESULT_FILE.read_text(encoding="utf-8")).get("fundamentals", {})
+            for symbol, data in old.items():
+                if symbol not in cache["stocks"] and isinstance(data, dict):
+                    cache["stocks"][symbol] = {"data": data, "checked": {}}
+        except (OSError, ValueError, AttributeError):
+            pass
+    today = datetime.now(KST).date().isoformat()
     now = time.time()
-    enriched = {}
+    usage = cache["daily_usage"]
+    usage = {day: n for day, n in usage.items() if day >= today}
+    cache["daily_usage"] = usage
+    used = int(usage.get(today, 0))
+    blocked = cache["blocked"]
+    stocks = cache["stocks"]
+    # All HTTP attempts count toward the budget; 401/402/403 endpoints are disabled
+    # for 30 days, avoiding repeated paid-plan errors.
     for symbol in symbols:
-        saved = cache.get(symbol, {})
-        if saved and now - saved.get("timestamp", 0) < FMP_CACHE_HOURS * 3600:
-            enriched[symbol] = saved.get("data", {})
-            continue
+        entry = stocks.setdefault(symbol, {"data": {}, "checked": {}})
+        entry.setdefault("data", {})
+        entry.setdefault("checked", {})
         if not FMP_API_KEY:
-            enriched[symbol] = {}
             continue
-        profile = fmp_get("profile", symbol)
-        ratios = fmp_get("ratios-ttm", symbol)
-        grades = fmp_get("grades-consensus", symbol)
-        target = fmp_get("price-target-consensus", symbol)
-        statement = fmp_get("income-statement", symbol)
-        estimates = None
-        try:
-            response = requests.get(FMP_URL + "/analyst-estimates",
-                params={"symbol": symbol, "period": "annual", "page": 0, "limit": 10, "apikey": FMP_API_KEY}, timeout=12)
-            if response.status_code == 200:
+        for endpoint in FMP_ENDPOINTS:
+            if used >= FMP_DAILY_BUDGET:
+                break
+            if now - entry["checked"].get(endpoint, 0) < FMP_CACHE_TTL_DAYS * 86400:
+                continue
+            if now - blocked.get(endpoint, 0) < 30 * 86400:
+                continue
+            params = {"symbol": symbol, "apikey": FMP_API_KEY}
+            if endpoint == "analyst-estimates":
+                params.update({"period": "annual", "page": 0, "limit": 10})
+            used += 1
+            usage[today] = used
+            entry["checked"][endpoint] = now
+            try:
+                response = requests.get(FMP_URL + "/" + endpoint, params=params, timeout=12)
+                if response.status_code in (401, 402, 403):
+                    blocked[endpoint] = now
+                    continue
+                if response.status_code == 429:
+                    used = FMP_DAILY_BUDGET
+                    usage[today] = used
+                    break
+                if response.status_code != 200:
+                    continue
                 rows = response.json()
-                if isinstance(rows, list):
-                    estimates = next((x for x in rows if isinstance(x, dict) and str(x.get("date", "")) >= datetime.now(UTC).strftime("%Y-%m-%d")), None)
-        except (requests.RequestException, ValueError):
-            pass
-        strong_buy = fmp_number(grades, "strongBuy")
-        buy = fmp_number(grades, "buy")
-        hold = fmp_number(grades, "hold")
-        sell = fmp_number(grades, "sell")
-        strong_sell = fmp_number(grades, "strongSell")
-        counts = [strong_buy, buy, hold, sell, strong_sell]
-        total = sum(counts) if all(x is not None for x in counts) else None
-        price_target = fmp_number(target, "targetConsensus")
-        data = {
-            "sector": (profile or {}).get("sector"),
-            "industry": (profile or {}).get("industry"),
-            "analyst_consensus": (grades or {}).get("consensus"),
-            "analyst_buy_count": int(strong_buy + buy) if strong_buy is not None and buy is not None else None,
-            "analyst_total": int(total) if total else None,
-            "analyst_buy_pct": round((strong_buy + buy) / total * 100, 1) if total and strong_buy is not None and buy is not None else None,
-            "price_target_usd": price_target,
-            "pe": fmp_number(ratios, "priceToEarningsRatioTTM", "peRatioTTM"),
-            "pb": fmp_number(ratios, "priceToBookRatioTTM", "pbRatioTTM"),
-            "ps": fmp_number(ratios, "priceToSalesRatioTTM", "priceToSalesRatio"),
-            "revenue_usd": fmp_number(statement, "revenue"),
-            "operating_income_usd": fmp_number(statement, "operatingIncome"),
-            "net_income_usd": fmp_number(statement, "netIncome"),
-            "statement_period": (statement or {}).get("date"),
-            "estimated_revenue_usd": fmp_number(estimates, "revenueAvg"),
-            "estimated_operating_income_usd": fmp_number(estimates, "ebitAvg"),
-            "estimated_net_income_usd": fmp_number(estimates, "netIncomeAvg"),
-            "estimate_period": (estimates or {}).get("date"),
-            "source": "Financial Modeling Prep",
-            "fetched_utc": iso(now_utc()),
-        }
-        enriched[symbol] = data
-        cache[symbol] = {"timestamp": now, "data": data}
-        time.sleep(0.2)
-    if FMP_API_KEY:
-        try:
-            FMP_CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
-        except OSError:
-            pass
-    result["fundamentals"] = enriched
-    result["fundamentals_source"] = "Financial Modeling Prep" if FMP_API_KEY else "unavailable: FMP_API_KEY not configured"
+                data = rows[0] if isinstance(rows, list) and rows else (rows if isinstance(rows, dict) else None)
+                if endpoint == "analyst-estimates" and isinstance(rows, list):
+                    data = next((x for x in rows if isinstance(x, dict) and
+                                 str(x.get("date", "")) >= today), None)
+                if not isinstance(data, dict):
+                    continue
+                out = entry["data"]
+                if endpoint == "profile":
+                    out.update({"sector": data.get("sector"), "industry": data.get("industry")})
+                elif endpoint == "ratios-ttm":
+                    out.update({"pe": fmp_number(data, "priceToEarningsRatioTTM", "peRatioTTM"),
+                                "pb": fmp_number(data, "priceToBookRatioTTM", "pbRatioTTM"),
+                                "ps": fmp_number(data, "priceToSalesRatioTTM", "priceToSalesRatio")})
+                elif endpoint == "grades-consensus":
+                    counts = [fmp_number(data, k) for k in ("strongBuy", "buy", "hold", "sell", "strongSell")]
+                    total = sum(counts) if all(x is not None for x in counts) else None
+                    buys = counts[0] + counts[1] if counts[0] is not None and counts[1] is not None else None
+                    out.update({"analyst_consensus": data.get("consensus"),
+                                "analyst_buy_count": int(buys) if buys is not None else None,
+                                "analyst_total": int(total) if total else None,
+                                "analyst_buy_pct": round(buys / total * 100, 1) if total and buys is not None else None})
+                elif endpoint == "price-target-consensus":
+                    out["price_target_usd"] = fmp_number(data, "targetConsensus")
+                elif endpoint == "income-statement":
+                    out.update({"revenue_usd": fmp_number(data, "revenue"),
+                                "operating_income_usd": fmp_number(data, "operatingIncome"),
+                                "net_income_usd": fmp_number(data, "netIncome"),
+                                "statement_period": data.get("date")})
+                elif endpoint == "analyst-estimates":
+                    out.update({"estimated_revenue_usd": fmp_number(data, "revenueAvg"),
+                                "estimated_operating_income_usd": fmp_number(data, "ebitAvg"),
+                                "estimated_net_income_usd": fmp_number(data, "netIncomeAvg"),
+                                "estimate_period": data.get("date")})
+                out["source"] = "Financial Modeling Prep"
+                out["fetched_utc"] = iso(now_utc())
+            except (requests.RequestException, ValueError, TypeError):
+                pass
+    result["fundamentals"] = {symbol: stocks.get(symbol, {}).get("data", {}) for symbol in symbols}
+    result["fundamentals_source"] = "Financial Modeling Prep (cached)" if FMP_API_KEY else "unavailable: FMP_API_KEY not configured"
+    result["fundamentals_api_usage"] = {"date_kst": today, "requests_used_today_by_monitor": used, "daily_budget": FMP_DAILY_BUDGET}
+    # Commit this file with result.json so the cache persists across GitHub runners.
+    FMP_CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
 
 def fmt_fund(v, decimals=1, suffix=""):
     n = safe_float(v)
@@ -856,7 +902,7 @@ def append_fundamental_report(lines, result):
         target = safe_float(x.get("price_target_usd"))
         upside = (target / price - 1) * 100 if price and price > 0 and target is not None else None
         count = f"{x['analyst_buy_count']}/{x['analyst_total']}" if x.get("analyst_buy_count") is not None and x.get("analyst_total") else "N/A"
-        theme = str(x.get("industry") or x.get("sector") or "N/A").replace("|", "/")
+        theme = theme_korean(x.get("industry"), x.get("sector"))
         lines.append(f"| {symbol} | {theme} | {x.get('analyst_consensus') or 'N/A'} | {count} | {fmt_fund(x.get('analyst_buy_pct'), 1, '%')} | {fmt_fund(target, 2)} | {fmt_fund(upside, 1, '%')} | {fmt_fund(x.get('pe'))} | {fmt_fund(x.get('pb'))} | {fmt_fund(x.get('ps'))} |")
     lines.append("")
     lines.append("### 연간 재무실적 및 예상치 (십억 USD)")
