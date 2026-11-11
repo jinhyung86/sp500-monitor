@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-11T07:44:57+00:00",
-    "finished_utc": "2026-11-11T07:45:01+00:00",
-    "started_kst": "2026-11-11T16:44:57+09:00",
-    "finished_kst": "2026-11-11T16:45:01+09:00",
-    "started_et": "2026-11-11T02:44:57-05:00",
+    "started_utc": "2026-11-11T07:49:59+00:00",
+    "finished_utc": "2026-11-11T07:50:04+00:00",
+    "started_kst": "2026-11-11T16:49:59+09:00",
+    "finished_kst": "2026-11-11T16:50:04+09:00",
+    "started_et": "2026-11-11T02:49:59-05:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-11T07:28:57+00:00"
+    "historical_data_end_utc": "2026-11-11T07:33:59+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -3138,13 +3138,13 @@
   "fundamentals": {
     "AEE": {
       "sector": "Utilities",
-      "industry": "Regulated Electric",
-      "analyst_consensus": null,
+      "industry": "Utilities - Regulated Electric",
+      "analyst_consensus": "Buy",
       "analyst_buy_count": null,
-      "analyst_total": null,
+      "analyst_total": 18,
       "analyst_buy_pct": null,
-      "price_target_usd": null,
-      "pe": null,
+      "price_target_usd": 116.45,
+      "pe": 19.770435,
       "pb": null,
       "ps": null,
       "revenue_usd": null,
@@ -3156,17 +3156,18 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:34:27+00:00"
+      "fetched_utc": "2026-11-11T07:34:27+00:00",
+      "market_source": "Yahoo Finance (unofficial)"
     },
     "AFL": {
       "sector": "Financial Services",
       "industry": "Insurance - Life",
-      "analyst_consensus": null,
+      "analyst_consensus": "Hold",
       "analyst_buy_count": null,
-      "analyst_total": null,
+      "analyst_total": 15,
       "analyst_buy_pct": null,
-      "price_target_usd": null,
-      "pe": null,
+      "price_target_usd": 118.73333,
+      "pe": 18.48759,
       "pb": null,
       "ps": null,
       "revenue_usd": null,
@@ -3178,17 +3179,18 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:34:29+00:00"
+      "fetched_utc": "2026-11-11T07:34:29+00:00",
+      "market_source": "Yahoo Finance (unofficial)"
     },
     "AIZ": {
       "sector": "Financial Services",
       "industry": "Insurance - Property & Casualty",
-      "analyst_consensus": null,
+      "analyst_consensus": "Strong_buy",
       "analyst_buy_count": null,
-      "analyst_total": null,
+      "analyst_total": 6,
       "analyst_buy_pct": null,
-      "price_target_usd": null,
-      "pe": null,
+      "price_target_usd": 350.16666,
+      "pe": 15.196226,
       "pb": null,
       "ps": null,
       "revenue_usd": null,
@@ -3200,7 +3202,8 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:34:31+00:00"
+      "fetched_utc": "2026-11-11T07:34:31+00:00",
+      "market_source": "Yahoo Finance (unofficial)"
     },
     "COST": {
       "sector": "Consumer Defensive",
@@ -3227,12 +3230,12 @@
     "CPAY": {
       "sector": "Technology",
       "industry": "Software - Infrastructure",
-      "analyst_consensus": null,
+      "analyst_consensus": "Buy",
       "analyst_buy_count": null,
-      "analyst_total": null,
+      "analyst_total": 15,
       "analyst_buy_pct": null,
-      "price_target_usd": null,
-      "pe": null,
+      "price_target_usd": 492.0,
+      "pe": 25.26883,
       "pb": null,
       "ps": null,
       "revenue_usd": null,
@@ -3244,17 +3247,18 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:34:34+00:00"
+      "fetched_utc": "2026-11-11T07:34:34+00:00",
+      "market_source": "Yahoo Finance (unofficial)"
     },
     "DE": {
       "sector": "Industrials",
-      "industry": "Agricultural - Machinery",
+      "industry": "Farm & Heavy Construction Machinery",
       "analyst_consensus": null,
       "analyst_buy_count": null,
-      "analyst_total": null,
+      "analyst_total": 23,
       "analyst_buy_pct": null,
-      "price_target_usd": null,
-      "pe": null,
+      "price_target_usd": 694.0078,
+      "pe": 38.223457,
       "pb": null,
       "ps": null,
       "revenue_usd": null,
@@ -3266,17 +3270,18 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:34:36+00:00"
+      "fetched_utc": "2026-11-11T07:34:36+00:00",
+      "market_source": "Yahoo Finance (unofficial)"
     },
     "DTE": {
       "sector": "Utilities",
-      "industry": "Regulated Electric",
-      "analyst_consensus": null,
+      "industry": "Utilities - Regulated Electric",
+      "analyst_consensus": "Buy",
       "analyst_buy_count": null,
-      "analyst_total": null,
+      "analyst_total": 14,
       "analyst_buy_pct": null,
-      "price_target_usd": null,
-      "pe": null,
+      "price_target_usd": 148.39285,
+      "pe": 21.187502,
       "pb": null,
       "ps": null,
       "revenue_usd": null,
@@ -3288,17 +3293,18 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:34:38+00:00"
+      "fetched_utc": "2026-11-11T07:34:38+00:00",
+      "market_source": "Yahoo Finance (unofficial)"
     },
     "DXCM": {
       "sector": "Healthcare",
-      "industry": "Medical - Devices",
-      "analyst_consensus": null,
+      "industry": "Medical Devices",
+      "analyst_consensus": "Strong_buy",
       "analyst_buy_count": null,
-      "analyst_total": null,
+      "analyst_total": 26,
       "analyst_buy_pct": null,
-      "price_target_usd": null,
-      "pe": null,
+      "price_target_usd": 98.57692,
+      "pe": 31.464567,
       "pb": null,
       "ps": null,
       "revenue_usd": null,
@@ -3310,17 +3316,18 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:34:40+00:00"
+      "fetched_utc": "2026-11-11T07:34:40+00:00",
+      "market_source": "Yahoo Finance (unofficial)"
     },
     "EVRG": {
       "sector": "Utilities",
-      "industry": "Regulated Electric",
-      "analyst_consensus": null,
+      "industry": "Utilities - Regulated Electric",
+      "analyst_consensus": "Buy",
       "analyst_buy_count": null,
-      "analyst_total": null,
+      "analyst_total": 14,
       "analyst_buy_pct": null,
-      "price_target_usd": null,
-      "pe": null,
+      "price_target_usd": 91.85714,
+      "pe": 19.697105,
       "pb": null,
       "ps": null,
       "revenue_usd": null,
@@ -3332,7 +3339,8 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:34:42+00:00"
+      "fetched_utc": "2026-11-11T07:34:42+00:00",
+      "market_source": "Yahoo Finance (unofficial)"
     },
     "EW": {
       "sector": "Healthcare",
@@ -3665,10 +3673,14 @@
       "fetched_utc": "2026-11-11T07:35:08+00:00"
     }
   },
-  "fundamentals_source": "Financial Modeling Prep (cached)",
+  "fundamentals_source": "SEC EDGAR + Yahoo Finance (unofficial), cached",
   "fundamentals_api_usage": {
-    "date_kst": "2026-11-11",
-    "requests_used_today_by_monitor": 6,
-    "daily_budget": 6
+    "sec_companyfacts_requests_this_run": 0,
+    "yahoo_symbol_requests_this_run": 8,
+    "fmp_requests_this_run": 0,
+    "cache_stocks": 24,
+    "errors": [
+      "SEC ticker map: HTTPError"
+    ]
   }
 }
