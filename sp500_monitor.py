@@ -1059,7 +1059,7 @@ def build_markdown(result):
             add_stock(x, [
                 x["symbol"], x.get("name", ""), fmt_fund(x.get("quality_score"), 1) + "점",
                 "수익률 " + fmt_fund(x.get("return_pct"), 2, "%"),
-                "R² " + fmt_fund(x.get("r2"), 3),
+                "위치 " + fmt_fund(100*x["box_position"], 1, "%") + " · 상단 " + fmt_fund(x.get("box_high"), 2) if x.get("box_position") is not None else "-",
                 "거래량 " + fmt_fund(x.get("volume_growth_ratio"), 2, "x"),
                 "일평균 +" + fmt_fund(x.get("slope_pct_per_day"), 3, "%"),
                 str(period) + "일"])
@@ -1270,6 +1270,15 @@ def main():
                     quality = uptrend_quality(completed, p)
                     if quality and quality["quality_filters_pass"]:
                         trend.update(quality)
+                        # Use a consistent 21-day price range for uptrend box position.
+                        # This is a range-position indicator, not a valid sideways-box claim.
+                        range_metrics = box_metrics(completed, 21)
+                        if range_metrics:
+                            span = range_metrics["box_high"] - range_metrics["box_low"]
+                            trend["box_position"] = ((trend["close"] - range_metrics["box_low"]) / span
+                                                     if span > 0 else None)
+                            trend["box_high"] = range_metrics["box_high"]
+                            trend["box_period"] = 21
                         trend["quality_score"] = uptrend_quality_score(trend, quality)
                         if trend["quality_score"] >= UPTREND_SCORE_MIN:
                             trend.update({"symbol": symbol, "name": symbol_to_name[symbol]})
