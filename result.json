@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-11T07:30:38+00:00",
-    "finished_utc": "2026-11-11T07:30:44+00:00",
-    "started_kst": "2026-11-11T16:30:38+09:00",
-    "finished_kst": "2026-11-11T16:30:44+09:00",
-    "started_et": "2026-11-11T02:30:38-05:00",
+    "started_utc": "2026-11-11T07:34:21+00:00",
+    "finished_utc": "2026-11-11T07:34:25+00:00",
+    "started_kst": "2026-11-11T16:34:21+09:00",
+    "finished_kst": "2026-11-11T16:34:25+09:00",
+    "started_et": "2026-11-11T02:34:21-05:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-11T07:14:38+00:00"
+    "historical_data_end_utc": "2026-11-11T07:18:21+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -3102,7 +3102,7 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:30:46+00:00"
+      "fetched_utc": "2026-11-11T07:34:27+00:00"
     },
     "AFL": {
       "sector": "Financial Services",
@@ -3124,7 +3124,7 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:30:48+00:00"
+      "fetched_utc": "2026-11-11T07:34:29+00:00"
     },
     "AIZ": {
       "sector": "Financial Services",
@@ -3146,7 +3146,7 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:30:50+00:00"
+      "fetched_utc": "2026-11-11T07:34:31+00:00"
     },
     "COST": {
       "sector": "Consumer Defensive",
@@ -3168,7 +3168,7 @@
       "estimated_net_income_usd": 14501653042.0,
       "estimate_period": "2031-08-30",
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:30:52+00:00"
+      "fetched_utc": "2026-11-11T07:34:33+00:00"
     },
     "CPAY": {
       "sector": "Technology",
@@ -3190,7 +3190,7 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:30:54+00:00"
+      "fetched_utc": "2026-11-11T07:34:34+00:00"
     },
     "DE": {
       "sector": "Industrials",
@@ -3212,7 +3212,7 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:30:56+00:00"
+      "fetched_utc": "2026-11-11T07:34:36+00:00"
     },
     "DTE": {
       "sector": "Utilities",
@@ -3234,7 +3234,7 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:30:58+00:00"
+      "fetched_utc": "2026-11-11T07:34:38+00:00"
     },
     "DXCM": {
       "sector": "Healthcare",
@@ -3256,7 +3256,7 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:00+00:00"
+      "fetched_utc": "2026-11-11T07:34:40+00:00"
     },
     "EVRG": {
       "sector": "Utilities",
@@ -3278,7 +3278,7 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:02+00:00"
+      "fetched_utc": "2026-11-11T07:34:42+00:00"
     },
     "EW": {
       "sector": "Healthcare",
@@ -3300,7 +3300,7 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:04+00:00"
+      "fetched_utc": "2026-11-11T07:34:43+00:00"
     },
     "HD": {
       "sector": "Consumer Cyclical",
@@ -3322,7 +3322,7 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:07+00:00"
+      "fetched_utc": "2026-11-11T07:34:45+00:00"
     },
     "HSIC": {
       "sector": "Healthcare",
@@ -3344,7 +3344,7 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:09+00:00"
+      "fetched_utc": "2026-11-11T07:34:47+00:00"
     },
     "HUM": {
       "sector": "Healthcare",
@@ -3366,7 +3366,7 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:11+00:00"
+      "fetched_utc": "2026-11-11T07:34:49+00:00"
     },
     "JNJ": {
       "sector": "Healthcare",
@@ -3388,7 +3388,7 @@
       "estimated_net_income_usd": 42630188045.0,
       "estimate_period": "2030-12-28",
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:13+00:00"
+      "fetched_utc": "2026-11-11T07:34:50+00:00"
     },
     "MCK": {
       "sector": "Healthcare",
@@ -3410,7 +3410,7 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:15+00:00"
+      "fetched_utc": "2026-11-11T07:34:52+00:00"
     },
     "MSI": {
       "sector": "Technology",
@@ -3432,7 +3432,7 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:17+00:00"
+      "fetched_utc": "2026-11-11T07:34:54+00:00"
     },
     "SOLV": {
       "sector": "Healthcare",
@@ -3454,7 +3454,7 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:19+00:00"
+      "fetched_utc": "2026-11-11T07:34:56+00:00"
     },
     "SPG": {
       "sector": "Real Estate",
@@ -3476,11 +3476,11 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:22+00:00"
+      "fetched_utc": "2026-11-11T07:34:57+00:00"
     },
     "TDG": {
-      "sector": "Industrials",
-      "industry": "Aerospace & Defense",
+      "sector": null,
+      "industry": null,
       "analyst_consensus": null,
       "analyst_buy_count": null,
       "analyst_total": null,
@@ -3498,11 +3498,11 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:24+00:00"
+      "fetched_utc": "2026-11-11T07:34:59+00:00"
     },
     "TECH": {
-      "sector": "Healthcare",
-      "industry": "Biotechnology",
+      "sector": null,
+      "industry": null,
       "analyst_consensus": null,
       "analyst_buy_count": null,
       "analyst_total": null,
@@ -3520,11 +3520,11 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:26+00:00"
+      "fetched_utc": "2026-11-11T07:35:01+00:00"
     },
     "TKO": {
-      "sector": "Communication Services",
-      "industry": "Entertainment",
+      "sector": null,
+      "industry": null,
       "analyst_consensus": null,
       "analyst_buy_count": null,
       "analyst_total": null,
@@ -3542,11 +3542,11 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:28+00:00"
+      "fetched_utc": "2026-11-11T07:35:03+00:00"
     },
     "TPR": {
-      "sector": "Consumer Cyclical",
-      "industry": "Luxury Goods",
+      "sector": null,
+      "industry": null,
       "analyst_consensus": null,
       "analyst_buy_count": null,
       "analyst_total": null,
@@ -3564,33 +3564,11 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:32+00:00"
+      "fetched_utc": "2026-11-11T07:35:05+00:00"
     },
     "UBER": {
-      "sector": "Technology",
-      "industry": "Software - Application",
-      "analyst_consensus": "Buy",
-      "analyst_buy_count": 52,
-      "analyst_total": 63,
-      "analyst_buy_pct": 82.5,
-      "price_target_usd": 103.22,
-      "pe": 41.20588235294117,
-      "pb": 5.1624208467406625,
-      "ps": 2.530430156034391,
-      "revenue_usd": 52017000000.0,
-      "operating_income_usd": 5565000000.0,
-      "net_income_usd": 10053000000.0,
-      "statement_period": "2025-12-31",
-      "estimated_revenue_usd": 92424000000.0,
-      "estimated_operating_income_usd": 18443763615.0,
-      "estimated_net_income_usd": 15205228701.0,
-      "estimate_period": "2030-12-31",
-      "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:34+00:00"
-    },
-    "VMRK": {
-      "sector": "Real Estate",
-      "industry": "REIT - Residential",
+      "sector": null,
+      "industry": null,
       "analyst_consensus": null,
       "analyst_buy_count": null,
       "analyst_total": null,
@@ -3608,7 +3586,29 @@
       "estimated_net_income_usd": null,
       "estimate_period": null,
       "source": "Financial Modeling Prep",
-      "fetched_utc": "2026-11-11T07:31:36+00:00"
+      "fetched_utc": "2026-11-11T07:35:07+00:00"
+    },
+    "VMRK": {
+      "sector": null,
+      "industry": null,
+      "analyst_consensus": null,
+      "analyst_buy_count": null,
+      "analyst_total": null,
+      "analyst_buy_pct": null,
+      "price_target_usd": null,
+      "pe": null,
+      "pb": null,
+      "ps": null,
+      "revenue_usd": null,
+      "operating_income_usd": null,
+      "net_income_usd": null,
+      "statement_period": null,
+      "estimated_revenue_usd": null,
+      "estimated_operating_income_usd": null,
+      "estimated_net_income_usd": null,
+      "estimate_period": null,
+      "source": "Financial Modeling Prep",
+      "fetched_utc": "2026-11-11T07:35:08+00:00"
     }
   },
   "fundamentals_source": "Financial Modeling Prep"
