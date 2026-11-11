@@ -1428,7 +1428,8 @@ def main():
         "seen_signal_keys": sorted(seen_signal_keys)[-5000:],
     }
 
-    fmp_enrich(result)
+    from fundamentals_sources import enrich as enrich_fundamentals
+    enrich_fundamentals(result, constituents)
     for group in (result["upper_box_watch_candidates"], result["lower_box_candidates"], result["new_breakout_signals"], *result["uptrend_candidates"].values()):
         for item in group:
             item.update({k: v for k, v in symbol_to_theme.get(item["symbol"], {}).items() if k not in item})
