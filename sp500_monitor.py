@@ -25,6 +25,8 @@ REQUEST_TIMEOUT = 20
 MAX_RETRIES = 1
 DAILY_LOOKBACK_DAYS = 300
 BOX_PERIODS = (21, 42, 63, 126)
+UPTREND_PERIODS = (5, 10, 20)
+UPTREND_MIN_R2 = 0.60
 BOX_MAX_WIDTH = 0.20
 BOX_FIRST_LAST_MAX_MOVE = 0.07
 DAILY_VOLUME_RATIO_MIN = 1.50
@@ -439,6 +441,46 @@ def lower_box_for_period(completed, period):
     }
 
 
+def uptrend_for_period(completed, period):
+    """Detect a rising close-price trend in completed daily bars only.
+
+    A down day is allowed. Regression R² measures trend consistency.
+    """
+    if len(completed) < period:
+        return None
+    window = completed[-period:]
+    closes = [safe_float(bar.get("c")) for bar in window]
+    if any(price is None or not math.isfinite(price) or price <= 0 for price in closes):
+        return None
+
+    n = len(closes)
+    x_mean = (n - 1) / 2.0
+    y_mean = sum(closes) / n
+    ss_x = sum((i - x_mean) ** 2 for i in range(n))
+    ss_y = sum((price - y_mean) ** 2 for price in closes)
+    if ss_x <= 0 or ss_y <= 0:
+        return None
+    covariance = sum((i - x_mean) * (price - y_mean) for i, price in enumerate(closes))
+    slope = covariance / ss_x
+    r_squared = max(0.0, min(1.0, covariance ** 2 / (ss_x * ss_y)))
+    return_pct = (closes[-1] / closes[0] - 1.0) * 100.0
+    if slope <= 0 or r_squared < UPTREND_MIN_R2 or return_pct <= 0:
+        return None
+
+    return {
+        "period": period,
+        "as_of_date": str(parse_bar_date(window[-1])),
+        "start_date": str(parse_bar_date(window[0])),
+        "start_close": closes[0],
+        "close": closes[-1],
+        "return_pct": round(return_pct, 3),
+        "r2": round(r_squared, 4),
+        "slope_pct_per_day": round(slope / y_mean * 100.0, 4),
+        "up_days": sum(closes[i] > closes[i - 1] for i in range(1, n)),
+        "down_days": sum(closes[i] < closes[i - 1] for i in range(1, n)),
+    }
+
+
 def snapshot_price(snapshot):
     if not snapshot:
         return None
@@ -567,6 +609,25 @@ def build_markdown(result):
     lines.append(f"- 미요청: {result['coverage']['unrequested_count']}")
     lines.append("")
 
+    lines.append("## 우상향 종목 (완료된 일봉 기준)")
+    lines.append(f"- 판정: 회귀 기울기 > 0, R² >= {result['criteria']['uptrend_min_r2']:.2f}, 기간 수익률 > 0%")
+    for period in UPTREND_PERIODS:
+        candidates = result["uptrend_candidates"][f"{period}d"]
+        lines.append("")
+        lines.append(f"### 최근 {period}거래일: {len(candidates)}종목")
+        if candidates:
+            lines.append("| 티커 | 회사명 | 기간 수익률 | R² | 일평균 추세기울기 | 상승일/하락일 | 기준일 |")
+            lines.append("|---|---|---:|---:|---:|---:|---|")
+            for item in candidates:
+                lines.append(
+                    f"| {item['symbol']} | {item['name']} | {item['return_pct']:+.2f}% | "
+                    f"{item['r2']:.3f} | {item['slope_pct_per_day']:+.3f}% | "
+                    f"{item['up_days']}/{item['down_days']} | {item['as_of_date']} |"
+                )
+        else:
+            lines.append("- 없음")
+    lines.append("")
+
     lines.append("## 신규 상단 돌파 신호")
     if result["new_breakout_signals"]:
         lines.append("")
@@ -640,10 +701,20 @@ def main():
     all_confirmed = []
     lower_box_candidates = []
     price_candidates = []
+    uptrend_candidates = {f"{p}d": [] for p in UPTREND_PERIODS}
+    uptrend_calc_complete = {str(p): 0 for p in UPTREND_PERIODS}
 
     for symbol in symbols:
         raw = daily_bars.get(symbol, [])
         completed = completed_daily_bars(raw, now_ny)
+
+        for p in UPTREND_PERIODS:
+            if len(completed) >= p:
+                uptrend_calc_complete[str(p)] += 1
+                trend = uptrend_for_period(completed, p)
+                if trend:
+                    trend.update({"symbol": symbol, "name": symbol_to_name[symbol]})
+                    uptrend_candidates[f"{p}d"].append(trend)
 
         for p in BOX_PERIODS:
             if len(completed) >= p:
@@ -678,6 +749,11 @@ def main():
                 if sig and sig["confirmed"]:
                     sig.update({"symbol": symbol, "name": symbol_to_name[symbol], "mode": "after_close"})
                     all_confirmed.append(sig)
+
+    for period_key in uptrend_candidates:
+        uptrend_candidates[period_key].sort(
+            key=lambda item: (-item["r2"], -item["return_pct"], item["symbol"])
+        )
 
     candidate_volume_validations = 0
     if is_open and price_candidates:
@@ -753,6 +829,8 @@ def main():
         },
         "criteria": {
             "box_periods": list(BOX_PERIODS),
+            "uptrend_periods": list(UPTREND_PERIODS),
+            "uptrend_min_r2": UPTREND_MIN_R2,
             "box_max_width": BOX_MAX_WIDTH,
             "first_to_last_close_max_abs_move": BOX_FIRST_LAST_MAX_MOVE,
             "volume_ratio_min": DAILY_VOLUME_RATIO_MIN,
@@ -767,6 +845,8 @@ def main():
             "unique_requested_count": unique_requested_count,
             "breakout_calc_complete": breakout_calc_complete,
             "lower_box_calc_complete": lower_box_calc_complete,
+            "uptrend_calc_complete": uptrend_calc_complete,
+            "uptrend_candidate_counts": {key: len(value) for key, value in uptrend_candidates.items()},
             "candidate_price_breakouts": len(price_candidates),
             "candidate_volume_validations": candidate_volume_validations,
             "data_shortage_count": len(set(data_shortage_symbols)),
@@ -782,6 +862,7 @@ def main():
         "confirmed_signals": unique_confirmed,
         "new_breakout_signals": new_signals,
         "lower_box_candidates": sorted(lower_box_candidates, key=lambda x: (x["box_position"], -x["up_down_volume_ratio"])),
+        "uptrend_candidates": uptrend_candidates,
         "failures": failure_list,
         "seen_signal_keys": sorted(seen_signal_keys)[-5000:],
     }
@@ -797,6 +878,7 @@ def main():
         "breakout_calc_complete": breakout_calc_complete,
         "lower_box_calc_complete": lower_box_calc_complete,
         "lower_box_candidates": len(lower_box_candidates),
+        "uptrend_candidates": {key: len(value) for key, value in uptrend_candidates.items()},
         "price_candidates": len(price_candidates),
         "volume_validations": candidate_volume_validations,
         "new_signals": len(new_signals),
