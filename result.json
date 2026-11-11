@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-11T07:05:18+00:00",
-    "finished_utc": "2026-11-11T07:05:23+00:00",
-    "started_kst": "2026-11-11T16:05:18+09:00",
-    "finished_kst": "2026-11-11T16:05:23+09:00",
-    "started_et": "2026-11-11T02:05:18-05:00",
+    "started_utc": "2026-11-11T07:20:22+00:00",
+    "finished_utc": "2026-11-11T07:20:26+00:00",
+    "started_kst": "2026-11-11T16:20:22+09:00",
+    "finished_kst": "2026-11-11T16:20:26+09:00",
+    "started_et": "2026-11-11T02:20:22-05:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-11T06:49:18+00:00"
+    "historical_data_end_utc": "2026-11-11T07:04:22+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -170,7 +170,7 @@
       "volume_growth_ratio": 1.374,
       "watch_score": 99.4,
       "symbol": "SPG",
-      "name": "Simon Property Group"
+      "name": "사이먼 프로퍼티 그룹"
     },
     {
       "period": 42,
@@ -191,7 +191,7 @@
       "volume_growth_ratio": 1.878,
       "watch_score": 99.0,
       "symbol": "TKO",
-      "name": "TKO Group Holdings"
+      "name": "TKO 그룹 홀딩스"
     },
     {
       "period": 42,
@@ -212,7 +212,7 @@
       "volume_growth_ratio": 1.602,
       "watch_score": 98.2,
       "symbol": "DTE",
-      "name": "DTE Energy"
+      "name": "DTE 에너지"
     },
     {
       "period": 42,
@@ -233,7 +233,7 @@
       "volume_growth_ratio": 1.12,
       "watch_score": 97.4,
       "symbol": "JNJ",
-      "name": "Johnson & Johnson"
+      "name": "존슨앤드존슨"
     },
     {
       "period": 63,
@@ -254,7 +254,7 @@
       "volume_growth_ratio": 1.199,
       "watch_score": 97.1,
       "symbol": "TECH",
-      "name": "Bio-Techne"
+      "name": "바이오테크네"
     },
     {
       "period": 42,
@@ -275,7 +275,7 @@
       "volume_growth_ratio": 1.428,
       "watch_score": 96.4,
       "symbol": "HSIC",
-      "name": "Henry Schein"
+      "name": "헨리 샤인"
     },
     {
       "period": 63,
@@ -296,7 +296,7 @@
       "volume_growth_ratio": 1.461,
       "watch_score": 96.2,
       "symbol": "AEE",
-      "name": "Ameren"
+      "name": "아메렌"
     },
     {
       "period": 63,
@@ -317,7 +317,7 @@
       "volume_growth_ratio": 2.138,
       "watch_score": 96.1,
       "symbol": "EVRG",
-      "name": "Evergy"
+      "name": "에버지"
     },
     {
       "period": 42,
@@ -338,7 +338,7 @@
       "volume_growth_ratio": 1.706,
       "watch_score": 95.0,
       "symbol": "VMRK",
-      "name": "Vivmark Residential"
+      "name": "비브마크 레지덴셜"
     },
     {
       "period": 21,
@@ -359,7 +359,7 @@
       "volume_growth_ratio": 1.232,
       "watch_score": 94.8,
       "symbol": "DE",
-      "name": "Deere & Company"
+      "name": "디어"
     },
     {
       "period": 63,
@@ -380,7 +380,7 @@
       "volume_growth_ratio": 1.358,
       "watch_score": 91.7,
       "symbol": "TDG",
-      "name": "TransDigm Group"
+      "name": "트랜스다임 그룹"
     },
     {
       "period": 21,
@@ -401,7 +401,7 @@
       "volume_growth_ratio": 1.303,
       "watch_score": 91.5,
       "symbol": "HUM",
-      "name": "Humana"
+      "name": "휴매나"
     },
     {
       "period": 63,
@@ -422,7 +422,7 @@
       "volume_growth_ratio": 1.31,
       "watch_score": 91.4,
       "symbol": "AFL",
-      "name": "Aflac"
+      "name": "애플랙"
     },
     {
       "period": 42,
@@ -443,7 +443,7 @@
       "volume_growth_ratio": 1.752,
       "watch_score": 90.2,
       "symbol": "SOLV",
-      "name": "Solventum"
+      "name": "솔벤텀"
     },
     {
       "period": 21,
@@ -464,7 +464,7 @@
       "volume_growth_ratio": 1.41,
       "watch_score": 88.4,
       "symbol": "UBER",
-      "name": "Uber"
+      "name": "우버"
     }
   ],
   "lower_box_candidates": [
@@ -489,7 +489,7 @@
       "trend_guard_pass": true,
       "qualifies": true,
       "symbol": "DXCM",
-      "name": "Dexcom"
+      "name": "덱스컴"
     }
   ],
   "uptrend_candidates": {
@@ -516,7 +516,7 @@
         "quality_filters_pass": true,
         "quality_score": 90.4,
         "symbol": "EW",
-        "name": "Edwards Lifesciences"
+        "name": "에드워즈 라이프사이언시스"
       }
     ],
     "10d": [
@@ -542,7 +542,7 @@
         "quality_filters_pass": true,
         "quality_score": 92.9,
         "symbol": "CPAY",
-        "name": "Corpay"
+        "name": "코페이"
       },
       {
         "period": 10,
@@ -566,7 +566,7 @@
         "quality_filters_pass": true,
         "quality_score": 91.6,
         "symbol": "EW",
-        "name": "Edwards Lifesciences"
+        "name": "에드워즈 라이프사이언시스"
       },
       {
         "period": 10,
@@ -590,7 +590,7 @@
         "quality_filters_pass": true,
         "quality_score": 87.6,
         "symbol": "TPR",
-        "name": "Tapestry, Inc."
+        "name": "태피스트리"
       },
       {
         "period": 10,
@@ -614,7 +614,7 @@
         "quality_filters_pass": true,
         "quality_score": 86.6,
         "symbol": "MSI",
-        "name": "Motorola Solutions"
+        "name": "모토로라 솔루션스"
       },
       {
         "period": 10,
@@ -638,7 +638,7 @@
         "quality_filters_pass": true,
         "quality_score": 86.1,
         "symbol": "AIZ",
-        "name": "Assurant"
+        "name": "어슈어런트"
       },
       {
         "period": 10,
@@ -662,7 +662,7 @@
         "quality_filters_pass": true,
         "quality_score": 81.3,
         "symbol": "COST",
-        "name": "Costco"
+        "name": "코스트코"
       },
       {
         "period": 10,
@@ -686,7 +686,7 @@
         "quality_filters_pass": true,
         "quality_score": 76.2,
         "symbol": "MCK",
-        "name": "McKesson"
+        "name": "맥케슨"
       }
     ],
     "20d": [
@@ -712,7 +712,7 @@
         "quality_filters_pass": true,
         "quality_score": 88.3,
         "symbol": "SPG",
-        "name": "Simon Property Group"
+        "name": "사이먼 프로퍼티 그룹"
       },
       {
         "period": 20,
@@ -736,7 +736,7 @@
         "quality_filters_pass": true,
         "quality_score": 86.9,
         "symbol": "MSI",
-        "name": "Motorola Solutions"
+        "name": "모토로라 솔루션스"
       },
       {
         "period": 20,
@@ -760,7 +760,7 @@
         "quality_filters_pass": true,
         "quality_score": 75.2,
         "symbol": "HD",
-        "name": "Home Depot (The)"
+        "name": "홈디포"
       }
     ]
   },
@@ -3080,5 +3080,32 @@
     "ZTS:42:82.2900:2026-11-02T14:45-05:00",
     "ZTS:63:82.2900:2026-11-02T13:45-05:00",
     "ZTS:63:82.2900:2026-11-02T14:45-05:00"
-  ]
+  ],
+  "fundamentals": {
+    "AEE": {},
+    "AFL": {},
+    "AIZ": {},
+    "COST": {},
+    "CPAY": {},
+    "DE": {},
+    "DTE": {},
+    "DXCM": {},
+    "EVRG": {},
+    "EW": {},
+    "HD": {},
+    "HSIC": {},
+    "HUM": {},
+    "JNJ": {},
+    "MCK": {},
+    "MSI": {},
+    "SOLV": {},
+    "SPG": {},
+    "TDG": {},
+    "TECH": {},
+    "TKO": {},
+    "TPR": {},
+    "UBER": {},
+    "VMRK": {}
+  },
+  "fundamentals_source": "unavailable: FMP_API_KEY not configured"
 }

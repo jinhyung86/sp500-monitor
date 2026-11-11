@@ -7,9 +7,9 @@
 
 | 티커 | 기간 | 종가 | 박스하단 | 박스상단 | 위치 | 상승/하락 거래량 | 최대거래량일 제외 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| DXCM | 덱스컴 | 79.92 | 76.52 | 90.39 | 24.5% | 1.32x | 1.18x |
+| DXCM | 42 | 79.92 | 76.52 | 90.39 | 24.5% | 1.32x | 1.18x |
 
-## 박스권 상단 접근 후보 (위치 70~100%)
+## 박스권 상단 감시 후보 (감시점수 85점 이상)
 
 | 티커 | 회사명 | 등급 | 기간 | 종가 | 박스상단 | 박스위치 | 5일 등락 | 거래량 변화 | 감시점수 |
 |---|---|:---:|---:|---:|---:|---:|---:|---:|---:|
@@ -55,13 +55,71 @@
 | HD | 홈디포 | 75.2 | +18.78% | 0.881 | +0.836% | 1.28x | 1.28x | -1.25% | 2026-11-10 |
 
 
+## 종목별 테마·애널리스트·가치평가 (USD)
+| 티커 | 업종/테마 | 투자의견 | 매수/전체 | 매수비율 | 목표가($) | 상승여력 | PER | PBR | PSR |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|
+| AEE | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| AFL | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| AIZ | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| COST | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| CPAY | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| DE | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| DTE | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| DXCM | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| EVRG | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| EW | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| HD | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| HSIC | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| HUM | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| JNJ | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| MCK | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| MSI | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| SOLV | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| SPG | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| TDG | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| TECH | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| TKO | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| TPR | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| UBER | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| VMRK | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+
+### 연간 재무실적 및 예상치 (십억 USD)
+| 티커 | 실적기준일 | 매출 | 영업이익 | 순이익 | 예상기준일 | 예상매출 | 예상영업이익 | 예상순이익 |
+|---|---|---:|---:|---:|---|---:|---:|---:|
+| AEE | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| AFL | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| AIZ | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| COST | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| CPAY | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| DE | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| DTE | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| DXCM | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| EVRG | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| EW | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| HD | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| HSIC | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| HUM | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| JNJ | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| MCK | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| MSI | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| SOLV | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| SPG | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| TDG | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| TECH | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| TKO | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| TPR | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| UBER | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| VMRK | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+
+- 출처: Financial Modeling Prep. 데이터 제공 범위/요금제에 따라 N/A 표시. 목표가 상승여력은 보고서 종가 기준이며 실시간 수익률이 아닙니다.
+
 ## 실패/누락
 - FDXF: daily bars insufficient: 114 (need 127 for 126-day scan)
 - HONA: daily bars insufficient: 104 (need 127 for 126-day scan)
 - VYLR: daily bars insufficient: 29 (need 127 for 126-day scan)
 ## 실행 결과 요약
-- 실행 시작(KST): 2026-11-11T16:05:18+09:00
-- 실행 종료(KST): 2026-11-11T16:05:23+09:00
+- 실행 시작(KST): 2026-11-11T16:20:22+09:00
+- 실행 종료(KST): 2026-11-11T16:20:26+09:00
 - 모드: after_close_daily
 - 전체 대상: 503
 - 고유 요청: 503
