@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-11T07:38:41+00:00",
-    "finished_utc": "2026-11-11T07:38:45+00:00",
-    "started_kst": "2026-11-11T16:38:41+09:00",
-    "finished_kst": "2026-11-11T16:38:45+09:00",
-    "started_et": "2026-11-11T02:38:41-05:00",
+    "started_utc": "2026-11-11T07:44:57+00:00",
+    "finished_utc": "2026-11-11T07:45:01+00:00",
+    "started_kst": "2026-11-11T16:44:57+09:00",
+    "finished_kst": "2026-11-11T16:45:01+09:00",
+    "started_et": "2026-11-11T02:44:57-05:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-11T07:22:41+00:00"
+    "historical_data_end_utc": "2026-11-11T07:28:57+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -170,7 +170,9 @@
       "volume_growth_ratio": 1.374,
       "watch_score": 99.4,
       "symbol": "SPG",
-      "name": "사이먼 프로퍼티 그룹"
+      "name": "사이먼 프로퍼티 그룹",
+      "sector": "Real Estate",
+      "industry": "Retail REITs"
     },
     {
       "period": 42,
@@ -191,7 +193,9 @@
       "volume_growth_ratio": 1.878,
       "watch_score": 99.0,
       "symbol": "TKO",
-      "name": "TKO 그룹 홀딩스"
+      "name": "TKO 그룹 홀딩스",
+      "sector": "Communication Services",
+      "industry": "Movies & Entertainment"
     },
     {
       "period": 42,
@@ -212,7 +216,9 @@
       "volume_growth_ratio": 1.602,
       "watch_score": 98.2,
       "symbol": "DTE",
-      "name": "DTE 에너지"
+      "name": "DTE 에너지",
+      "sector": "Utilities",
+      "industry": "Multi-Utilities"
     },
     {
       "period": 42,
@@ -233,7 +239,9 @@
       "volume_growth_ratio": 1.12,
       "watch_score": 97.4,
       "symbol": "JNJ",
-      "name": "존슨앤드존슨"
+      "name": "존슨앤드존슨",
+      "sector": "Health Care",
+      "industry": "Pharmaceuticals"
     },
     {
       "period": 63,
@@ -254,7 +262,9 @@
       "volume_growth_ratio": 1.199,
       "watch_score": 97.1,
       "symbol": "TECH",
-      "name": "바이오테크네"
+      "name": "바이오테크네",
+      "sector": "Health Care",
+      "industry": "Life Sciences Tools & Services"
     },
     {
       "period": 42,
@@ -275,7 +285,9 @@
       "volume_growth_ratio": 1.428,
       "watch_score": 96.4,
       "symbol": "HSIC",
-      "name": "헨리 샤인"
+      "name": "헨리 샤인",
+      "sector": "Health Care",
+      "industry": "Health Care Distributors"
     },
     {
       "period": 63,
@@ -296,7 +308,9 @@
       "volume_growth_ratio": 1.461,
       "watch_score": 96.2,
       "symbol": "AEE",
-      "name": "아메렌"
+      "name": "아메렌",
+      "sector": "Utilities",
+      "industry": "Multi-Utilities"
     },
     {
       "period": 63,
@@ -317,7 +331,9 @@
       "volume_growth_ratio": 2.138,
       "watch_score": 96.1,
       "symbol": "EVRG",
-      "name": "에버지"
+      "name": "에버지",
+      "sector": "Utilities",
+      "industry": "Electric Utilities"
     },
     {
       "period": 42,
@@ -338,7 +354,9 @@
       "volume_growth_ratio": 1.706,
       "watch_score": 95.0,
       "symbol": "VMRK",
-      "name": "비브마크 레지덴셜"
+      "name": "비브마크 레지덴셜",
+      "sector": "Real Estate",
+      "industry": "Multi-Family Residential REITs"
     },
     {
       "period": 21,
@@ -359,7 +377,9 @@
       "volume_growth_ratio": 1.232,
       "watch_score": 94.8,
       "symbol": "DE",
-      "name": "디어"
+      "name": "디어",
+      "sector": "Industrials",
+      "industry": "Agricultural & Farm Machinery"
     },
     {
       "period": 63,
@@ -380,7 +400,9 @@
       "volume_growth_ratio": 1.358,
       "watch_score": 91.7,
       "symbol": "TDG",
-      "name": "트랜스다임 그룹"
+      "name": "트랜스다임 그룹",
+      "sector": "Industrials",
+      "industry": "Aerospace & Defense"
     },
     {
       "period": 21,
@@ -401,7 +423,9 @@
       "volume_growth_ratio": 1.303,
       "watch_score": 91.5,
       "symbol": "HUM",
-      "name": "휴매나"
+      "name": "휴매나",
+      "sector": "Health Care",
+      "industry": "Managed Health Care"
     },
     {
       "period": 63,
@@ -422,7 +446,9 @@
       "volume_growth_ratio": 1.31,
       "watch_score": 91.4,
       "symbol": "AFL",
-      "name": "애플랙"
+      "name": "애플랙",
+      "sector": "Financials",
+      "industry": "Life & Health Insurance"
     },
     {
       "period": 42,
@@ -443,7 +469,9 @@
       "volume_growth_ratio": 1.752,
       "watch_score": 90.2,
       "symbol": "SOLV",
-      "name": "솔벤텀"
+      "name": "솔벤텀",
+      "sector": "Health Care",
+      "industry": "Health Care Technology"
     },
     {
       "period": 21,
@@ -464,7 +492,9 @@
       "volume_growth_ratio": 1.41,
       "watch_score": 88.4,
       "symbol": "UBER",
-      "name": "우버"
+      "name": "우버",
+      "sector": "Industrials",
+      "industry": "Passenger Ground Transportation"
     }
   ],
   "lower_box_candidates": [
@@ -489,7 +519,9 @@
       "trend_guard_pass": true,
       "qualifies": true,
       "symbol": "DXCM",
-      "name": "덱스컴"
+      "name": "덱스컴",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment"
     }
   ],
   "uptrend_candidates": {
@@ -516,7 +548,9 @@
         "quality_filters_pass": true,
         "quality_score": 90.4,
         "symbol": "EW",
-        "name": "에드워즈 라이프사이언시스"
+        "name": "에드워즈 라이프사이언시스",
+        "sector": "Health Care",
+        "industry": "Health Care Equipment"
       }
     ],
     "10d": [
@@ -542,7 +576,9 @@
         "quality_filters_pass": true,
         "quality_score": 92.9,
         "symbol": "CPAY",
-        "name": "코페이"
+        "name": "코페이",
+        "sector": "Financials",
+        "industry": "Transaction & Payment Processing Services"
       },
       {
         "period": 10,
@@ -566,7 +602,9 @@
         "quality_filters_pass": true,
         "quality_score": 91.6,
         "symbol": "EW",
-        "name": "에드워즈 라이프사이언시스"
+        "name": "에드워즈 라이프사이언시스",
+        "sector": "Health Care",
+        "industry": "Health Care Equipment"
       },
       {
         "period": 10,
@@ -590,7 +628,9 @@
         "quality_filters_pass": true,
         "quality_score": 87.6,
         "symbol": "TPR",
-        "name": "태피스트리"
+        "name": "태피스트리",
+        "sector": "Consumer Discretionary",
+        "industry": "Apparel, Accessories & Luxury Goods"
       },
       {
         "period": 10,
@@ -614,7 +654,9 @@
         "quality_filters_pass": true,
         "quality_score": 86.6,
         "symbol": "MSI",
-        "name": "모토로라 솔루션스"
+        "name": "모토로라 솔루션스",
+        "sector": "Information Technology",
+        "industry": "Communications Equipment"
       },
       {
         "period": 10,
@@ -638,7 +680,9 @@
         "quality_filters_pass": true,
         "quality_score": 86.1,
         "symbol": "AIZ",
-        "name": "어슈어런트"
+        "name": "어슈어런트",
+        "sector": "Financials",
+        "industry": "Multi-line Insurance"
       },
       {
         "period": 10,
@@ -662,7 +706,9 @@
         "quality_filters_pass": true,
         "quality_score": 81.3,
         "symbol": "COST",
-        "name": "코스트코"
+        "name": "코스트코",
+        "sector": "Consumer Staples",
+        "industry": "Consumer Staples Merchandise Retail"
       },
       {
         "period": 10,
@@ -686,7 +732,9 @@
         "quality_filters_pass": true,
         "quality_score": 76.2,
         "symbol": "MCK",
-        "name": "맥케슨"
+        "name": "맥케슨",
+        "sector": "Health Care",
+        "industry": "Health Care Distributors"
       }
     ],
     "20d": [
@@ -712,7 +760,9 @@
         "quality_filters_pass": true,
         "quality_score": 88.3,
         "symbol": "SPG",
-        "name": "사이먼 프로퍼티 그룹"
+        "name": "사이먼 프로퍼티 그룹",
+        "sector": "Real Estate",
+        "industry": "Retail REITs"
       },
       {
         "period": 20,
@@ -736,7 +786,9 @@
         "quality_filters_pass": true,
         "quality_score": 86.9,
         "symbol": "MSI",
-        "name": "모토로라 솔루션스"
+        "name": "모토로라 솔루션스",
+        "sector": "Information Technology",
+        "industry": "Communications Equipment"
       },
       {
         "period": 20,
@@ -760,7 +812,9 @@
         "quality_filters_pass": true,
         "quality_score": 75.2,
         "symbol": "HD",
-        "name": "홈디포"
+        "name": "홈디포",
+        "sector": "Consumer Discretionary",
+        "industry": "Home Improvement Retail"
       }
     ]
   },
