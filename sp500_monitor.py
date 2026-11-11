@@ -1061,7 +1061,7 @@ def build_markdown(result):
                 "수익률 " + fmt_fund(x.get("return_pct"), 2, "%"),
                 "R² " + fmt_fund(x.get("r2"), 3),
                 "거래량 " + fmt_fund(x.get("volume_growth_ratio"), 2, "x"),
-                "기울기 " + fmt_fund(x.get("slope_pct_per_day"), 3, "%"),
+                "일평균 +" + fmt_fund(x.get("slope_pct_per_day"), 3, "%"),
                 str(period) + "일"])
         lines.append("</tbody></table>")
 
