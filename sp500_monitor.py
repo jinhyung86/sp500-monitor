@@ -720,21 +720,6 @@ def build_markdown(result):
     lines = []
     lines.append("# S&P 500 전수검사")
     lines.append("")
-    lines.append(f"- 실행 시작(KST): {result['run']['started_kst']}")
-    lines.append(f"- 실행 종료(KST): {result['run']['finished_kst']}")
-    lines.append(f"- 모드: {result['run']['mode']}")
-    lines.append(f"- 전체 대상: {result['coverage']['target_count']}")
-    lines.append(f"- 고유 요청: {result['coverage']['unique_requested_count']}")
-    period_summary = ' / '.join(str(p) for p in result['criteria']['box_periods'])
-    breakout_complete = ' / '.join(str(result['coverage']['breakout_calc_complete'][str(p)]) for p in result['criteria']['box_periods'])
-    lower_complete = ' / '.join(str(result['coverage']['lower_box_calc_complete'][str(p)]) for p in result['criteria']['box_periods'])
-    lines.append(f"- 상단돌파 계산 완료({period_summary}): {breakout_complete}")
-    lines.append(f"- 하단후보 계산 완료({period_summary}): {lower_complete}")
-    lines.append(f"- 후보 5분봉 검증: {result['coverage']['candidate_volume_validations']}")
-    lines.append(f"- 자료부족: {result['coverage']['data_shortage_count']}")
-    lines.append(f"- 미요청: {result['coverage']['unrequested_count']}")
-    lines.append("")
-
     lines.append("## 신규 상단 돌파 신호")
     if result["new_breakout_signals"]:
         lines.append("")
@@ -763,12 +748,6 @@ def build_markdown(result):
 
     lines.append("")
     lines.append("## 박스권 상단 접근 후보 (위치 70~100%)")
-    lines.append("- 박스 위치 = (종가 - 박스 하단) / (박스 상단 - 박스 하단) × 100")
-    lines.append("- A: 95~100% / B: 85~95% / C: 70~85%")
-    lines.append("- 기존 유효 박스 조건 유지. 상승·거래량은 가점만 부여하며 필수 조건이 아닙니다.")
-    counts = result["coverage"]["upper_box_watch_tier_counts"]
-    lines.append(f"- 중복 제거: {len(result['upper_box_watch_candidates'])}종목 (A {counts['A']} / B {counts['B']} / C {counts['C']})")
-    lines.append(f"- 감시점수 {UPPER_BOX_WATCH_MIN_SCORE:.0f}점 이상만 표시하며, 점수 높은 순으로 정렬합니다.")
     items = result["upper_box_watch_candidates"]
     lines.append("")
     if not items:
@@ -783,11 +762,6 @@ def build_markdown(result):
     lines.append("")
 
     lines.append("## 우상향 종목 (완료된 일봉 기준)")
-    lines.append(f"- 공통 기준: R² ≥ {UPTREND_MIN_R2:.2f}, 일평균 추세 기울기 ≥ +{UPTREND_MIN_SLOPE_PCT_PER_DAY:.2f}%")
-    lines.append("- 기간별 최소 수익률: " + " / ".join(f"{p}거래일 +{UPTREND_MIN_RETURN_PCT[p]:.0f}%" for p in UPTREND_PERIODS))
-    lines.append("- 2차 필터: 5일 평균 거래량/직전 20일 ≥ 1.20배, 5일선 > 10일선 > 20일선, 상승/하락일 거래량 ≥ 1.20배")
-    lines.append("- 20일 최고 종가 대비 -5% 이내, 기간 중 하루 +10% 초과 급등 제외, 품질 점수 70점 이상")
-    lines.append("- 점수 구성: 추세 일관성 30 + 거래량 30 + 이동평균선 20 + 고점 유지 20 (투자 수익 예측 아님)")
     for period in UPTREND_PERIODS:
         candidates = result["uptrend_candidates"][f"{period}d"]
         lines.append("")
@@ -813,6 +787,23 @@ def build_markdown(result):
             lines.append(f"- {item['symbol']}: {item['reason']}")
         if len(result["failures"]) > 100:
             lines.append(f"- ... 추가 {len(result['failures']) - 100}건은 result.json 참고")
+
+    lines.append("## 실행 결과 요약")
+    lines.append(f"- 실행 시작(KST): {result['run']['started_kst']}")
+    lines.append(f"- 실행 종료(KST): {result['run']['finished_kst']}")
+    lines.append(f"- 모드: {result['run']['mode']}")
+    lines.append(f"- 전체 대상: {result['coverage']['target_count']}")
+    lines.append(f"- 고유 요청: {result['coverage']['unique_requested_count']}")
+    period_summary = ' / '.join(str(p) for p in result['criteria']['box_periods'])
+    breakout_complete = ' / '.join(str(result['coverage']['breakout_calc_complete'][str(p)]) for p in result['criteria']['box_periods'])
+    lower_complete = ' / '.join(str(result['coverage']['lower_box_calc_complete'][str(p)]) for p in result['criteria']['box_periods'])
+    lines.append(f"- 상단돌파 계산 완료({period_summary}): {breakout_complete}")
+    lines.append(f"- 하단후보 계산 완료({period_summary}): {lower_complete}")
+    lines.append(f"- 후보 5분봉 검증: {result['coverage']['candidate_volume_validations']}")
+    lines.append(f"- 자료부족: {result['coverage']['data_shortage_count']}")
+    lines.append(f"- 미요청: {result['coverage']['unrequested_count']}")
+    lines.append("")
+
 
     return "\n".join(lines) + "\n"
 
