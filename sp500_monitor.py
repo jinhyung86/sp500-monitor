@@ -889,8 +889,8 @@ def append_fundamental_report(lines, result):
         return
     lines.append("")
     lines.append("## 종목별 테마·애널리스트·가치평가 (USD)")
-    lines.append("| 티커 | 업종/테마 | 투자의견 | 매수/전체 | 매수비율 | 목표가($) | 상승여력 | PER | PBR | PSR |")
-    lines.append("|---|---|---|---:|---:|---:|---:|---:|---:|---:|")
+    lines.append("| 티커 | 업종/테마 | 투자의견 | 매수/전체 | 매수비율 | 목표가($) | 상승여력 | PER |")
+    lines.append("|---|---|---|---:|---:|---:|---:|---:|")
     price_map = {}
     for group in (result["upper_box_watch_candidates"], result["lower_box_candidates"], *result["uptrend_candidates"].values()):
         for item in group:
@@ -903,7 +903,7 @@ def append_fundamental_report(lines, result):
         upside = (target / price - 1) * 100 if price and price > 0 and target is not None else None
         count = f"{x['analyst_buy_count']}/{x['analyst_total']}" if x.get("analyst_buy_count") is not None and x.get("analyst_total") else "N/A"
         theme = theme_korean(x.get("industry"), x.get("sector"))
-        lines.append(f"| {symbol} | {theme} | {x.get('analyst_consensus') or 'N/A'} | {count} | {fmt_fund(x.get('analyst_buy_pct'), 1, '%')} | {fmt_fund(target, 2)} | {fmt_fund(upside, 1, '%')} | {fmt_fund(x.get('pe'))} | {fmt_fund(x.get('pb'))} | {fmt_fund(x.get('ps'))} |")
+        lines.append(f"| {symbol} | {theme} | {x.get('analyst_consensus') or 'N/A'} | {count} | {fmt_fund(x.get('analyst_buy_pct'), 1, '%')} | {fmt_fund(target, 2)} | {fmt_fund(upside, 1, '%')} | {fmt_fund(x.get('pe'))} |")
     lines.append("")
     lines.append("### 연간 재무실적 및 예상치 (십억 USD)")
     lines.append("| 티커 | 실적기준일 | 매출 | 영업이익 | 순이익 | 예상기준일 | 예상매출 | 예상영업이익 | 예상순이익 |")
@@ -922,18 +922,18 @@ def candidate_fund_line(result, item):
     target = safe_float(x.get("price_target_usd"))
     price = safe_float(item.get("close", item.get("price")))
     upside = (100 * (target / price - 1) if target is not None and price and price > 0 else None)
-    ratios = "/".join(fmt_fund(x.get(k), 1) for k in ("pe", "pb", "ps"))
+    pe_value = fmt_fund(x.get("pe"), 1)
     actual = "/".join(fmt_billions(x.get(k)) for k in ("revenue_usd", "operating_income_usd", "net_income_usd"))
     forecast = "/".join(fmt_billions(x.get(k)) for k in ("estimated_revenue_usd", "estimated_operating_income_usd", "estimated_net_income_usd"))
     return (f"| 정보 | {theme} | {opinion} · 매수 {buy} ({fmt_fund(x.get('analyst_buy_pct'), 1, '%')}) | "
             f"목표 USD {fmt_fund(target, 2)} · 여력 {fmt_fund(upside, 1, '%')} | "
-            f"PER/PBR/PSR {ratios} | 실적 매출/영업/순익 {actual} | "
+            f"{pe_value}배 | 실적 매출/영업/순익 {actual} | "
             f"예상 매출/영업/순익 {forecast} | {x.get('statement_period') or 'N/A'} |")
 
 
 def build_markdown(result):
     lines = ["# S&P 500 전수검사", ""]
-    header = "| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER·PBR·PSR | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |"
+    header = "| 종목 | 회사명<br>테마 | 점수<br>투자의견 | 가격<br>목표가 | 기술지표<br>PER | 거래량<br>실적(십억 USD) | 추세<br>예상(십억 USD) | 기간<br>실적기준일 |"
     divider = "|---|---|---|---|---|---|---|---|"
 
     def begin_section(title):
