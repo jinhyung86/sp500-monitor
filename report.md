@@ -24,7 +24,7 @@
 <tr><td rowspan="2">DTE</td><td>DTE 에너지</td><td>98.2점 · A등급</td><td>138.99</td><td>위치 95.5% · 상단 139.89</td><td>거래량 1.60x</td><td>5일 1.06%</td><td>42일</td></tr>
 <tr><td>규제 전력</td><td>Buy</td><td>목표 USD 148.39 · 여력 6.8%</td><td></td><td></td><td></td><td> </td></tr>
 <tr><td rowspan="2">JNJ</td><td>존슨앤드존슨</td><td>97.4점 · B등급</td><td>280.78</td><td>위치 93.5% · 상단 283.25</td><td>거래량 1.12x</td><td>5일 1.61%</td><td>42일</td></tr>
-<tr><td>제약</td><td>Buy · 매수 21/22 · 매수비율 52.5%</td><td>목표 USD 279.41 · 여력 -0.5%</td><td></td><td>94.19B / 25.60B (+27.2%) / 26.80B (+28.5%)</td><td></td><td>2025-12-31 </td></tr>
+<tr><td>제약</td><td>Buy</td><td>목표 USD 279.41 · 여력 -0.5%</td><td></td><td>94.19B / 25.60B (+27.2%) / 26.80B (+28.5%)</td><td></td><td>2025-12-31 </td></tr>
 <tr><td rowspan="2">TECH</td><td>바이오테크네</td><td>97.1점 · B등급</td><td>72.82</td><td>위치 92.7% · 상단 72.88</td><td>거래량 1.20x</td><td>5일 0.12%</td><td>63일</td></tr>
 <tr><td>바이오</td><td>Hold</td><td>목표 USD 70.50 · 여력 -3.2%</td><td></td><td>1.22B / 0.27B (+22.4%) / 0.18B (+15.0%)</td><td></td><td>2026-06-30 </td></tr>
 <tr><td rowspan="2">HSIC</td><td>헨리 샤인</td><td>96.4점 · B등급</td><td>88.74</td><td>위치 90.9% · 상단 89.68</td><td>거래량 1.43x</td><td>5일 0.57%</td><td>42일</td></tr>
@@ -72,7 +72,7 @@
 <tr><td rowspan="2">AIZ</td><td>어슈어런트</td><td>86.1점</td><td>수익률 13.04%</td><td>R² 0.932</td><td>거래량 1.72x</td><td>일평균 +1.239%</td><td>10일</td></tr>
 <tr><td>손해보험</td><td>Strong_buy</td><td>목표 USD 350.17 · 여력 8.7%</td><td></td><td></td><td></td><td> </td></tr>
 <tr><td rowspan="2">COST</td><td>코스트코</td><td>81.3점</td><td>수익률 8.49%</td><td>R² 0.867</td><td>거래량 1.23x</td><td>일평균 +0.908%</td><td>10일</td></tr>
-<tr><td>할인 유통</td><td>Buy · 매수 39/37 · 매수비율 66.1%</td><td>목표 USD 1,073.35 · 여력 0.7%</td><td></td><td>303.15B / 11.69B (+3.9%) / 9.23B (+3.0%)</td><td></td><td>2026-08-31 </td></tr>
+<tr><td>할인 유통</td><td>Buy</td><td>목표 USD 1,073.35 · 여력 0.7%</td><td></td><td>303.15B / 11.69B (+3.9%) / 9.23B (+3.0%)</td><td></td><td>2026-08-31 </td></tr>
 <tr><td rowspan="2">MCK</td><td>맥케슨</td><td>76.2점</td><td>수익률 12.70%</td><td>R² 0.855</td><td>거래량 1.26x</td><td>일평균 +1.338%</td><td>10일</td></tr>
 <tr><td>의료 유통</td><td>Buy</td><td>목표 USD 1,144.29 · 여력 5.7%</td><td></td><td></td><td></td><td> </td></tr>
 </tbody></table>
@@ -96,8 +96,8 @@
 - VYLR: daily bars insufficient: 29 (need 127 for 126-day scan)
 
 ## 실행 결과 요약
-- 실행 시작(KST): 2026-11-11T16:58:28+09:00
-- 실행 종료(KST): 2026-11-11T16:58:31+09:00
+- 실행 시작(KST): 2026-11-11T16:59:55+09:00
+- 실행 종료(KST): 2026-11-11T16:59:59+09:00
 - 모드: after_close_daily
 - 전체 대상: 503
 - 고유 요청: 503
