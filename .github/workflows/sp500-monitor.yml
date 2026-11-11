@@ -43,13 +43,14 @@ jobs:
             report.md
             sp500_symbols.json
             fmp_cache.json
+            fundamentals_cache.json
           retention-days: 30
 
       - name: Commit latest result
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add result.json report.md sp500_symbols.json fmp_cache.json
+          git add result.json report.md sp500_symbols.json fmp_cache.json fundamentals_cache.json
           if git diff --cached --quiet; then
             echo "No result changes"
           else
