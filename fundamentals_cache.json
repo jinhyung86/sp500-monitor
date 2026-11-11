@@ -40,16 +40,16 @@
         "analyst_total": 15,
         "analyst_buy_pct": 20.0,
         "price_target_usd": 118.73333,
-        "pe": 18.483212,
+        "pe": 18.51022,
         "pb": null,
         "ps": null,
         "revenue_usd": 17355000000.0,
         "operating_income_usd": null,
         "net_income_usd": 3646000000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": 17237511790.0,
+        "estimated_revenue_usd": 17180178460.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": 3798592112.9412,
+        "estimated_net_income_usd": 3800239154.4509997,
         "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:29+00:00",
@@ -60,7 +60,7 @@
         "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794423978.697766
+      "yahoo_at": 1794427592.368611
     },
     "AIZ": {
       "data": {
@@ -71,7 +71,7 @@
         "analyst_total": 7,
         "analyst_buy_pct": 100.0,
         "price_target_usd": 350.16666,
-        "pe": 15.1681595,
+        "pe": 15.177359,
         "pb": null,
         "ps": null,
         "revenue_usd": 12814300000.0,
@@ -91,7 +91,7 @@
         "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794423978.697766
+      "yahoo_at": 1794427592.368611
     },
     "COST": {
       "data": {
@@ -380,17 +380,17 @@
         "analyst_buy_count": 16,
         "analyst_total": 26,
         "analyst_buy_pct": 61.5,
-        "price_target_usd": 479.33334,
-        "pe": 43.64488,
+        "price_target_usd": 483.29166,
+        "pe": 43.83366,
         "pb": null,
         "ps": null,
         "revenue_usd": 129664000000.0,
         "operating_income_usd": null,
         "net_income_usd": 1188000000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": 171299838020.0,
+        "estimated_revenue_usd": 171603609450.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": 2088585909.24,
+        "estimated_net_income_usd": 2090363437.3400002,
         "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:49+00:00",
@@ -401,7 +401,7 @@
         "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794423978.697766
+      "yahoo_at": 1794427592.368611
     },
     "JNJ": {
       "data": {
