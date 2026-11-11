@@ -1,20 +1,20 @@
 {
   "run": {
-    "started_utc": "2026-11-11T14:05:24+00:00",
-    "finished_utc": "2026-11-11T14:05:41+00:00",
-    "started_kst": "2026-11-11T23:05:24+09:00",
-    "finished_kst": "2026-11-11T23:05:41+09:00",
-    "started_et": "2026-11-11T09:05:24-05:00",
-    "mode": "after_close_daily",
-    "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-11T13:49:24+00:00"
+    "started_utc": "2026-11-11T15:05:17+00:00",
+    "finished_utc": "2026-11-11T15:05:58+00:00",
+    "started_kst": "2026-11-12T00:05:17+09:00",
+    "finished_kst": "2026-11-12T00:05:58+09:00",
+    "started_et": "2026-11-11T10:05:17-05:00",
+    "mode": "intraday_delayed_sip",
+    "market_open_estimate": true,
+    "historical_data_end_utc": "2026-11-11T14:49:17+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
     "constituent_warning": null,
     "market_data": "Alpaca Market Data",
     "historical_feed": "sip",
-    "snapshot_feed": null,
+    "snapshot_feed": "delayed_sip",
     "adjustment": "split"
   },
   "criteria": {
@@ -109,8 +109,8 @@
       "10d": 7,
       "20d": 3
     },
-    "candidate_price_breakouts": 0,
-    "candidate_volume_validations": 0,
+    "candidate_price_breakouts": 4,
+    "candidate_volume_validations": 2,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
       "FDXF",
@@ -121,34 +121,11 @@
     "unrequested_symbols": [],
     "http_requests": {
       "daily": 14,
-      "snapshots": 0,
-      "intraday_5m": 0
+      "snapshots": 7,
+      "intraday_5m": 4
     }
   },
-  "confirmed_signals": [
-    {
-      "period": 21,
-      "box_high": 218.7819,
-      "box_low": 183.86,
-      "box_width": 0.18993745240944193,
-      "first_close": 208.82,
-      "last_close": 207.4,
-      "first_last_move": -0.006800114931519885,
-      "valid_box": true,
-      "breakout_date": "2026-11-10",
-      "close": 224.64,
-      "prev_close": 207.4,
-      "volume": 8460334.0,
-      "avg20_volume": 2962090.5,
-      "volume_ratio": 2.8562037520460635,
-      "confirmed": true,
-      "strong": true,
-      "symbol": "TTWO",
-      "name": "Take-Two Interactive",
-      "mode": "after_close",
-      "signal_key": "TTWO:21:218.7819:2026-11-10"
-    }
-  ],
+  "confirmed_signals": [],
   "new_breakout_signals": [],
   "upper_box_watch_candidates": [
     {
@@ -855,15 +832,15 @@
   "failures": [
     {
       "symbol": "FDXF",
-      "reason": "daily bars insufficient: 114 (need 127 for 126-day scan)"
+      "reason": "daily bars insufficient: 114 (need 126 for 126-day scan)"
     },
     {
       "symbol": "HONA",
-      "reason": "daily bars insufficient: 104 (need 127 for 126-day scan)"
+      "reason": "daily bars insufficient: 104 (need 126 for 126-day scan)"
     },
     {
       "symbol": "VYLR",
-      "reason": "daily bars insufficient: 29 (need 127 for 126-day scan)"
+      "reason": "daily bars insufficient: 29 (need 126 for 126-day scan)"
     }
   ],
   "seen_signal_keys": [
@@ -3205,7 +3182,7 @@
       "analyst_total": 15,
       "analyst_buy_pct": 20.0,
       "price_target_usd": 118.73333,
-      "pe": 18.48759,
+      "pe": 18.370802,
       "pb": null,
       "ps": null,
       "revenue_usd": 17355000000.0,
@@ -3232,7 +3209,7 @@
       "analyst_total": 7,
       "analyst_buy_pct": 100.0,
       "price_target_usd": 350.16666,
-      "pe": 15.196226,
+      "pe": 15.161792,
       "pb": null,
       "ps": null,
       "revenue_usd": 12814300000.0,
@@ -3502,7 +3479,7 @@
       "analyst_total": 26,
       "analyst_buy_pct": 61.5,
       "price_target_usd": 479.33334,
-      "pe": 42.73756,
+      "pe": 43.17561,
       "pb": null,
       "ps": null,
       "revenue_usd": 129664000000.0,
