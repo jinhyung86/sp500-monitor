@@ -40,6 +40,8 @@ BOX_FIRST_LAST_MAX_MOVE = 0.07
 DAILY_VOLUME_RATIO_MIN = 1.50
 STRONG_VOLUME_RATIO = 2.00
 LOWER_BOX_MAX_POSITION = 0.30
+UPPER_BOX_WATCH_MIN_POSITION = 0.70
+UPPER_BOX_WATCH_MAX_POSITION = 1.00
 UP_DOWN_VOLUME_RATIO_MIN = 1.30
 UP_DOWN_VOLUME_RATIO_EX_MAX_DAY_MIN = 1.10
 
@@ -361,6 +363,52 @@ def daily_breakout_for_period(completed, period):
         "volume_ratio": volume_ratio,
         "confirmed": confirmed,
         "strong": bool(volume_ratio is not None and volume_ratio >= STRONG_VOLUME_RATIO),
+    }
+
+
+def upper_box_watch_for_period(completed, period):
+    """Find valid sideways boxes whose latest close sits at 70-100% of box height.
+
+    Momentum/volume metrics rank candidates; they do not exclude early setups.
+    """
+    metrics = box_metrics(completed, period)
+    if not metrics or not metrics["valid_box"]:
+        return None
+    span = metrics["box_high"] - metrics["box_low"]
+    if span <= 0:
+        return None
+    closes = [safe_float(b.get("c")) for b in completed[-max(period, 25):]]
+    volumes = [safe_float(b.get("v")) for b in completed[-max(period, 25):]]
+    if any(v is None for v in closes + volumes):
+        return None
+    close = closes[-1]
+    position = (close - metrics["box_low"]) / span
+    if not UPPER_BOX_WATCH_MIN_POSITION <= position <= UPPER_BOX_WATCH_MAX_POSITION:
+        return None
+    recent_5_return_pct = ((close / closes[-5] - 1) * 100) if len(closes) >= 5 and closes[-5] > 0 else None
+    ma5 = mean(closes[-5:]) if len(closes) >= 5 else None
+    ma20 = mean(closes[-20:]) if len(closes) >= 20 else None
+    ma5_rising = len(closes) >= 6 and mean(closes[-5:]) > mean(closes[-6:-1])
+    recent5_volume = mean(volumes[-5:]) if len(volumes) >= 5 else None
+    previous20_volume = mean(volumes[-25:-5]) if len(volumes) >= 25 else None
+    volume_ratio = recent5_volume / previous20_volume if previous20_volume and previous20_volume > 0 else None
+    # Score ranks early setups; none of these indicators is a mandatory filter.
+    score = round(
+        position * 40
+        + (20 if recent_5_return_pct is not None and recent_5_return_pct > 0 else 0)
+        + (15 if ma5 is not None and ma20 is not None and ma5 > ma20 else 0)
+        + (10 if ma5_rising else 0)
+        + (15 if volume_ratio is not None and volume_ratio >= 1.1 else 0), 1
+    )
+    tier = "A" if position >= .95 else ("B" if position >= .85 else "C")
+    return {
+        **metrics, "as_of_date": str(parse_bar_date(completed[-1])),
+        "close": close, "box_position": position, "tier": tier,
+        "recent_5_return_pct": round(recent_5_return_pct, 3) if recent_5_return_pct is not None else None,
+        "ma5_above_ma20": bool(ma5 is not None and ma20 is not None and ma5 > ma20),
+        "ma5_rising": ma5_rising,
+        "volume_growth_ratio": round(volume_ratio, 3) if volume_ratio is not None else None,
+        "watch_score": score,
     }
 
 
@@ -712,6 +760,28 @@ def build_markdown(result):
     else:
         lines.append("- 없음")
 
+    lines.append("")
+    lines.append("## 박스권 상단 접근 후보 (위치 70~100%)")
+    lines.append("- 박스 위치 = (종가 - 박스 하단) / (박스 상단 - 박스 하단) × 100")
+    lines.append("- A: 95~100% / B: 85~95% / C: 70~85%")
+    lines.append("- 기존 유효 박스 조건 유지. 상승·거래량은 가점만 부여하며 필수 조건이 아닙니다.")
+    counts = result["coverage"]["upper_box_watch_tier_counts"]
+    lines.append(f"- 중복 제거: {len(result['upper_box_watch_candidates'])}종목 (A {counts['A']} / B {counts['B']} / C {counts['C']})")
+    for tier in ("A", "B", "C"):
+        items = [x for x in result["upper_box_watch_candidates"] if x["tier"] == tier]
+        lines.append("")
+        lines.append(f"### {tier}등급: {len(items)}종목")
+        if not items:
+            lines.append("- 없음")
+            continue
+        lines.append("| 티커 | 회사명 | 기간 | 종가 | 박스상단 | 박스위치 | 5일 등락 | 거래량 변화 | 감시점수 |")
+        lines.append("|---|---|---:|---:|---:|---:|---:|---:|---:|")
+        for x in items:
+            r = f"{x['recent_5_return_pct']:+.2f}%" if x['recent_5_return_pct'] is not None else "-"
+            v = f"{x['volume_growth_ratio']:.2f}x" if x['volume_growth_ratio'] is not None else "-"
+            lines.append(f"| {x['symbol']} | {x['name']} | {x['period']} | {x['close']:.2f} | {x['box_high']:.2f} | {x['box_position']*100:.1f}% | {r} | {v} | {x['watch_score']:.1f} |")
+    lines.append("")
+
     lines.append("## 우상향 종목 (완료된 일봉 기준)")
     lines.append(f"- 공통 기준: R² ≥ {UPTREND_MIN_R2:.2f}, 일평균 추세 기울기 ≥ +{UPTREND_MIN_SLOPE_PCT_PER_DAY:.2f}%")
     lines.append("- 기간별 최소 수익률: " + " / ".join(f"{p}거래일 +{UPTREND_MIN_RETURN_PCT[p]:.0f}%" for p in UPTREND_PERIODS))
@@ -782,6 +852,8 @@ def main():
     data_shortage_symbols = []
     all_confirmed = []
     lower_box_candidates = []
+    upper_box_watch_by_symbol = {}
+    upper_box_watch_calc_complete = {str(p): 0 for p in BOX_PERIODS}
     price_candidates = []
     uptrend_candidates = {f"{p}d": [] for p in UPTREND_PERIODS}
     uptrend_calc_complete = {str(p): 0 for p in UPTREND_PERIODS}
@@ -805,6 +877,13 @@ def main():
 
         for p in BOX_PERIODS:
             if len(completed) >= p:
+                upper_box_watch_calc_complete[str(p)] += 1
+                watch = upper_box_watch_for_period(completed, p)
+                if watch:
+                    watch.update({"symbol": symbol, "name": symbol_to_name[symbol]})
+                    old = upper_box_watch_by_symbol.get(symbol)
+                    if old is None or (watch["watch_score"], watch["box_position"], watch["period"]) > (old["watch_score"], old["box_position"], old["period"]):
+                        upper_box_watch_by_symbol[symbol] = watch
                 lower_box_calc_complete[str(p)] += 1
                 low = lower_box_for_period(completed, p)
                 if low and low["qualifies"]:
@@ -836,6 +915,12 @@ def main():
                 if sig and sig["confirmed"]:
                     sig.update({"symbol": symbol, "name": symbol_to_name[symbol], "mode": "after_close"})
                     all_confirmed.append(sig)
+
+    upper_box_watch_candidates = sorted(
+        upper_box_watch_by_symbol.values(),
+        key=lambda x: (-x["box_position"], -x["watch_score"], x["symbol"])
+    )
+    upper_box_watch_tier_counts = {tier: sum(x["tier"] == tier for x in upper_box_watch_candidates) for tier in ("A", "B", "C")}
 
     for period_key in uptrend_candidates:
         uptrend_candidates[period_key].sort(
@@ -929,6 +1014,10 @@ def main():
                 "min_quality_score": UPTREND_SCORE_MIN,
                 "min_completed_daily_bars": 25,
             },
+            "upper_box_watch_min_position": UPPER_BOX_WATCH_MIN_POSITION,
+            "upper_box_watch_max_position": UPPER_BOX_WATCH_MAX_POSITION,
+            "upper_box_watch_tiers": {"A": [0.95, 1.00], "B": [0.85, 0.95], "C": [0.70, 0.85]},
+            "upper_box_watch_deduplicate_by_symbol": True,
             "box_max_width": BOX_MAX_WIDTH,
             "first_to_last_close_max_abs_move": BOX_FIRST_LAST_MAX_MOVE,
             "volume_ratio_min": DAILY_VOLUME_RATIO_MIN,
@@ -943,6 +1032,9 @@ def main():
             "unique_requested_count": unique_requested_count,
             "breakout_calc_complete": breakout_calc_complete,
             "lower_box_calc_complete": lower_box_calc_complete,
+            "upper_box_watch_calc_complete": upper_box_watch_calc_complete,
+            "upper_box_watch_candidate_count": len(upper_box_watch_candidates),
+            "upper_box_watch_tier_counts": upper_box_watch_tier_counts,
             "uptrend_calc_complete": uptrend_calc_complete,
             "uptrend_candidate_counts": {key: len(value) for key, value in uptrend_candidates.items()},
             "candidate_price_breakouts": len(price_candidates),
@@ -959,6 +1051,7 @@ def main():
         },
         "confirmed_signals": unique_confirmed,
         "new_breakout_signals": new_signals,
+        "upper_box_watch_candidates": upper_box_watch_candidates,
         "lower_box_candidates": sorted(lower_box_candidates, key=lambda x: (x["box_position"], -x["up_down_volume_ratio"])),
         "uptrend_candidates": uptrend_candidates,
         "failures": failure_list,
@@ -976,6 +1069,8 @@ def main():
         "breakout_calc_complete": breakout_calc_complete,
         "lower_box_calc_complete": lower_box_calc_complete,
         "lower_box_candidates": len(lower_box_candidates),
+        "upper_box_watch_candidates": len(upper_box_watch_candidates),
+        "upper_box_watch_tier_counts": upper_box_watch_tier_counts,
         "uptrend_candidates": {key: len(value) for key, value in uptrend_candidates.items()},
         "price_candidates": len(price_candidates),
         "volume_validations": candidate_volume_validations,
