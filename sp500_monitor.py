@@ -29,6 +29,12 @@ UPTREND_PERIODS = (5, 10, 20)
 UPTREND_MIN_R2 = 0.85
 UPTREND_MIN_SLOPE_PCT_PER_DAY = 0.70
 UPTREND_MIN_RETURN_PCT = {5: 3.0, 10: 7.0, 20: 12.0}
+# Second-stage quality filters (apply only to uptrend candidates).
+UPTREND_VOLUME_GROWTH_MIN = 1.20
+UPTREND_UP_DOWN_VOLUME_MIN = 1.20
+UPTREND_MAX_DRAWDOWN_FROM_20D_CLOSE_HIGH = 0.05
+UPTREND_MAX_SINGLE_DAY_GAIN = 0.10
+UPTREND_SCORE_MIN = 70.0
 BOX_MAX_WIDTH = 0.20
 BOX_FIRST_LAST_MAX_MOVE = 0.07
 DAILY_VOLUME_RATIO_MIN = 1.50
@@ -489,6 +495,69 @@ def uptrend_for_period(completed, period):
     }
 
 
+def uptrend_quality(completed, period):
+    """Score a qualifying uptrend using completed bars, without extra API calls.
+
+    Requires 25 completed bars: 5-day volume compared with preceding 20 days.
+    All volume checks use daily bars, and flat days are excluded from up/down ratio.
+    """
+    if len(completed) < max(25, period):
+        return None
+    window = completed[-25:]
+    closes = [safe_float(b.get("c")) for b in window]
+    volumes = [safe_float(b.get("v")) for b in window]
+    if any(v is None or not math.isfinite(v) or v <= 0 for v in closes + volumes):
+        return None
+
+    ma5 = mean(closes[-5:])
+    ma10 = mean(closes[-10:])
+    ma20 = mean(closes[-20:])
+    ma_aligned = ma5 > ma10 > ma20
+    volume_growth = mean(volumes[-5:]) / mean(volumes[-25:-5])
+    high20 = max(closes[-20:])
+    drawdown = 1.0 - closes[-1] / high20
+
+    # Use the same evaluation window as the selected 5/10/20-day trend.
+    period_closes = closes[-period:]
+    period_volumes = volumes[-period:]
+    up_vol = [period_volumes[i] for i in range(1, period)
+              if period_closes[i] > period_closes[i - 1]]
+    down_vol = [period_volumes[i] for i in range(1, period)
+                if period_closes[i] < period_closes[i - 1]]
+    volume_ratio = mean(up_vol) / mean(down_vol) if up_vol and down_vol else None
+    # All-up periods have no down-day comparator: don't fabricate a ratio.
+    volume_balance_ok = bool(volume_ratio is not None and volume_ratio >= UPTREND_UP_DOWN_VOLUME_MIN)
+    max_day_gain = max(period_closes[i] / period_closes[i-1] - 1
+                       for i in range(1, period))
+    no_spike = max_day_gain <= UPTREND_MAX_SINGLE_DAY_GAIN
+    passes = (ma_aligned and volume_growth >= UPTREND_VOLUME_GROWTH_MIN
+              and volume_balance_ok
+              and drawdown <= UPTREND_MAX_DRAWDOWN_FROM_20D_CLOSE_HIGH
+              and no_spike)
+    return {
+        "ma5": round(ma5, 4), "ma10": round(ma10, 4), "ma20": round(ma20, 4),
+        "ma_aligned": ma_aligned,
+        "volume_growth_ratio": round(volume_growth, 4),
+        "up_down_volume_ratio": round(volume_ratio, 4) if volume_ratio is not None else None,
+        "drawdown_from_20d_close_high_pct": round(drawdown * 100, 3),
+        "max_single_day_gain_pct": round(max_day_gain * 100, 3),
+        "quality_filters_pass": passes,
+    }
+
+
+def uptrend_quality_score(trend, quality):
+    """Transparent 100-point ranking, not a forecast of future returns."""
+    trend_score = 30 * min(1.0, max(0.0, (trend["r2"] - 0.60) / 0.40))
+    vol_growth = quality["volume_growth_ratio"]
+    vol_balance = quality["up_down_volume_ratio"] or 0.0
+    volume_score = 15 * min(1.0, max(0.0, (vol_growth - 1.0) / 0.50))
+    volume_score += 15 * min(1.0, max(0.0, (vol_balance - 1.0) / 0.50))
+    ma_score = 20.0 if quality["ma_aligned"] else 0.0
+    drawdown = quality["drawdown_from_20d_close_high_pct"]
+    high_score = 20 * min(1.0, max(0.0, (10.0 - drawdown) / 10.0))
+    return round(trend_score + volume_score + ma_score + high_score, 1)
+
+
 def snapshot_price(snapshot):
     if not snapshot:
         return None
@@ -646,18 +715,22 @@ def build_markdown(result):
     lines.append("## 우상향 종목 (완료된 일봉 기준)")
     lines.append(f"- 공통 기준: R² ≥ {UPTREND_MIN_R2:.2f}, 일평균 추세 기울기 ≥ +{UPTREND_MIN_SLOPE_PCT_PER_DAY:.2f}%")
     lines.append("- 기간별 최소 수익률: " + " / ".join(f"{p}거래일 +{UPTREND_MIN_RETURN_PCT[p]:.0f}%" for p in UPTREND_PERIODS))
+    lines.append("- 2차 필터: 5일 평균 거래량/직전 20일 ≥ 1.20배, 5일선 > 10일선 > 20일선, 상승/하락일 거래량 ≥ 1.20배")
+    lines.append("- 20일 최고 종가 대비 -5% 이내, 기간 중 하루 +10% 초과 급등 제외, 품질 점수 70점 이상")
+    lines.append("- 점수 구성: 추세 일관성 30 + 거래량 30 + 이동평균선 20 + 고점 유지 20 (투자 수익 예측 아님)")
     for period in UPTREND_PERIODS:
         candidates = result["uptrend_candidates"][f"{period}d"]
         lines.append("")
         lines.append(f"### 최근 {period}거래일: {len(candidates)}종목")
         if candidates:
-            lines.append("| 티커 | 회사명 | 기간 수익률 | R² | 일평균 추세기울기 | 상승일/하락일 | 기준일 |")
-            lines.append("|---|---|---:|---:|---:|---:|---|")
+            lines.append("| 티커 | 회사명 | 점수 | 기간 수익률 | R² | 일평균 추세기울기 | 거래량증가 | 상승/하락 거래량 | 고점대비 | 기준일 |")
+            lines.append("|---|---|---:|---:|---:|---:|---:|---:|---:|---|")
             for item in candidates:
                 lines.append(
-                    f"| {item['symbol']} | {item['name']} | {item['return_pct']:+.2f}% | "
+                    f"| {item['symbol']} | {item['name']} | {item['quality_score']:.1f} | {item['return_pct']:+.2f}% | "
                     f"{item['r2']:.3f} | {item['slope_pct_per_day']:+.3f}% | "
-                    f"{item['up_days']}/{item['down_days']} | {item['as_of_date']} |"
+                    f"{item['volume_growth_ratio']:.2f}x | {item['up_down_volume_ratio']:.2f}x | "
+                    f"-{item['drawdown_from_20d_close_high_pct']:.2f}% | {item['as_of_date']} |"
                 )
         else:
             lines.append("- 없음")
@@ -722,8 +795,13 @@ def main():
                 uptrend_calc_complete[str(p)] += 1
                 trend = uptrend_for_period(completed, p)
                 if trend:
-                    trend.update({"symbol": symbol, "name": symbol_to_name[symbol]})
-                    uptrend_candidates[f"{p}d"].append(trend)
+                    quality = uptrend_quality(completed, p)
+                    if quality and quality["quality_filters_pass"]:
+                        trend.update(quality)
+                        trend["quality_score"] = uptrend_quality_score(trend, quality)
+                        if trend["quality_score"] >= UPTREND_SCORE_MIN:
+                            trend.update({"symbol": symbol, "name": symbol_to_name[symbol]})
+                            uptrend_candidates[f"{p}d"].append(trend)
 
         for p in BOX_PERIODS:
             if len(completed) >= p:
@@ -761,7 +839,7 @@ def main():
 
     for period_key in uptrend_candidates:
         uptrend_candidates[period_key].sort(
-            key=lambda item: (-item["r2"], -item["return_pct"], item["symbol"])
+            key=lambda item: (-item["quality_score"], -item["r2"], item["symbol"])
         )
 
     candidate_volume_validations = 0
@@ -842,6 +920,15 @@ def main():
             "uptrend_min_r2": UPTREND_MIN_R2,
             "uptrend_min_slope_pct_per_day": UPTREND_MIN_SLOPE_PCT_PER_DAY,
             "uptrend_min_return_pct": {str(k): v for k, v in UPTREND_MIN_RETURN_PCT.items()},
+            "uptrend_quality_filters": {
+                "volume_growth_min": UPTREND_VOLUME_GROWTH_MIN,
+                "up_down_volume_ratio_min": UPTREND_UP_DOWN_VOLUME_MIN,
+                "ma_order": "MA5 > MA10 > MA20",
+                "max_drawdown_from_20d_close_high": UPTREND_MAX_DRAWDOWN_FROM_20D_CLOSE_HIGH,
+                "max_single_day_gain": UPTREND_MAX_SINGLE_DAY_GAIN,
+                "min_quality_score": UPTREND_SCORE_MIN,
+                "min_completed_daily_bars": 25,
+            },
             "box_max_width": BOX_MAX_WIDTH,
             "first_to_last_close_max_abs_move": BOX_FIRST_LAST_MAX_MOVE,
             "volume_ratio_min": DAILY_VOLUME_RATIO_MIN,
