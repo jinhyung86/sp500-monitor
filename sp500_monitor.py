@@ -951,6 +951,8 @@ def candidate_fund_line(result, item):
         f"여력 {fmt_fund(upside, 1, '%')}" if upside is not None else "")))
     actual = fmt_financial_triplet(x, ("revenue_usd", "operating_income_usd", "net_income_usd"))
     forecast = fmt_financial_triplet(x, ("estimated_revenue_usd", "estimated_operating_income_usd", "estimated_net_income_usd"))
+    if x.get("estimated_net_income_method") and x.get("estimated_net_income_usd") is not None:
+        forecast += " · 순이익 근사치(EPS×주식수)"
     actual_revenue = safe_float(x.get("revenue_usd"))
     forecast_revenue = safe_float(x.get("estimated_revenue_usd"))
     if actual_revenue is not None and actual_revenue > 0 and forecast_revenue is not None:
