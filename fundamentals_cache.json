@@ -245,13 +245,13 @@
     "EW": {
       "data": {
         "sector": "Healthcare",
-        "industry": "Medical - Devices",
-        "analyst_consensus": null,
+        "industry": "Medical Devices",
+        "analyst_consensus": "Buy",
         "analyst_buy_count": null,
-        "analyst_total": null,
+        "analyst_total": 27,
         "analyst_buy_pct": null,
-        "price_target_usd": null,
-        "pe": null,
+        "price_target_usd": 111.64481,
+        "pe": 60.470932,
         "pb": null,
         "ps": null,
         "revenue_usd": null,
@@ -263,21 +263,22 @@
         "estimated_net_income_usd": null,
         "estimate_period": null,
         "source": "Financial Modeling Prep",
-        "fetched_utc": "2026-11-11T07:34:43+00:00"
+        "fetched_utc": "2026-11-11T07:34:43+00:00",
+        "market_source": "Yahoo Finance (unofficial)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 0
+      "yahoo_at": 1794383561.6654034
     },
     "HD": {
       "data": {
         "sector": "Consumer Cyclical",
-        "industry": "Home Improvement",
-        "analyst_consensus": null,
+        "industry": "Home Improvement Retail",
+        "analyst_consensus": "Buy",
         "analyst_buy_count": null,
-        "analyst_total": null,
+        "analyst_total": 32,
         "analyst_buy_pct": null,
-        "price_target_usd": null,
-        "pe": null,
+        "price_target_usd": 378.8125,
+        "pe": 24.562632,
         "pb": null,
         "ps": null,
         "revenue_usd": null,
@@ -289,21 +290,22 @@
         "estimated_net_income_usd": null,
         "estimate_period": null,
         "source": "Financial Modeling Prep",
-        "fetched_utc": "2026-11-11T07:34:45+00:00"
+        "fetched_utc": "2026-11-11T07:34:45+00:00",
+        "market_source": "Yahoo Finance (unofficial)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 0
+      "yahoo_at": 1794383561.6654034
     },
     "HSIC": {
       "data": {
         "sector": "Healthcare",
-        "industry": "Medical - Distribution",
-        "analyst_consensus": null,
+        "industry": "Medical Distribution",
+        "analyst_consensus": "Buy",
         "analyst_buy_count": null,
-        "analyst_total": null,
+        "analyst_total": 15,
         "analyst_buy_pct": null,
-        "price_target_usd": null,
-        "pe": null,
+        "price_target_usd": 96.6,
+        "pe": 24.312328,
         "pb": null,
         "ps": null,
         "revenue_usd": null,
@@ -315,21 +317,22 @@
         "estimated_net_income_usd": null,
         "estimate_period": null,
         "source": "Financial Modeling Prep",
-        "fetched_utc": "2026-11-11T07:34:47+00:00"
+        "fetched_utc": "2026-11-11T07:34:47+00:00",
+        "market_source": "Yahoo Finance (unofficial)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 0
+      "yahoo_at": 1794383561.6654034
     },
     "HUM": {
       "data": {
         "sector": "Healthcare",
-        "industry": "Medical - Healthcare Plans",
-        "analyst_consensus": null,
+        "industry": "Healthcare Plans",
+        "analyst_consensus": "Buy",
         "analyst_buy_count": null,
-        "analyst_total": null,
+        "analyst_total": 24,
         "analyst_buy_pct": null,
-        "price_target_usd": null,
-        "pe": null,
+        "price_target_usd": 479.33334,
+        "pe": 42.73756,
         "pb": null,
         "ps": null,
         "revenue_usd": null,
@@ -341,10 +344,11 @@
         "estimated_net_income_usd": null,
         "estimate_period": null,
         "source": "Financial Modeling Prep",
-        "fetched_utc": "2026-11-11T07:34:49+00:00"
+        "fetched_utc": "2026-11-11T07:34:49+00:00",
+        "market_source": "Yahoo Finance (unofficial)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 0
+      "yahoo_at": 1794383561.6654034
     },
     "JNJ": {
       "data": {
@@ -375,13 +379,13 @@
     "MCK": {
       "data": {
         "sector": "Healthcare",
-        "industry": "Medical - Distribution",
-        "analyst_consensus": null,
+        "industry": "Medical Distribution",
+        "analyst_consensus": "Buy",
         "analyst_buy_count": null,
-        "analyst_total": null,
+        "analyst_total": 14,
         "analyst_buy_pct": null,
-        "price_target_usd": null,
-        "pe": null,
+        "price_target_usd": 1144.2858,
+        "pe": 27.923393,
         "pb": null,
         "ps": null,
         "revenue_usd": null,
@@ -393,21 +397,22 @@
         "estimated_net_income_usd": null,
         "estimate_period": null,
         "source": "Financial Modeling Prep",
-        "fetched_utc": "2026-11-11T07:34:52+00:00"
+        "fetched_utc": "2026-11-11T07:34:52+00:00",
+        "market_source": "Yahoo Finance (unofficial)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 0
+      "yahoo_at": 1794383561.6654034
     },
     "MSI": {
       "data": {
         "sector": "Technology",
         "industry": "Communication Equipment",
-        "analyst_consensus": null,
+        "analyst_consensus": "Buy",
         "analyst_buy_count": null,
-        "analyst_total": null,
+        "analyst_total": 11,
         "analyst_buy_pct": null,
-        "price_target_usd": null,
-        "pe": null,
+        "price_target_usd": 547.1818,
+        "pe": 42.427998,
         "pb": null,
         "ps": null,
         "revenue_usd": null,
@@ -419,21 +424,22 @@
         "estimated_net_income_usd": null,
         "estimate_period": null,
         "source": "Financial Modeling Prep",
-        "fetched_utc": "2026-11-11T07:34:54+00:00"
+        "fetched_utc": "2026-11-11T07:34:54+00:00",
+        "market_source": "Yahoo Finance (unofficial)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 0
+      "yahoo_at": 1794383561.6654034
     },
     "SOLV": {
       "data": {
         "sector": "Healthcare",
-        "industry": "Medical - Instruments & Supplies",
-        "analyst_consensus": null,
+        "industry": "Medical Instruments & Supplies",
+        "analyst_consensus": "Buy",
         "analyst_buy_count": null,
-        "analyst_total": null,
+        "analyst_total": 13,
         "analyst_buy_pct": null,
-        "price_target_usd": null,
-        "pe": null,
+        "price_target_usd": 97.69231,
+        "pe": 101.213486,
         "pb": null,
         "ps": null,
         "revenue_usd": null,
@@ -445,21 +451,22 @@
         "estimated_net_income_usd": null,
         "estimate_period": null,
         "source": "Financial Modeling Prep",
-        "fetched_utc": "2026-11-11T07:34:56+00:00"
+        "fetched_utc": "2026-11-11T07:34:56+00:00",
+        "market_source": "Yahoo Finance (unofficial)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 0
+      "yahoo_at": 1794383561.6654034
     },
     "SPG": {
       "data": {
         "sector": "Real Estate",
         "industry": "REIT - Retail",
-        "analyst_consensus": null,
+        "analyst_consensus": "Buy",
         "analyst_buy_count": null,
-        "analyst_total": null,
+        "analyst_total": 19,
         "analyst_buy_pct": null,
-        "price_target_usd": null,
-        "pe": null,
+        "price_target_usd": 232.28947,
+        "pe": 16.929964,
         "pb": null,
         "ps": null,
         "revenue_usd": null,
@@ -471,10 +478,11 @@
         "estimated_net_income_usd": null,
         "estimate_period": null,
         "source": "Financial Modeling Prep",
-        "fetched_utc": "2026-11-11T07:34:57+00:00"
+        "fetched_utc": "2026-11-11T07:34:57+00:00",
+        "market_source": "Yahoo Finance (unofficial)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 0
+      "yahoo_at": 1794383561.6654034
     },
     "TDG": {
       "data": {
