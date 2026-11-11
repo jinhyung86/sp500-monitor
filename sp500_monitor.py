@@ -1008,8 +1008,8 @@ def build_markdown(result):
             attr = ' rowspan="2"' if rowspan else ""
             return f"<td{attr}>{escape(str(value))}</td>"
         lines.append("<tr>" + td(technical[0], rowspan=True) +
-                     "".join(td(value) for value in technical[1:]) + "</tr>")
-        lines.append("<tr>" + "".join(td(value) for value in info[1:]) + "</tr>")
+                     "".join(td(value, rowspan=(i == 4)) for i, value in enumerate(technical[1:], start=1)) + "</tr>")
+        lines.append("<tr>" + "".join(td(value) for i, value in enumerate(info[1:], start=1) if i != 4) + "</tr>")
 
     begin_section("신규 상단 돌파 신호")
     if result["new_breakout_signals"]:
