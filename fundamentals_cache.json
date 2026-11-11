@@ -16,18 +16,20 @@
         "operating_income_usd": 2026000000.0,
         "net_income_usd": 1456000000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 9708146380.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 1607965537.74384,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:27+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "AFL": {
       "data": {
@@ -45,18 +47,20 @@
         "operating_income_usd": null,
         "net_income_usd": 3646000000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 17237511790.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 3798592112.9412,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:29+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "AIZ": {
       "data": {
@@ -74,18 +78,20 @@
         "operating_income_usd": null,
         "net_income_usd": 872700000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 15080233330.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 1200800287.14174,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:31+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "COST": {
       "data": {
@@ -134,18 +140,20 @@
         "operating_income_usd": 1951847000.0,
         "net_income_usd": 1069826000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 5801450930.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 2034870249.26895,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:34+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "DE": {
       "data": {
@@ -163,18 +171,20 @@
         "operating_income_usd": 8416000000.0,
         "net_income_usd": 5027000000.0,
         "statement_period": "2025-10-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 44693328680.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 6171515372.858641,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:36+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "DTE": {
       "data": {
@@ -192,18 +202,20 @@
         "operating_income_usd": 2528000000.0,
         "net_income_usd": 1462000000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 16526781700.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 1699170699.6478899,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:38+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "DXCM": {
       "data": {
@@ -221,18 +233,20 @@
         "operating_income_usd": 911800000.0,
         "net_income_usd": 836300000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 5774764950.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 1169137738.81326,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:40+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "EVRG": {
       "data": {
@@ -250,18 +264,20 @@
         "operating_income_usd": 1532900000.0,
         "net_income_usd": 855600000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 6691615990.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 1071321427.1702,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:42+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "EW": {
       "data": {
@@ -279,18 +295,20 @@
         "operating_income_usd": 1636200000.0,
         "net_income_usd": 1073500000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 7477998080.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 1945995500.0,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:43+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "HD": {
       "data": {
@@ -308,18 +326,20 @@
         "operating_income_usd": 20890000000.0,
         "net_income_usd": 14156000000.0,
         "statement_period": "2026-01-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 177088423120.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 15879836678.08786,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:45+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "HSIC": {
       "data": {
@@ -337,18 +357,20 @@
         "operating_income_usd": 758000000.0,
         "net_income_usd": 398000000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 14368478560.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 664150932.66944,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:47+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "HUM": {
       "data": {
@@ -366,18 +388,20 @@
         "operating_income_usd": null,
         "net_income_usd": 1188000000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 171299838020.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 2088585909.24,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:49+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "JNJ": {
       "data": {
@@ -426,18 +450,20 @@
         "operating_income_usd": 6454000000.0,
         "net_income_usd": 4762000000.0,
         "statement_period": "2026-03-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 465366102440.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 6026367952.17752,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:52+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "MSI": {
       "data": {
@@ -455,18 +481,20 @@
         "operating_income_usd": 2959000000.0,
         "net_income_usd": 2154000000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 14253141300.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 3232280180.3394003,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:54+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "SOLV": {
       "data": {
@@ -484,18 +512,20 @@
         "operating_income_usd": 632000000.0,
         "net_income_usd": 1556000000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 8552452100.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 1269260201.19261,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:56+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "SPG": {
       "data": {
@@ -513,18 +543,20 @@
         "operating_income_usd": 3175396000.0,
         "net_income_usd": 4627612000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": null,
+        "estimated_revenue_usd": 6945548540.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": null,
-        "estimate_period": null,
+        "estimated_net_income_usd": 2186293790.58,
+        "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:57+00:00",
         "market_source": "Yahoo Finance (unofficial)",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385001.6971064
+      "yahoo_at": 1794387928.399552
     },
     "TDG": {
       "data": {
