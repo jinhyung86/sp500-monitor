@@ -42,6 +42,7 @@ STRONG_VOLUME_RATIO = 2.00
 LOWER_BOX_MAX_POSITION = 0.30
 UPPER_BOX_WATCH_MIN_POSITION = 0.70
 UPPER_BOX_WATCH_MAX_POSITION = 1.00
+UPPER_BOX_WATCH_MIN_SCORE = 85.0
 UP_DOWN_VOLUME_RATIO_MIN = 1.30
 UP_DOWN_VOLUME_RATIO_EX_MAX_DAY_MIN = 1.10
 
@@ -767,19 +768,18 @@ def build_markdown(result):
     lines.append("- 기존 유효 박스 조건 유지. 상승·거래량은 가점만 부여하며 필수 조건이 아닙니다.")
     counts = result["coverage"]["upper_box_watch_tier_counts"]
     lines.append(f"- 중복 제거: {len(result['upper_box_watch_candidates'])}종목 (A {counts['A']} / B {counts['B']} / C {counts['C']})")
-    for tier in ("A", "B", "C"):
-        items = [x for x in result["upper_box_watch_candidates"] if x["tier"] == tier]
-        lines.append("")
-        lines.append(f"### {tier}등급: {len(items)}종목")
-        if not items:
-            lines.append("- 없음")
-            continue
-        lines.append("| 티커 | 회사명 | 기간 | 종가 | 박스상단 | 박스위치 | 5일 등락 | 거래량 변화 | 감시점수 |")
-        lines.append("|---|---|---:|---:|---:|---:|---:|---:|---:|")
+    lines.append(f"- 감시점수 {UPPER_BOX_WATCH_MIN_SCORE:.0f}점 이상만 표시하며, 점수 높은 순으로 정렬합니다.")
+    items = result["upper_box_watch_candidates"]
+    lines.append("")
+    if not items:
+        lines.append("- 없음")
+    else:
+        lines.append("| 티커 | 회사명 | 등급 | 기간 | 종가 | 박스상단 | 박스위치 | 5일 등락 | 거래량 변화 | 감시점수 |")
+        lines.append("|---|---|:---:|---:|---:|---:|---:|---:|---:|---:|")
         for x in items:
             r = f"{x['recent_5_return_pct']:+.2f}%" if x['recent_5_return_pct'] is not None else "-"
             v = f"{x['volume_growth_ratio']:.2f}x" if x['volume_growth_ratio'] is not None else "-"
-            lines.append(f"| {x['symbol']} | {x['name']} | {x['period']} | {x['close']:.2f} | {x['box_high']:.2f} | {x['box_position']*100:.1f}% | {r} | {v} | {x['watch_score']:.1f} |")
+            lines.append(f"| {x['symbol']} | {x['name']} | {x['tier']} | {x['period']} | {x['close']:.2f} | {x['box_high']:.2f} | {x['box_position']*100:.1f}% | {r} | {v} | {x['watch_score']:.1f} |")
     lines.append("")
 
     lines.append("## 우상향 종목 (완료된 일봉 기준)")
@@ -917,8 +917,8 @@ def main():
                     all_confirmed.append(sig)
 
     upper_box_watch_candidates = sorted(
-        upper_box_watch_by_symbol.values(),
-        key=lambda x: (-x["box_position"], -x["watch_score"], x["symbol"])
+        (x for x in upper_box_watch_by_symbol.values() if x["watch_score"] >= UPPER_BOX_WATCH_MIN_SCORE),
+        key=lambda x: (-x["watch_score"], -x["box_position"], x["symbol"])
     )
     upper_box_watch_tier_counts = {tier: sum(x["tier"] == tier for x in upper_box_watch_candidates) for tier in ("A", "B", "C")}
 
@@ -1016,6 +1016,7 @@ def main():
             },
             "upper_box_watch_min_position": UPPER_BOX_WATCH_MIN_POSITION,
             "upper_box_watch_max_position": UPPER_BOX_WATCH_MAX_POSITION,
+            "upper_box_watch_min_score": UPPER_BOX_WATCH_MIN_SCORE,
             "upper_box_watch_tiers": {"A": [0.95, 1.00], "B": [0.85, 0.95], "C": [0.70, 0.85]},
             "upper_box_watch_deduplicate_by_symbol": True,
             "box_max_width": BOX_MAX_WIDTH,
