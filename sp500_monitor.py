@@ -949,11 +949,16 @@ def candidate_fund_line(result, item):
     target_info = " · ".join(filter(None, (
         f"목표 USD {fmt_fund(target, 2)}" if target is not None else "",
         f"여력 {fmt_fund(upside, 1, '%')}" if upside is not None else "")))
-    pe = fmt_fund(x.get("pe"), 1)
     actual = fmt_financial_triplet(x, ("revenue_usd", "operating_income_usd", "net_income_usd"))
     forecast = fmt_financial_triplet(x, ("estimated_revenue_usd", "estimated_operating_income_usd", "estimated_net_income_usd"))
+    actual_revenue = safe_float(x.get("revenue_usd"))
+    forecast_revenue = safe_float(x.get("estimated_revenue_usd"))
+    if actual_revenue is not None and actual_revenue > 0 and forecast_revenue is not None:
+        growth = (forecast_revenue / actual_revenue - 1) * 100
+        forecast = forecast.replace(fmt_billions(forecast_revenue),
+                                    f"{fmt_billions(forecast_revenue)} ({growth:+.1f}%)", 1)
     return (f"| 정보 | {theme} | {opinion_info} | {target_info} | "
-            f"{pe + '배' if pe else ''} | {actual} | {forecast} | "
+            f" | {actual} | {forecast} | "
             f"{x.get('statement_period') or ''} |")
 
 
@@ -961,7 +966,7 @@ def build_markdown(result):
     lines = ["# S&P 500 전수검사", ""]
     header = ("<table><thead><tr>"
               "<th>종목</th><th>회사명<br>테마</th><th>점수<br>투자의견</th>"
-              "<th>가격<br>목표가</th><th>기술지표<br>PER</th>"
+              "<th>가격<br>목표가</th><th>기술지표</th>"
               "<th>거래량<br>실적(십억 USD)</th><th>추세<br>예상(십억 USD)</th>"
               "<th>기간<br>실적기준일</th></tr></thead><tbody>")
 
