@@ -90,19 +90,19 @@
 ※ 각 종목 첫 줄은 기술적 지표, 둘째 줄은 테마·애널리스트·재무정보입니다. 실적/예상 값은 매출·영업이익·순이익 순서이며 단위는 십억 USD입니다. 목표가 상승여력은 해당 후보 종가 기준입니다. 데이터가 없으면 공백으로 표시합니다.
 
 ## 실패/누락
-- FDXF: daily bars insufficient: 115 (need 127 for 126-day scan)
-- HONA: daily bars insufficient: 105 (need 127 for 126-day scan)
-- VYLR: daily bars insufficient: 30 (need 127 for 126-day scan)
+- FDXF: daily bars insufficient: 115 (need 126 for 126-day scan)
+- HONA: daily bars insufficient: 105 (need 126 for 126-day scan)
+- VYLR: daily bars insufficient: 30 (need 126 for 126-day scan)
 
 ## 실행 결과 요약
-- 실행 시작(KST): 2026-11-12T23:05:25+09:00
-- 실행 종료(KST): 2026-11-12T23:05:44+09:00
-- 모드: after_close_daily
+- 실행 시작(KST): 2026-11-13T00:05:24+09:00
+- 실행 종료(KST): 2026-11-13T00:06:33+09:00
+- 모드: intraday_delayed_sip
 - 전체 대상: 503
 - 고유 요청: 503
 - 상단돌파 계산 완료(21 / 42 / 63 / 126): 503 / 502 / 502 / 500
 - 하단후보 계산 완료(21 / 42 / 63 / 126): 503 / 502 / 502 / 500
-- 후보 5분봉 검증: 0
+- 후보 5분봉 검증: 5
 - 자료부족: 3
 - 미요청: 0
 

@@ -1,20 +1,20 @@
 {
   "run": {
-    "started_utc": "2026-11-12T14:05:25+00:00",
-    "finished_utc": "2026-11-12T14:05:44+00:00",
-    "started_kst": "2026-11-12T23:05:25+09:00",
-    "finished_kst": "2026-11-12T23:05:44+09:00",
-    "started_et": "2026-11-12T09:05:25-05:00",
-    "mode": "after_close_daily",
-    "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-12T13:49:25+00:00"
+    "started_utc": "2026-11-12T15:05:24+00:00",
+    "finished_utc": "2026-11-12T15:06:33+00:00",
+    "started_kst": "2026-11-13T00:05:24+09:00",
+    "finished_kst": "2026-11-13T00:06:33+09:00",
+    "started_et": "2026-11-12T10:05:24-05:00",
+    "mode": "intraday_delayed_sip",
+    "market_open_estimate": true,
+    "historical_data_end_utc": "2026-11-12T14:49:24+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
     "constituent_warning": null,
     "market_data": "Alpaca Market Data",
     "historical_feed": "sip",
-    "snapshot_feed": null,
+    "snapshot_feed": "delayed_sip",
     "adjustment": "split"
   },
   "criteria": {
@@ -109,8 +109,8 @@
       "10d": 6,
       "20d": 3
     },
-    "candidate_price_breakouts": 0,
-    "candidate_volume_validations": 0,
+    "candidate_price_breakouts": 5,
+    "candidate_volume_validations": 5,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
       "FDXF",
@@ -121,8 +121,8 @@
     "unrequested_symbols": [],
     "http_requests": {
       "daily": 14,
-      "snapshots": 0,
-      "intraday_5m": 0
+      "snapshots": 7,
+      "intraday_5m": 11
     }
   },
   "confirmed_signals": [],
@@ -799,15 +799,15 @@
   "failures": [
     {
       "symbol": "FDXF",
-      "reason": "daily bars insufficient: 115 (need 127 for 126-day scan)"
+      "reason": "daily bars insufficient: 115 (need 126 for 126-day scan)"
     },
     {
       "symbol": "HONA",
-      "reason": "daily bars insufficient: 105 (need 127 for 126-day scan)"
+      "reason": "daily bars insufficient: 105 (need 126 for 126-day scan)"
     },
     {
       "symbol": "VYLR",
-      "reason": "daily bars insufficient: 30 (need 127 for 126-day scan)"
+      "reason": "daily bars insufficient: 30 (need 126 for 126-day scan)"
     }
   ],
   "seen_signal_keys": [
@@ -3151,7 +3151,7 @@
       "analyst_total": 15,
       "analyst_buy_pct": 20.0,
       "price_target_usd": 118.73333,
-      "pe": 18.556204,
+      "pe": 18.640877,
       "pb": null,
       "ps": null,
       "revenue_usd": 17355000000.0,
@@ -3178,7 +3178,7 @@
       "analyst_total": 7,
       "analyst_buy_pct": 100.0,
       "price_target_usd": 350.16666,
-      "pe": 15.253774,
+      "pe": 15.214387,
       "pb": null,
       "ps": null,
       "revenue_usd": 12814300000.0,
@@ -3409,7 +3409,7 @@
       "analyst_total": 26,
       "analyst_buy_pct": 61.5,
       "price_target_usd": 490.08334,
-      "pe": 43.54244,
+      "pe": 42.72829,
       "pb": null,
       "ps": null,
       "revenue_usd": 129664000000.0,

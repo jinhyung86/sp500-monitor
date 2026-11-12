@@ -40,7 +40,7 @@
         "analyst_total": 15,
         "analyst_buy_pct": 20.0,
         "price_target_usd": 118.73333,
-        "pe": 18.556204,
+        "pe": 18.640877,
         "pb": null,
         "ps": null,
         "revenue_usd": 17355000000.0,
@@ -60,7 +60,7 @@
         "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794492344.2753983
+      "yahoo_at": 1794495993.8248832
     },
     "AIZ": {
       "data": {
@@ -71,7 +71,7 @@
         "analyst_total": 7,
         "analyst_buy_pct": 100.0,
         "price_target_usd": 350.16666,
-        "pe": 15.253774,
+        "pe": 15.214387,
         "pb": null,
         "ps": null,
         "revenue_usd": 12814300000.0,
@@ -91,7 +91,7 @@
         "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794492344.2753983
+      "yahoo_at": 1794495993.8248832
     },
     "COST": {
       "data": {
@@ -381,7 +381,7 @@
         "analyst_total": 26,
         "analyst_buy_pct": 61.5,
         "price_target_usd": 490.08334,
-        "pe": 43.54244,
+        "pe": 42.72829,
         "pb": null,
         "ps": null,
         "revenue_usd": 129664000000.0,
@@ -401,7 +401,7 @@
         "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794492344.2753983
+      "yahoo_at": 1794495993.8248832
     },
     "JNJ": {
       "data": {
