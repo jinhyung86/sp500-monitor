@@ -60,7 +60,7 @@
         "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794485127.1044238
+      "yahoo_at": 1794488737.7356818
     },
     "AIZ": {
       "data": {
@@ -91,7 +91,7 @@
         "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794485127.1044238
+      "yahoo_at": 1794488737.7356818
     },
     "COST": {
       "data": {
@@ -380,7 +380,7 @@
         "analyst_buy_count": 16,
         "analyst_total": 26,
         "analyst_buy_pct": 61.5,
-        "price_target_usd": 483.29166,
+        "price_target_usd": 490.08334,
         "pe": 43.54244,
         "pb": null,
         "ps": null,
@@ -388,9 +388,9 @@
         "operating_income_usd": null,
         "net_income_usd": 1188000000.0,
         "statement_period": "2025-12-31",
-        "estimated_revenue_usd": 171603609450.0,
+        "estimated_revenue_usd": 173572677970.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": 2090363437.3400002,
+        "estimated_net_income_usd": 2171649316.94,
         "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:49+00:00",
@@ -401,7 +401,7 @@
         "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794485127.1044238
+      "yahoo_at": 1794488737.7356818
     },
     "JNJ": {
       "data": {
