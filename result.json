@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-12T16:05:22+00:00",
-    "finished_utc": "2026-11-12T16:06:35+00:00",
-    "started_kst": "2026-11-13T01:05:22+09:00",
-    "finished_kst": "2026-11-13T01:06:35+09:00",
-    "started_et": "2026-11-12T11:05:22-05:00",
+    "started_utc": "2026-11-12T17:05:27+00:00",
+    "finished_utc": "2026-11-12T17:06:25+00:00",
+    "started_kst": "2026-11-13T02:05:27+09:00",
+    "finished_kst": "2026-11-13T02:06:25+09:00",
+    "started_et": "2026-11-12T12:05:27-05:00",
     "mode": "intraday_delayed_sip",
     "market_open_estimate": true,
-    "historical_data_end_utc": "2026-11-12T15:49:22+00:00"
+    "historical_data_end_utc": "2026-11-12T16:49:27+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -109,8 +109,8 @@
       "10d": 6,
       "20d": 3
     },
-    "candidate_price_breakouts": 6,
-    "candidate_volume_validations": 6,
+    "candidate_price_breakouts": 5,
+    "candidate_volume_validations": 5,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
       "FDXF",
@@ -122,65 +122,11 @@
     "http_requests": {
       "daily": 14,
       "snapshots": 7,
-      "intraday_5m": 13
+      "intraday_5m": 11
     }
   },
-  "confirmed_signals": [
-    {
-      "period": 63,
-      "box_high": 81.755,
-      "box_low": 68.72,
-      "box_width": 0.1896827706635622,
-      "first_close": 79.17,
-      "last_close": 81.1,
-      "first_last_move": 0.02437792092964508,
-      "valid_box": true,
-      "price": 81.815,
-      "prev_close": 81.1,
-      "symbol": "XEL",
-      "name": "Xcel Energy",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-11-12T10:45-05:00",
-      "current_cum_volume": 2735753.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 1088922.45,
-      "volume_ratio": 2.512348790311009,
-      "confirmed": true,
-      "strong": true,
-      "signal_key": "XEL:63:81.7550:2026-11-12T10:45-05:00",
-      "quality_score": 61.1,
-      "sector": "Utilities",
-      "industry": "Multi-Utilities"
-    }
-  ],
-  "new_breakout_signals": [
-    {
-      "period": 63,
-      "box_high": 81.755,
-      "box_low": 68.72,
-      "box_width": 0.1896827706635622,
-      "first_close": 79.17,
-      "last_close": 81.1,
-      "first_last_move": 0.02437792092964508,
-      "valid_box": true,
-      "price": 81.815,
-      "prev_close": 81.1,
-      "symbol": "XEL",
-      "name": "Xcel Energy",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-11-12T10:45-05:00",
-      "current_cum_volume": 2735753.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 1088922.45,
-      "volume_ratio": 2.512348790311009,
-      "confirmed": true,
-      "strong": true,
-      "signal_key": "XEL:63:81.7550:2026-11-12T10:45-05:00",
-      "quality_score": 61.1,
-      "sector": "Utilities",
-      "industry": "Multi-Utilities"
-    }
-  ],
+  "confirmed_signals": [],
+  "new_breakout_signals": [],
   "upper_box_watch_candidates": [
     {
       "period": 63,
@@ -3206,7 +3152,7 @@
       "analyst_total": 15,
       "analyst_buy_pct": 20.0,
       "price_target_usd": 118.73333,
-      "pe": 18.598541,
+      "pe": 18.557665,
       "pb": null,
       "ps": null,
       "revenue_usd": 17355000000.0,
@@ -3233,7 +3179,7 @@
       "analyst_total": 7,
       "analyst_buy_pct": 100.0,
       "price_target_usd": 350.16666,
-      "pe": 15.251414,
+      "pe": 15.250943,
       "pb": null,
       "ps": null,
       "revenue_usd": 12814300000.0,
@@ -3464,7 +3410,7 @@
       "analyst_total": 26,
       "analyst_buy_pct": 61.5,
       "price_target_usd": 490.08334,
-      "pe": 43.176098,
+      "pe": 43.512196,
       "pb": null,
       "ps": null,
       "revenue_usd": 129664000000.0,
@@ -3731,29 +3677,6 @@
       "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
       "market_source": "Yahoo Finance (unofficial)",
       "source": "SEC EDGAR / Yahoo Finance"
-    },
-    "XEL": {
-      "sector": "Utilities",
-      "industry": "Utilities - Regulated Electric",
-      "analyst_buy_count": 18,
-      "analyst_buy_pct": 90.0,
-      "analyst_total": 20,
-      "pe": 19.013987,
-      "price_target_usd": 89.81579,
-      "revenue_usd": 14669000000.0,
-      "operating_income_usd": 2879000000.0,
-      "net_income_usd": 2018000000.0,
-      "statement_period": "2025-12-31",
-      "financial_source": "Yahoo Finance annual income statement (unofficial)",
-      "estimated_revenue_usd": 17219300100.0,
-      "estimate_period": "+1y",
-      "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
-      "estimated_net_income_usd": 2932474021.8772798,
-      "estimated_net_income_method": "EPS consensus x current shares (approximation)",
-      "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
-      "analyst_consensus": "Strong_buy",
-      "market_source": "Yahoo Finance (unofficial)",
-      "source": "SEC EDGAR / Yahoo Finance"
     }
   },
   "fundamentals_source": "SEC EDGAR + Yahoo Finance (unofficial), cached",
@@ -3761,7 +3684,7 @@
     "missing_actuals": 3,
     "missing_forecasts": 0,
     "sec_companyfacts_requests_this_run": 0,
-    "yahoo_symbol_requests_this_run": 4,
+    "yahoo_symbol_requests_this_run": 3,
     "fmp_requests_this_run": 0,
     "cache_stocks": 33,
     "errors": [
