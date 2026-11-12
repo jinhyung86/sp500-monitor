@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-12T07:05:22+00:00",
-    "finished_utc": "2026-11-12T07:05:32+00:00",
-    "started_kst": "2026-11-12T16:05:22+09:00",
-    "finished_kst": "2026-11-12T16:05:32+09:00",
-    "started_et": "2026-11-12T02:05:22-05:00",
+    "started_utc": "2026-11-12T08:05:23+00:00",
+    "finished_utc": "2026-11-12T08:05:29+00:00",
+    "started_kst": "2026-11-12T17:05:23+09:00",
+    "finished_kst": "2026-11-12T17:05:29+09:00",
+    "started_et": "2026-11-12T03:05:23-05:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-12T06:49:22+00:00"
+    "historical_data_end_utc": "2026-11-12T07:49:23+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -374,7 +374,7 @@
       "recent_5_return_pct": 1.064,
       "ma5_above_ma20": true,
       "ma5_rising": true,
-      "volume_growth_ratio": 1.623,
+      "volume_growth_ratio": 1.617,
       "watch_score": 95.8,
       "symbol": "EVRG",
       "name": "에버지",
@@ -691,7 +691,7 @@
         "ma10": 127.322,
         "ma20": 121.0695,
         "ma_aligned": true,
-        "volume_growth_ratio": 1.2752,
+        "volume_growth_ratio": 1.2751,
         "up_down_volume_ratio": 1.443,
         "drawdown_from_20d_close_high_pct": 2.006,
         "max_single_day_gain_pct": 7.07,
