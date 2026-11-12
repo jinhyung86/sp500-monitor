@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-12T00:05:25+00:00",
-    "finished_utc": "2026-11-12T00:05:38+00:00",
-    "started_kst": "2026-11-12T09:05:25+09:00",
-    "finished_kst": "2026-11-12T09:05:38+09:00",
-    "started_et": "2026-11-11T19:05:25-05:00",
+    "started_utc": "2026-11-12T01:05:21+00:00",
+    "finished_utc": "2026-11-12T01:05:33+00:00",
+    "started_kst": "2026-11-12T10:05:21+09:00",
+    "finished_kst": "2026-11-12T10:05:33+09:00",
+    "started_et": "2026-11-11T20:05:21-05:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-11T23:49:25+00:00"
+    "historical_data_end_utc": "2026-11-12T00:49:21+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -575,7 +575,7 @@
         "ma10": 97.818,
         "ma20": 92.2635,
         "ma_aligned": true,
-        "volume_growth_ratio": 1.9659,
+        "volume_growth_ratio": 1.966,
         "up_down_volume_ratio": 1.2538,
         "drawdown_from_20d_close_high_pct": 0.0,
         "max_single_day_gain_pct": 5.714,
