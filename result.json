@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-13T17:05:32+00:00",
-    "finished_utc": "2026-11-13T17:05:46+00:00",
-    "started_kst": "2026-11-14T02:05:32+09:00",
-    "finished_kst": "2026-11-14T02:05:46+09:00",
-    "started_et": "2026-11-13T12:05:32-05:00",
+    "started_utc": "2026-11-13T18:05:21+00:00",
+    "finished_utc": "2026-11-13T18:05:42+00:00",
+    "started_kst": "2026-11-14T03:05:21+09:00",
+    "finished_kst": "2026-11-14T03:05:42+09:00",
+    "started_et": "2026-11-13T13:05:21-05:00",
     "mode": "intraday_delayed_sip",
     "market_open_estimate": true,
-    "historical_data_end_utc": "2026-11-13T16:49:32+00:00"
+    "historical_data_end_utc": "2026-11-13T17:49:21+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -109,8 +109,8 @@
       "10d": 0,
       "20d": 0
     },
-    "candidate_price_breakouts": 2,
-    "candidate_volume_validations": 2,
+    "candidate_price_breakouts": 4,
+    "candidate_volume_validations": 3,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
       "FDXF",
@@ -122,7 +122,7 @@
     "http_requests": {
       "daily": 14,
       "snapshots": 7,
-      "intraday_5m": 4
+      "intraday_5m": 6
     }
   },
   "confirmed_signals": [],
@@ -2702,7 +2702,7 @@
       "analyst_total": 26,
       "analyst_buy_pct": 61.5,
       "price_target_usd": 490.08334,
-      "pe": 42.790245,
+      "pe": 42.895123,
       "pb": null,
       "ps": null,
       "revenue_usd": 129664000000.0,

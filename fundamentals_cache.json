@@ -381,7 +381,7 @@
         "analyst_total": 26,
         "analyst_buy_pct": 61.5,
         "price_target_usd": 490.08334,
-        "pe": 42.790245,
+        "pe": 42.895123,
         "pb": null,
         "ps": null,
         "revenue_usd": 129664000000.0,
@@ -401,7 +401,7 @@
         "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794589546.5981853
+      "yahoo_at": 1794593142.0560992
     },
     "JNJ": {
       "data": {
