@@ -24,9 +24,9 @@
 <tr><td>규제 전력</td><td>Hold · 매수 8/23 · 매수비율 34.8%</td><td>96.15 · 여력 2.7%</td><td>29.55B / 7.29B (+24.7%) / 4.34B (+14.7%)</td><td>32.90B (+11.3%) /  / 5.75B (+17.5%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
 <tr><td rowspan="2">FOX</td><td>Fox Corporation (Class B)</td><td>93.7점 · C등급</td><td>61.11</td><td rowspan="2">위치 84.1% · 상단 62.47</td><td>거래량 1.19x</td><td>5일 0.99%</td><td>42일</td></tr>
 <tr><td>엔터테인먼트</td><td></td><td></td><td>17.13B / 3.50B (+20.4%) / 1.69B (+9.8%)</td><td></td><td>2026-06-30 </td></tr>
-<tr><td rowspan="2">DUK</td><td>듀크 에너지</td><td>92.6점 · C등급</td><td>129.16</td><td rowspan="2">위치 81.4% · 상단 132.99</td><td>거래량 1.19x</td><td>5일 0.83%</td><td>126일</td></tr>
+<tr><td rowspan="2">DUK</td><td>듀크 에너지</td><td>92.6점 · C등급</td><td>129.16</td><td rowspan="2">위치 81.4% · 상단 132.99</td><td>거래량 1.20x</td><td>5일 0.83%</td><td>126일</td></tr>
 <tr><td>규제 전력</td><td>Buy · 매수 11/23 · 매수비율 47.8%</td><td>132.26 · 여력 2.4%</td><td>32.24B / 8.58B (+26.6%) / 4.97B (+15.4%)</td><td>35.46B (+10.0%) /  / 5.59B (+15.8%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
-<tr><td rowspan="2">FOXA</td><td>Fox Corporation (Class A)</td><td>92.0점 · C등급</td><td>68.42</td><td rowspan="2">위치 79.9% · 상단 70.47</td><td>거래량 2.36x</td><td>5일 1.08%</td><td>42일</td></tr>
+<tr><td rowspan="2">FOXA</td><td>Fox Corporation (Class A)</td><td>92.0점 · C등급</td><td>68.42</td><td rowspan="2">위치 79.9% · 상단 70.47</td><td>거래량 2.37x</td><td>5일 1.08%</td><td>42일</td></tr>
 <tr><td>엔터테인먼트</td><td>Buy · 매수 13/20 · 매수비율 65.0%</td><td>79.91 · 여력 16.8%</td><td>17.13B / 3.50B (+20.4%) / 1.69B (+9.8%)</td><td>24.89B (+45.3%) /  / 2.09B (+8.4%) · 순이익 근사치(EPS×주식수)</td><td>2026-06-30 </td></tr>
 <tr><td rowspan="2">PEG</td><td>Public Service Enterprise Group</td><td>85.0점 · A등급</td><td>75.88</td><td rowspan="2">위치 99.9% · 상단 75.89</td><td>거래량 0.71x</td><td>5일 1.13%</td><td>42일</td></tr>
 <tr><td>규제 전력</td><td>Buy · 매수 8/22 · 매수비율 36.4%</td><td>81.21 · 여력 7.0%</td><td>12.17B / 2.98B (+24.5%) / 2.11B (+17.3%)</td><td>13.26B (+9.0%) /  / 2.31B (+17.4%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
@@ -61,8 +61,8 @@
 - VYLR: daily bars insufficient: 32 (need 127 for 126-day scan)
 
 ## 실행 결과 요약
-- 실행 시작(KST): 2026-11-14T06:05:30+09:00
-- 실행 종료(KST): 2026-11-14T06:05:37+09:00
+- 실행 시작(KST): 2026-11-14T07:05:23+09:00
+- 실행 종료(KST): 2026-11-14T07:05:31+09:00
 - 모드: after_close_daily
 - 전체 대상: 503
 - 고유 요청: 503
