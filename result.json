@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-13T04:05:20+00:00",
-    "finished_utc": "2026-11-13T04:05:25+00:00",
-    "started_kst": "2026-11-13T13:05:20+09:00",
-    "finished_kst": "2026-11-13T13:05:25+09:00",
-    "started_et": "2026-11-12T23:05:20-05:00",
+    "started_utc": "2026-11-13T05:05:21+00:00",
+    "finished_utc": "2026-11-13T05:05:24+00:00",
+    "started_kst": "2026-11-13T14:05:21+09:00",
+    "finished_kst": "2026-11-13T14:05:24+09:00",
+    "started_et": "2026-11-13T00:05:21-05:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-13T03:49:20+00:00"
+    "historical_data_end_utc": "2026-11-13T04:49:21+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -2702,7 +2702,7 @@
       "analyst_total": 26,
       "analyst_buy_pct": 61.5,
       "price_target_usd": 490.08334,
-      "pe": 43.285854,
+      "pe": 43.540726,
       "pb": null,
       "ps": null,
       "revenue_usd": 129664000000.0,
