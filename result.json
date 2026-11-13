@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-13T06:05:18+00:00",
-    "finished_utc": "2026-11-13T06:05:21+00:00",
-    "started_kst": "2026-11-13T15:05:18+09:00",
-    "finished_kst": "2026-11-13T15:05:21+09:00",
-    "started_et": "2026-11-13T01:05:18-05:00",
+    "started_utc": "2026-11-13T07:05:21+00:00",
+    "finished_utc": "2026-11-13T07:05:25+00:00",
+    "started_kst": "2026-11-13T16:05:21+09:00",
+    "finished_kst": "2026-11-13T16:05:25+09:00",
+    "started_et": "2026-11-13T02:05:21-05:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-13T05:49:18+00:00"
+    "historical_data_end_utc": "2026-11-13T06:49:21+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -2711,7 +2711,7 @@
       "statement_period": "2025-12-31",
       "estimated_revenue_usd": 173572677970.0,
       "estimated_operating_income_usd": null,
-      "estimated_net_income_usd": 2171649316.94,
+      "estimated_net_income_usd": 2180511735.7575,
       "estimate_period": "+1y",
       "source": "Financial Modeling Prep",
       "fetched_utc": "2026-11-11T07:34:49+00:00",

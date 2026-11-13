@@ -390,7 +390,7 @@
         "statement_period": "2025-12-31",
         "estimated_revenue_usd": 173572677970.0,
         "estimated_operating_income_usd": null,
-        "estimated_net_income_usd": 2171649316.94,
+        "estimated_net_income_usd": 2180511735.7575,
         "estimate_period": "+1y",
         "source": "Financial Modeling Prep",
         "fetched_utc": "2026-11-11T07:34:49+00:00",
@@ -401,7 +401,7 @@
         "estimated_net_income_method": "EPS consensus x current shares (approximation)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794549921.8954387
+      "yahoo_at": 1794553525.0864525
     },
     "JNJ": {
       "data": {
