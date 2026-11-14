@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-14T07:05:28+00:00",
-    "finished_utc": "2026-11-14T07:05:31+00:00",
-    "started_kst": "2026-11-14T16:05:28+09:00",
-    "finished_kst": "2026-11-14T16:05:31+09:00",
-    "started_et": "2026-11-14T02:05:28-05:00",
+    "started_utc": "2026-11-14T08:05:19+00:00",
+    "finished_utc": "2026-11-14T08:05:24+00:00",
+    "started_kst": "2026-11-14T17:05:19+09:00",
+    "finished_kst": "2026-11-14T17:05:24+09:00",
+    "started_et": "2026-11-14T03:05:19-05:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-14T06:49:28+00:00"
+    "historical_data_end_utc": "2026-11-14T07:49:19+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -190,7 +190,7 @@
       "recent_5_return_pct": 0.021,
       "ma5_above_ma20": true,
       "ma5_rising": true,
-      "volume_growth_ratio": 1.561,
+      "volume_growth_ratio": 1.534,
       "watch_score": 93.9,
       "symbol": "SO",
       "name": "서던 컴퍼니",
@@ -236,7 +236,7 @@
       "recent_5_return_pct": 0.827,
       "ma5_above_ma20": true,
       "ma5_rising": true,
-      "volume_growth_ratio": 1.234,
+      "volume_growth_ratio": 1.231,
       "watch_score": 92.6,
       "symbol": "DUK",
       "name": "듀크 에너지",
