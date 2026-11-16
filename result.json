@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-16T15:05:38+00:00",
-    "finished_utc": "2026-11-16T15:05:44+00:00",
-    "started_kst": "2026-11-17T00:05:38+09:00",
-    "finished_kst": "2026-11-17T00:05:44+09:00",
-    "started_et": "2026-11-16T10:05:38-05:00",
+    "started_utc": "2026-11-16T16:05:42+00:00",
+    "finished_utc": "2026-11-16T16:05:46+00:00",
+    "started_kst": "2026-11-17T01:05:42+09:00",
+    "finished_kst": "2026-11-17T01:05:46+09:00",
+    "started_et": "2026-11-16T11:05:42-05:00",
     "mode": "intraday_delayed_sip",
     "market_open_estimate": true,
-    "historical_data_end_utc": "2026-11-16T14:49:38+00:00"
+    "historical_data_end_utc": "2026-11-16T15:49:42+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -109,7 +109,7 @@
       "10d": 0,
       "20d": 1
     },
-    "candidate_price_breakouts": 6,
+    "candidate_price_breakouts": 7,
     "candidate_volume_validations": 5,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
@@ -125,62 +125,8 @@
       "intraday_5m": 10
     }
   },
-  "confirmed_signals": [
-    {
-      "period": 21,
-      "box_high": 170.73,
-      "box_low": 156.8,
-      "box_width": 0.08883928571428568,
-      "first_close": 159.35,
-      "last_close": 169.8,
-      "first_last_move": 0.06557891433950425,
-      "valid_box": true,
-      "price": 172.29,
-      "prev_close": 169.8,
-      "symbol": "PG",
-      "name": "Procter & Gamble",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-11-16T09:45-05:00",
-      "current_cum_volume": 1533574.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 995590.0,
-      "volume_ratio": 1.5403670185518135,
-      "confirmed": true,
-      "strong": false,
-      "signal_key": "PG:21:170.7300:2026-11-16T09:45-05:00",
-      "quality_score": 38.7,
-      "sector": "Consumer Staples",
-      "industry": "Personal Care Products"
-    }
-  ],
-  "new_breakout_signals": [
-    {
-      "period": 21,
-      "box_high": 170.73,
-      "box_low": 156.8,
-      "box_width": 0.08883928571428568,
-      "first_close": 159.35,
-      "last_close": 169.8,
-      "first_last_move": 0.06557891433950425,
-      "valid_box": true,
-      "price": 172.29,
-      "prev_close": 169.8,
-      "symbol": "PG",
-      "name": "Procter & Gamble",
-      "mode": "intraday",
-      "last_5m_time_et": "2026-11-16T09:45-05:00",
-      "current_cum_volume": 1533574.0,
-      "prior_session_count": 20,
-      "same_time_avg_volume": 995590.0,
-      "volume_ratio": 1.5403670185518135,
-      "confirmed": true,
-      "strong": false,
-      "signal_key": "PG:21:170.7300:2026-11-16T09:45-05:00",
-      "quality_score": 38.7,
-      "sector": "Consumer Staples",
-      "industry": "Personal Care Products"
-    }
-  ],
+  "confirmed_signals": [],
+  "new_breakout_signals": [],
   "upper_box_watch_candidates": [
     {
       "period": 63,
@@ -2774,7 +2720,7 @@
     "FOX": {
       "sector": "Communication Services",
       "industry": "Entertainment",
-      "pe": 12.827661,
+      "pe": 12.873405,
       "revenue_usd": 17126000000.0,
       "operating_income_usd": 3496000000.0,
       "net_income_usd": 1685000000.0,
@@ -2826,29 +2772,6 @@
       "estimate_period": "+1y",
       "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
       "estimated_net_income_usd": 2309038663.92311,
-      "estimated_net_income_method": "EPS consensus x current shares (approximation)",
-      "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
-      "analyst_consensus": "Buy",
-      "market_source": "Yahoo Finance (unofficial)",
-      "source": "SEC EDGAR / Yahoo Finance"
-    },
-    "PG": {
-      "sector": "Consumer Defensive",
-      "industry": "Household & Personal Products",
-      "analyst_buy_count": 14,
-      "analyst_buy_pct": 56.0,
-      "analyst_total": 25,
-      "pe": 26.008286,
-      "price_target_usd": 174.04349,
-      "revenue_usd": 87032000000.0,
-      "operating_income_usd": 19748000000.0,
-      "net_income_usd": 16046000000.0,
-      "statement_period": "2026-06-30",
-      "financial_source": "Yahoo Finance annual income statement (unofficial)",
-      "estimated_revenue_usd": 92570663750.0,
-      "estimate_period": "+1y",
-      "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
-      "estimated_net_income_usd": 17148373539.63123,
       "estimated_net_income_method": "EPS consensus x current shares (approximation)",
       "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
       "analyst_consensus": "Buy",
@@ -2907,7 +2830,7 @@
     "missing_actuals": 0,
     "missing_forecasts": 1,
     "sec_companyfacts_requests_this_run": 0,
-    "yahoo_symbol_requests_this_run": 2,
+    "yahoo_symbol_requests_this_run": 1,
     "fmp_requests_this_run": 0,
     "cache_stocks": 39,
     "errors": [

@@ -1044,7 +1044,7 @@
       "data": {
         "sector": "Communication Services",
         "industry": "Entertainment",
-        "pe": 12.827661,
+        "pe": 12.873405,
         "revenue_usd": 17126000000.0,
         "operating_income_usd": 3496000000.0,
         "net_income_usd": 1685000000.0,
@@ -1057,7 +1057,7 @@
         "source": "SEC EDGAR / Yahoo Finance"
       },
       "sec_at": 0,
-      "yahoo_at": 1794841544.016624
+      "yahoo_at": 1794845146.7607598
     },
     "FOXA": {
       "data": {
