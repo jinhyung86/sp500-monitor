@@ -1044,7 +1044,7 @@
       "data": {
         "sector": "Communication Services",
         "industry": "Entertainment",
-        "pe": 12.974468,
+        "pe": 12.97766,
         "revenue_usd": 17126000000.0,
         "operating_income_usd": 3496000000.0,
         "net_income_usd": 1685000000.0,
@@ -1057,7 +1057,7 @@
         "source": "SEC EDGAR / Yahoo Finance"
       },
       "sec_at": 0,
-      "yahoo_at": 1794848744.945224
+      "yahoo_at": 1794852331.5677648
     },
     "FOXA": {
       "data": {
@@ -1139,6 +1139,33 @@
       },
       "sec_at": 0,
       "yahoo_at": 1794841544.016624
+    },
+    "CL": {
+      "data": {
+        "sector": "Consumer Defensive",
+        "industry": "Household & Personal Products",
+        "analyst_buy_count": 13,
+        "analyst_buy_pct": 61.9,
+        "analyst_total": 21,
+        "pe": 39.51366,
+        "price_target_usd": 101.7,
+        "revenue_usd": 20382000000.0,
+        "operating_income_usd": 4233000000.0,
+        "net_income_usd": 2132000000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 21887941950.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 3259325138.1974697,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1794852331.5677648
     }
   }
 }
