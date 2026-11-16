@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-16T18:05:26+00:00",
-    "finished_utc": "2026-11-16T18:05:31+00:00",
-    "started_kst": "2026-11-17T03:05:26+09:00",
-    "finished_kst": "2026-11-17T03:05:31+09:00",
-    "started_et": "2026-11-16T13:05:26-05:00",
+    "started_utc": "2026-11-16T19:05:24+00:00",
+    "finished_utc": "2026-11-16T19:05:27+00:00",
+    "started_kst": "2026-11-17T04:05:24+09:00",
+    "finished_kst": "2026-11-17T04:05:27+09:00",
+    "started_et": "2026-11-16T14:05:24-05:00",
     "mode": "intraday_delayed_sip",
     "market_open_estimate": true,
-    "historical_data_end_utc": "2026-11-16T17:49:26+00:00"
+    "historical_data_end_utc": "2026-11-16T18:49:24+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -109,8 +109,8 @@
       "10d": 0,
       "20d": 1
     },
-    "candidate_price_breakouts": 4,
-    "candidate_volume_validations": 4,
+    "candidate_price_breakouts": 6,
+    "candidate_volume_validations": 5,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
       "FDXF",
@@ -122,7 +122,7 @@
     "http_requests": {
       "daily": 14,
       "snapshots": 7,
-      "intraday_5m": 8
+      "intraday_5m": 10
     }
   },
   "confirmed_signals": [
@@ -135,20 +135,20 @@
       "last_close": 99.67,
       "first_last_move": 0.05907980023376891,
       "valid_box": true,
-      "price": 101.33,
+      "price": 101.455,
       "prev_close": 99.67,
       "symbol": "CL",
       "name": "Colgate-Palmolive",
       "mode": "intraday",
-      "last_5m_time_et": "2026-11-16T12:45-05:00",
-      "current_cum_volume": 2785120.0,
+      "last_5m_time_et": "2026-11-16T13:45-05:00",
+      "current_cum_volume": 3216992.0,
       "prior_session_count": 20,
-      "same_time_avg_volume": 1779257.95,
-      "volume_ratio": 1.565326713869678,
+      "same_time_avg_volume": 2114830.7,
+      "volume_ratio": 1.521158171195453,
       "confirmed": true,
       "strong": false,
-      "signal_key": "CL:21:101.1800:2026-11-16T12:45-05:00",
-      "quality_score": 28.2,
+      "signal_key": "CL:21:101.1800:2026-11-16T13:45-05:00",
+      "quality_score": 28.3,
       "sector": "Consumer Staples",
       "industry": "Household Products"
     }
@@ -163,20 +163,20 @@
       "last_close": 99.67,
       "first_last_move": 0.05907980023376891,
       "valid_box": true,
-      "price": 101.33,
+      "price": 101.455,
       "prev_close": 99.67,
       "symbol": "CL",
       "name": "Colgate-Palmolive",
       "mode": "intraday",
-      "last_5m_time_et": "2026-11-16T12:45-05:00",
-      "current_cum_volume": 2785120.0,
+      "last_5m_time_et": "2026-11-16T13:45-05:00",
+      "current_cum_volume": 3216992.0,
       "prior_session_count": 20,
-      "same_time_avg_volume": 1779257.95,
-      "volume_ratio": 1.565326713869678,
+      "same_time_avg_volume": 2114830.7,
+      "volume_ratio": 1.521158171195453,
       "confirmed": true,
       "strong": false,
-      "signal_key": "CL:21:101.1800:2026-11-16T12:45-05:00",
-      "quality_score": 28.2,
+      "signal_key": "CL:21:101.1800:2026-11-16T13:45-05:00",
+      "quality_score": 28.3,
       "sector": "Consumer Staples",
       "industry": "Household Products"
     }
@@ -766,6 +766,7 @@
     "CINF:63:185.1850:2026-11-04T13:45-05:00",
     "CINF:63:185.1850:2026-11-04T14:45-05:00",
     "CL:21:101.1800:2026-11-16T12:45-05:00",
+    "CL:21:101.1800:2026-11-16T13:45-05:00",
     "CL:21:92.8700:2026-10-15T09:45-04:00",
     "CL:21:92.8700:2026-10-15T10:45-04:00",
     "CL:21:92.8700:2026-10-15T11:45-04:00",
@@ -2798,7 +2799,7 @@
     "FOX": {
       "sector": "Communication Services",
       "industry": "Entertainment",
-      "pe": 12.97766,
+      "pe": 12.912766,
       "revenue_usd": 17126000000.0,
       "operating_income_usd": 3496000000.0,
       "net_income_usd": 1685000000.0,
@@ -2908,7 +2909,7 @@
     "missing_actuals": 0,
     "missing_forecasts": 1,
     "sec_companyfacts_requests_this_run": 0,
-    "yahoo_symbol_requests_this_run": 2,
+    "yahoo_symbol_requests_this_run": 1,
     "fmp_requests_this_run": 0,
     "cache_stocks": 40,
     "errors": [
