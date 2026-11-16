@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-16T16:05:42+00:00",
-    "finished_utc": "2026-11-16T16:05:46+00:00",
-    "started_kst": "2026-11-17T01:05:42+09:00",
-    "finished_kst": "2026-11-17T01:05:46+09:00",
-    "started_et": "2026-11-16T11:05:42-05:00",
+    "started_utc": "2026-11-16T17:05:40+00:00",
+    "finished_utc": "2026-11-16T17:05:44+00:00",
+    "started_kst": "2026-11-17T02:05:40+09:00",
+    "finished_kst": "2026-11-17T02:05:44+09:00",
+    "started_et": "2026-11-16T12:05:40-05:00",
     "mode": "intraday_delayed_sip",
     "market_open_estimate": true,
-    "historical_data_end_utc": "2026-11-16T15:49:42+00:00"
+    "historical_data_end_utc": "2026-11-16T16:49:40+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -109,8 +109,8 @@
       "10d": 0,
       "20d": 1
     },
-    "candidate_price_breakouts": 7,
-    "candidate_volume_validations": 5,
+    "candidate_price_breakouts": 3,
+    "candidate_volume_validations": 3,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
       "FDXF",
@@ -122,7 +122,7 @@
     "http_requests": {
       "daily": 14,
       "snapshots": 7,
-      "intraday_5m": 10
+      "intraday_5m": 6
     }
   },
   "confirmed_signals": [],
@@ -2720,7 +2720,7 @@
     "FOX": {
       "sector": "Communication Services",
       "industry": "Entertainment",
-      "pe": 12.873405,
+      "pe": 12.974468,
       "revenue_usd": 17126000000.0,
       "operating_income_usd": 3496000000.0,
       "net_income_usd": 1685000000.0,
