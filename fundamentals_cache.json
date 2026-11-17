@@ -1193,6 +1193,32 @@
       },
       "sec_at": 0,
       "yahoo_at": 1794863128.0055747
+    },
+    "IVZ": {
+      "data": {
+        "sector": "Financial Services",
+        "industry": "Asset Management",
+        "analyst_buy_count": 7,
+        "analyst_buy_pct": 43.8,
+        "analyst_total": 16,
+        "price_target_usd": 35.13333,
+        "revenue_usd": 6377100000.0,
+        "operating_income_usd": -695700000.0,
+        "net_income_usd": -281700000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 5767416980.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 1455047363.38086,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1794949532.8252792
     }
   }
 }
