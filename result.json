@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-17T21:05:30+00:00",
-    "finished_utc": "2026-11-17T21:05:32+00:00",
-    "started_kst": "2026-11-18T06:05:30+09:00",
-    "finished_kst": "2026-11-18T06:05:32+09:00",
-    "started_et": "2026-11-17T16:05:30-05:00",
+    "started_utc": "2026-11-17T22:05:28+00:00",
+    "finished_utc": "2026-11-17T22:05:30+00:00",
+    "started_kst": "2026-11-18T07:05:28+09:00",
+    "finished_kst": "2026-11-18T07:05:30+09:00",
+    "started_et": "2026-11-17T17:05:28-05:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-17T20:49:30+00:00"
+    "historical_data_end_utc": "2026-11-17T21:49:28+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -144,7 +144,7 @@
       "recent_5_return_pct": 0.831,
       "ma5_above_ma20": true,
       "ma5_rising": true,
-      "volume_growth_ratio": 1.206,
+      "volume_growth_ratio": 1.223,
       "watch_score": 93.9,
       "symbol": "DUK",
       "name": "듀크 에너지",
@@ -167,7 +167,7 @@
       "recent_5_return_pct": 1.083,
       "ma5_above_ma20": true,
       "ma5_rising": true,
-      "volume_growth_ratio": 1.146,
+      "volume_growth_ratio": 1.154,
       "watch_score": 88.8,
       "symbol": "IVZ",
       "name": "Invesco",
@@ -195,8 +195,8 @@
         "ma10": 105.234,
         "ma20": 96.675,
         "ma_aligned": true,
-        "volume_growth_ratio": 1.2966,
-        "up_down_volume_ratio": 1.4413,
+        "volume_growth_ratio": 1.2967,
+        "up_down_volume_ratio": 1.441,
         "drawdown_from_20d_close_high_pct": 3.15,
         "max_single_day_gain_pct": 5.714,
         "quality_filters_pass": true,
@@ -2610,7 +2610,7 @@
     "missing_actuals": 0,
     "missing_forecasts": 0,
     "sec_companyfacts_requests_this_run": 0,
-    "yahoo_symbol_requests_this_run": 1,
+    "yahoo_symbol_requests_this_run": 0,
     "fmp_requests_this_run": 0,
     "cache_stocks": 42,
     "errors": [
