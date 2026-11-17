@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-17T17:05:29+00:00",
-    "finished_utc": "2026-11-17T17:05:33+00:00",
-    "started_kst": "2026-11-18T02:05:29+09:00",
-    "finished_kst": "2026-11-18T02:05:33+09:00",
-    "started_et": "2026-11-17T12:05:29-05:00",
+    "started_utc": "2026-11-17T18:05:29+00:00",
+    "finished_utc": "2026-11-17T18:05:31+00:00",
+    "started_kst": "2026-11-18T03:05:29+09:00",
+    "finished_kst": "2026-11-18T03:05:31+09:00",
+    "started_et": "2026-11-17T13:05:29-05:00",
     "mode": "intraday_delayed_sip",
     "market_open_estimate": true,
-    "historical_data_end_utc": "2026-11-17T16:49:29+00:00"
+    "historical_data_end_utc": "2026-11-17T17:49:29+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -2700,7 +2700,7 @@
     "FOX": {
       "sector": "Communication Services",
       "industry": "Entertainment",
-      "pe": 12.806383,
+      "pe": 12.848937,
       "revenue_usd": 17126000000.0,
       "operating_income_usd": 3496000000.0,
       "net_income_usd": 1685000000.0,
