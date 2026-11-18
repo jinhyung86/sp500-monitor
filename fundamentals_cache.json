@@ -1246,6 +1246,33 @@
       },
       "sec_at": 0,
       "yahoo_at": 1795017934.6468012
+    },
+    "FE": {
+      "data": {
+        "sector": "Utilities",
+        "industry": "Utilities - Regulated Electric",
+        "analyst_buy_count": 10,
+        "analyst_buy_pct": 55.6,
+        "analyst_total": 18,
+        "pe": 23.062803,
+        "price_target_usd": 50.82143,
+        "revenue_usd": 15090000000.0,
+        "operating_income_usd": 2833000000.0,
+        "net_income_usd": 1020000000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 16793551370.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 1705686041.1118,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795025128.1511664
     }
   }
 }
