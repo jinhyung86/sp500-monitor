@@ -1219,6 +1219,33 @@
       },
       "sec_at": 0,
       "yahoo_at": 1794949532.8252792
+    },
+    "TGT": {
+      "data": {
+        "sector": "Consumer Defensive",
+        "industry": "Discount Stores",
+        "analyst_buy_count": 13,
+        "analyst_buy_pct": 33.3,
+        "analyst_total": 39,
+        "pe": 17.502596,
+        "price_target_usd": 165.97144,
+        "revenue_usd": 104780000000.0,
+        "operating_income_usd": 5117000000.0,
+        "net_income_usd": 3705000000.0,
+        "statement_period": "2026-01-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 114013948160.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 4366300445.304319,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795017934.6468012
     }
   }
 }
