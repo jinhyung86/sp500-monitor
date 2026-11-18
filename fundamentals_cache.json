@@ -1273,6 +1273,58 @@
       },
       "sec_at": 0,
       "yahoo_at": 1795025128.1511664
+    },
+    "AES": {
+      "data": {
+        "sector": "Utilities",
+        "industry": "Utilities - Diversified",
+        "analyst_buy_count": 0,
+        "analyst_buy_pct": 0.0,
+        "analyst_total": 9,
+        "pe": 6.0281124,
+        "price_target_usd": 15.0,
+        "revenue_usd": 12233000000.0,
+        "operating_income_usd": 1970000000.0,
+        "net_income_usd": 910000000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 13437973290.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 1700510207.77296,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795035936.4860759
+    },
+    "IP": {
+      "data": {
+        "sector": "Consumer Cyclical",
+        "industry": "Packaging & Containers",
+        "analyst_buy_count": 10,
+        "analyst_buy_pct": 90.9,
+        "analyst_total": 11,
+        "price_target_usd": 42.3,
+        "revenue_usd": 23634000000.0,
+        "operating_income_usd": -10000000.0,
+        "net_income_usd": -3516000000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 26210870040.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 1456401688.9746,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795035936.4860759
     }
   }
 }
