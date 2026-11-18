@@ -939,17 +939,17 @@
         "analyst_buy_count": 8,
         "analyst_buy_pct": 34.8,
         "analyst_total": 23,
-        "pe": 21.415525,
-        "price_target_usd": 96.15,
+        "pe": 21.554794,
+        "price_target_usd": 96.275,
         "revenue_usd": 29553000000.0,
         "operating_income_usd": 7285000000.0,
         "net_income_usd": 4341000000.0,
         "statement_period": "2025-12-31",
         "financial_source": "Yahoo Finance annual income statement (unofficial)",
-        "estimated_revenue_usd": 32896985180.0,
+        "estimated_revenue_usd": 32931322520.0,
         "estimate_period": "+1y",
         "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
-        "estimated_net_income_usd": 5745046047.6005,
+        "estimated_net_income_usd": 5746291806.90153,
         "estimated_net_income_method": "EPS consensus x current shares (approximation)",
         "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
         "analyst_consensus": "Hold",
@@ -957,7 +957,7 @@
         "source": "SEC EDGAR / Yahoo Finance"
       },
       "sec_at": 0,
-      "yahoo_at": 1794431158.5241296
+      "yahoo_at": 1795039523.2848084
     },
     "XEL": {
       "data": {
