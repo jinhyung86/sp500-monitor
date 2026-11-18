@@ -4,10 +4,10 @@
 ## 신규 상단 돌파 신호
 
 <table><thead><tr><th>종목</th><th>회사명<br>테마</th><th>점수<br>투자의견</th><th>가격(USD)<br>목표가(USD)</th><th>기술지표</th><th>거래량<br>실적(십억 USD)</th><th>추세<br>예상(십억 USD)</th><th>기간<br>실적기준일</th></tr></thead><tbody>
-<tr><td rowspan="2">TGT</td><td>Target Corporation</td><td>70.0점 · 상단돌파 · 강함</td><td>169.09</td><td rowspan="2">상단 167.60</td><td>거래량 5.12x</td><td>-</td><td>42일</td></tr>
-<tr><td>할인 유통</td><td>Buy · 매수 13/39 · 매수비율 33.3%</td><td>165.97 · 여력 -1.8%</td><td>104.78B / 5.12B (+4.9%) / 3.71B (+3.5%)</td><td>114.01B (+8.8%) /  / 4.37B (+3.8%) · 순이익 근사치(EPS×주식수)</td><td>2026-01-31 </td></tr>
-<tr><td rowspan="2">TGT</td><td>Target Corporation</td><td>66.6점 · 상단돌파 · 강함</td><td>169.09</td><td rowspan="2">상단 167.60</td><td>거래량 5.12x</td><td>-</td><td>21일</td></tr>
-<tr><td>할인 유통</td><td>Buy · 매수 13/39 · 매수비율 33.3%</td><td>165.97 · 여력 -1.8%</td><td>104.78B / 5.12B (+4.9%) / 3.71B (+3.5%)</td><td>114.01B (+8.8%) /  / 4.37B (+3.8%) · 순이익 근사치(EPS×주식수)</td><td>2026-01-31 </td></tr>
+<tr><td rowspan="2">TGT</td><td>Target Corporation</td><td>67.4점 · 상단돌파 · 강함</td><td>168.80</td><td rowspan="2">상단 167.60</td><td>거래량 4.15x</td><td>-</td><td>42일</td></tr>
+<tr><td>할인 유통</td><td>Buy · 매수 13/39 · 매수비율 33.3%</td><td>165.97 · 여력 -1.7%</td><td>104.78B / 5.12B (+4.9%) / 3.71B (+3.5%)</td><td>114.01B (+8.8%) /  / 4.37B (+3.8%) · 순이익 근사치(EPS×주식수)</td><td>2026-01-31 </td></tr>
+<tr><td rowspan="2">TGT</td><td>Target Corporation</td><td>64.1점 · 상단돌파 · 강함</td><td>168.80</td><td rowspan="2">상단 167.60</td><td>거래량 4.15x</td><td>-</td><td>21일</td></tr>
+<tr><td>할인 유통</td><td>Buy · 매수 13/39 · 매수비율 33.3%</td><td>165.97 · 여력 -1.7%</td><td>104.78B / 5.12B (+4.9%) / 3.71B (+3.5%)</td><td>114.01B (+8.8%) /  / 4.37B (+3.8%) · 순이익 근사치(EPS×주식수)</td><td>2026-01-31 </td></tr>
 </tbody></table>
 
 ## 박스권 하단 후보
@@ -54,8 +54,8 @@
 - VYLR: daily bars insufficient: 34 (need 126 for 126-day scan)
 
 ## 실행 결과 요약
-- 실행 시작(KST): 2026-11-19T01:05:31+09:00
-- 실행 종료(KST): 2026-11-19T01:05:34+09:00
+- 실행 시작(KST): 2026-11-19T02:05:31+09:00
+- 실행 종료(KST): 2026-11-19T02:05:33+09:00
 - 모드: intraday_delayed_sip
 - 전체 대상: 503
 - 고유 요청: 503
