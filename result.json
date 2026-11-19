@@ -1,20 +1,20 @@
 {
   "run": {
-    "started_utc": "2026-11-19T14:05:21+00:00",
-    "finished_utc": "2026-11-19T14:05:22+00:00",
-    "started_kst": "2026-11-19T23:05:21+09:00",
-    "finished_kst": "2026-11-19T23:05:22+09:00",
-    "started_et": "2026-11-19T09:05:21-05:00",
-    "mode": "after_close_daily",
-    "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-19T13:49:21+00:00"
+    "started_utc": "2026-11-19T15:05:20+00:00",
+    "finished_utc": "2026-11-19T15:05:22+00:00",
+    "started_kst": "2026-11-20T00:05:20+09:00",
+    "finished_kst": "2026-11-20T00:05:22+09:00",
+    "started_et": "2026-11-19T10:05:20-05:00",
+    "mode": "intraday_delayed_sip",
+    "market_open_estimate": true,
+    "historical_data_end_utc": "2026-11-19T14:49:20+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
     "constituent_warning": null,
     "market_data": "Alpaca Market Data",
     "historical_feed": "sip",
-    "snapshot_feed": null,
+    "snapshot_feed": "delayed_sip",
     "adjustment": "split"
   },
   "criteria": {
@@ -121,7 +121,7 @@
     "unrequested_symbols": [],
     "http_requests": {
       "daily": 14,
-      "snapshots": 0,
+      "snapshots": 7,
       "intraday_5m": 0
     }
   },
@@ -280,15 +280,15 @@
   "failures": [
     {
       "symbol": "FDXF",
-      "reason": "daily bars insufficient: 120 (need 127 for 126-day scan)"
+      "reason": "daily bars insufficient: 120 (need 126 for 126-day scan)"
     },
     {
       "symbol": "HONA",
-      "reason": "daily bars insufficient: 110 (need 127 for 126-day scan)"
+      "reason": "daily bars insufficient: 110 (need 126 for 126-day scan)"
     },
     {
       "symbol": "VYLR",
-      "reason": "daily bars insufficient: 35 (need 127 for 126-day scan)"
+      "reason": "daily bars insufficient: 35 (need 126 for 126-day scan)"
     }
   ],
   "seen_signal_keys": [
