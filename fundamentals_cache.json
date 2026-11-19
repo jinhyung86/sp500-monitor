@@ -1325,6 +1325,87 @@
       },
       "sec_at": 0,
       "yahoo_at": 1795035936.4860759
+    },
+    "CHRW": {
+      "data": {
+        "sector": "Industrials",
+        "industry": "Integrated Freight & Logistics",
+        "analyst_buy_count": 18,
+        "analyst_buy_pct": 78.3,
+        "analyst_total": 23,
+        "pe": 24.76481,
+        "price_target_usd": 179.30435,
+        "revenue_usd": 16232763000.0,
+        "operating_income_usd": 794961000.0,
+        "net_income_usd": 587081000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 20359101310.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 865881070.77925,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795122324.6809094
+    },
+    "DIS": {
+      "data": {
+        "sector": "Communication Services",
+        "industry": "Entertainment",
+        "analyst_buy_count": 27,
+        "analyst_buy_pct": 84.4,
+        "analyst_total": 32,
+        "pe": 21.362343,
+        "price_target_usd": 131.34355,
+        "revenue_usd": 102344000000.0,
+        "operating_income_usd": 16497000000.0,
+        "net_income_usd": 9899000000.0,
+        "statement_period": "2026-09-30",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 111607672450.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 14549816566.26464,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795122324.6809094
+    },
+    "MLM": {
+      "data": {
+        "sector": "Basic Materials",
+        "industry": "Building Materials",
+        "analyst_buy_count": 17,
+        "analyst_buy_pct": 70.8,
+        "analyst_total": 24,
+        "pe": 37.817165,
+        "price_target_usd": 626.0,
+        "revenue_usd": 6150000000.0,
+        "operating_income_usd": 1455000000.0,
+        "net_income_usd": 1137000000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 9351234000.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 1266033490.3487499,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795122324.6809094
     }
   }
 }
