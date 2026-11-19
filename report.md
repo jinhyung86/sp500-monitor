@@ -19,7 +19,7 @@
 <table><thead><tr><th>종목</th><th>회사명<br>테마</th><th>점수<br>투자의견</th><th>가격(USD)<br>목표가(USD)</th><th>기술지표</th><th>거래량<br>실적(십억 USD)</th><th>추세<br>예상(십억 USD)</th><th>기간<br>실적기준일</th></tr></thead><tbody>
 <tr><td rowspan="2">AES</td><td>AES Corporation</td><td>97.7점 · B등급</td><td>15.02</td><td rowspan="2">위치 94.2% · 상단 15.05</td><td>거래량 3.40x</td><td>5일 0.74%</td><td>126일</td></tr>
 <tr><td>유틸리티</td><td>매수 0/9 · 매수비율 0.0%</td><td>15.00 · 여력 -0.1%</td><td>12.23B / 1.97B (+16.1%) / 0.91B (+7.4%)</td><td>13.44B (+9.9%) /  / 1.70B (+12.7%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
-<tr><td rowspan="2">TGT</td><td>Target Corporation</td><td>93.3점 · C등급</td><td>167.46</td><td rowspan="2">위치 83.3% · 상단 171.91</td><td>거래량 1.59x</td><td>5일 3.72%</td><td>63일</td></tr>
+<tr><td rowspan="2">TGT</td><td>Target Corporation</td><td>93.3점 · C등급</td><td>167.46</td><td rowspan="2">위치 83.3% · 상단 171.91</td><td>거래량 1.60x</td><td>5일 3.72%</td><td>63일</td></tr>
 <tr><td>할인 유통</td><td>Buy · 매수 13/39 · 매수비율 33.3%</td><td>165.97 · 여력 -0.9%</td><td>104.78B / 5.12B (+4.9%) / 3.71B (+3.5%)</td><td>114.01B (+8.8%) /  / 4.37B (+3.8%) · 순이익 근사치(EPS×주식수)</td><td>2026-01-31 </td></tr>
 <tr><td rowspan="2">DIS</td><td>월트 디즈니</td><td>91.5점 · C등급</td><td>120.25</td><td rowspan="2">위치 78.7% · 상단 123.37</td><td>거래량 1.88x</td><td>5일 1.08%</td><td>21일</td></tr>
 <tr><td>엔터테인먼트</td><td>Buy · 매수 27/32 · 매수비율 84.4%</td><td>131.34 · 여력 9.2%</td><td>102.34B / 16.50B (+16.1%) / 9.90B (+9.7%)</td><td>111.61B (+9.1%) /  / 14.55B (+13.0%) · 순이익 근사치(EPS×주식수)</td><td>2026-09-30 </td></tr>
@@ -55,8 +55,8 @@
 - VYLR: daily bars insufficient: 36 (need 127 for 126-day scan)
 
 ## 실행 결과 요약
-- 실행 시작(KST): 2026-11-20T06:05:21+09:00
-- 실행 종료(KST): 2026-11-20T06:05:24+09:00
+- 실행 시작(KST): 2026-11-20T07:05:19+09:00
+- 실행 종료(KST): 2026-11-20T07:05:22+09:00
 - 모드: after_close_daily
 - 전체 대상: 503
 - 고유 요청: 503
