@@ -1406,6 +1406,33 @@
       },
       "sec_at": 0,
       "yahoo_at": 1795122324.6809094
+    },
+    "ORLY": {
+      "data": {
+        "sector": "Consumer Cyclical",
+        "industry": "Auto Parts",
+        "analyst_buy_count": 24,
+        "analyst_buy_pct": 80.0,
+        "analyst_total": 30,
+        "pe": 29.055216,
+        "price_target_usd": 106.40741,
+        "revenue_usd": 17781992000.0,
+        "operating_income_usd": 3460612000.0,
+        "net_income_usd": 2538209000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 20478079410.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 2945515951.4551697,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795187128.2440145
     }
   }
 }

@@ -4,7 +4,12 @@
 ## 신규 상단 돌파 신호
 
 <table><thead><tr><th>종목</th><th>회사명<br>테마</th><th>점수<br>투자의견</th><th>가격(USD)<br>목표가(USD)</th><th>기술지표</th><th>거래량<br>실적(십억 USD)</th><th>추세<br>예상(십억 USD)</th><th>기간<br>실적기준일</th></tr></thead><tbody>
-<tr><td colspan="8">없음</td></tr>
+<tr><td rowspan="2">ORLY</td><td>O&#x27;Reilly Automotive</td><td>51.2점 · 상단돌파</td><td>94.57</td><td rowspan="2">상단 94.14</td><td>거래량 1.61x</td><td>-</td><td>126일</td></tr>
+<tr><td>경기소비재</td><td>Buy · 매수 24/30 · 매수비율 80.0%</td><td>106.41 · 여력 12.5%</td><td>17.78B / 3.46B (+19.5%) / 2.54B (+14.3%)</td><td>20.48B (+15.2%) /  / 2.95B (+14.4%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
+<tr><td rowspan="2">ORLY</td><td>O&#x27;Reilly Automotive</td><td>41.2점 · 상단돌파</td><td>94.57</td><td rowspan="2">상단 94.14</td><td>거래량 1.61x</td><td>-</td><td>63일</td></tr>
+<tr><td>경기소비재</td><td>Buy · 매수 24/30 · 매수비율 80.0%</td><td>106.41 · 여력 12.5%</td><td>17.78B / 3.46B (+19.5%) / 2.54B (+14.3%)</td><td>20.48B (+15.2%) /  / 2.95B (+14.4%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
+<tr><td rowspan="2">ORLY</td><td>O&#x27;Reilly Automotive</td><td>34.6점 · 상단돌파</td><td>94.57</td><td rowspan="2">상단 94.14</td><td>거래량 1.61x</td><td>-</td><td>21일</td></tr>
+<tr><td>경기소비재</td><td>Buy · 매수 24/30 · 매수비율 80.0%</td><td>106.41 · 여력 12.5%</td><td>17.78B / 3.46B (+19.5%) / 2.54B (+14.3%)</td><td>20.48B (+15.2%) /  / 2.95B (+14.4%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
 </tbody></table>
 
 ## 박스권 하단 후보
@@ -50,19 +55,19 @@
 ※ 각 종목 첫 줄은 기술적 지표, 둘째 줄은 테마·애널리스트·재무정보입니다. 실적/예상 값은 매출·영업이익·순이익 순서이며 단위는 십억 USD입니다. 목표가 상승여력은 해당 후보 종가 기준입니다. 데이터가 없으면 공백으로 표시합니다.
 
 ## 실패/누락
-- FDXF: daily bars insufficient: 121 (need 127 for 126-day scan)
-- HONA: daily bars insufficient: 111 (need 127 for 126-day scan)
-- VYLR: daily bars insufficient: 36 (need 127 for 126-day scan)
+- FDXF: daily bars insufficient: 121 (need 126 for 126-day scan)
+- HONA: daily bars insufficient: 111 (need 126 for 126-day scan)
+- VYLR: daily bars insufficient: 36 (need 126 for 126-day scan)
 
 ## 실행 결과 요약
-- 실행 시작(KST): 2026-11-20T23:05:22+09:00
-- 실행 종료(KST): 2026-11-20T23:05:25+09:00
-- 모드: after_close_daily
+- 실행 시작(KST): 2026-11-21T00:05:26+09:00
+- 실행 종료(KST): 2026-11-21T00:05:28+09:00
+- 모드: intraday_delayed_sip
 - 전체 대상: 503
 - 고유 요청: 503
 - 상단돌파 계산 완료(21 / 42 / 63 / 126): 503 / 502 / 502 / 500
 - 하단후보 계산 완료(21 / 42 / 63 / 126): 503 / 502 / 502 / 500
-- 후보 5분봉 검증: 0
+- 후보 5분봉 검증: 1
 - 자료부족: 3
 - 미요청: 0
 
