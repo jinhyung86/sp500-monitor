@@ -1433,6 +1433,60 @@
       },
       "sec_at": 0,
       "yahoo_at": 1795187128.2440145
+    },
+    "HSY": {
+      "data": {
+        "sector": "Consumer Defensive",
+        "industry": "Confectioners",
+        "analyst_buy_count": 7,
+        "analyst_buy_pct": 30.4,
+        "analyst_total": 23,
+        "pe": 19.848417,
+        "price_target_usd": 180.90475,
+        "revenue_usd": 11692576000.0,
+        "operating_income_usd": 1462122000.0,
+        "net_income_usd": 883259000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 12553515720.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 1385974285.4125,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Hold",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795208728.4826224
+    },
+    "TSN": {
+      "data": {
+        "sector": "Consumer Defensive",
+        "industry": "Farm Products",
+        "analyst_buy_count": 4,
+        "analyst_buy_pct": 30.8,
+        "analyst_total": 13,
+        "pe": 50.871094,
+        "price_target_usd": 67.09091,
+        "revenue_usd": 56419000000.0,
+        "operating_income_usd": 1100000000.0,
+        "net_income_usd": 453000000.0,
+        "statement_period": "2026-09-30",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 54838320100.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 1305095561.08688,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Hold",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795208728.4826224
     }
   }
 }
