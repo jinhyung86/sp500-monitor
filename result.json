@@ -1,20 +1,20 @@
 {
   "run": {
-    "started_utc": "2026-11-23T20:05:17+00:00",
-    "finished_utc": "2026-11-23T20:05:21+00:00",
-    "started_kst": "2026-11-24T05:05:17+09:00",
-    "finished_kst": "2026-11-24T05:05:21+09:00",
-    "started_et": "2026-11-23T15:05:17-05:00",
-    "mode": "intraday_delayed_sip",
-    "market_open_estimate": true,
-    "historical_data_end_utc": "2026-11-23T19:49:17+00:00"
+    "started_utc": "2026-11-23T21:05:24+00:00",
+    "finished_utc": "2026-11-23T21:05:27+00:00",
+    "started_kst": "2026-11-24T06:05:24+09:00",
+    "finished_kst": "2026-11-24T06:05:27+09:00",
+    "started_et": "2026-11-23T16:05:24-05:00",
+    "mode": "after_close_daily",
+    "market_open_estimate": false,
+    "historical_data_end_utc": "2026-11-23T20:49:24+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
     "constituent_warning": null,
     "market_data": "Alpaca Market Data",
     "historical_feed": "sip",
-    "snapshot_feed": "delayed_sip",
+    "snapshot_feed": null,
     "adjustment": "split"
   },
   "criteria": {
@@ -95,9 +95,9 @@
     },
     "upper_box_watch_candidate_count": 3,
     "upper_box_watch_tier_counts": {
-      "A": 0,
-      "B": 1,
-      "C": 2
+      "A": 1,
+      "B": 2,
+      "C": 0
     },
     "uptrend_calc_complete": {
       "5": 503,
@@ -107,10 +107,10 @@
     "uptrend_candidate_counts": {
       "5d": 0,
       "10d": 0,
-      "20d": 1
+      "20d": 0
     },
-    "candidate_price_breakouts": 2,
-    "candidate_volume_validations": 1,
+    "candidate_price_breakouts": 0,
+    "candidate_volume_validations": 0,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
       "FDXF",
@@ -121,8 +121,8 @@
     "unrequested_symbols": [],
     "http_requests": {
       "daily": 14,
-      "snapshots": 7,
-      "intraday_5m": 2
+      "snapshots": 0,
+      "intraday_5m": 0
     }
   },
   "confirmed_signals": [],
@@ -133,119 +133,89 @@
       "box_high": 15.05,
       "box_low": 14.53,
       "box_width": 0.03578802477632492,
-      "first_close": 14.67,
-      "last_close": 15.02,
-      "first_last_move": 0.02385821404226318,
+      "first_close": 14.68,
+      "last_close": 15.03,
+      "first_last_move": 0.023841961852860916,
       "valid_box": true,
-      "as_of_date": "2026-11-20",
-      "close": 15.02,
-      "box_position": 0.9423076923076903,
-      "tier": "B",
-      "recent_5_return_pct": 0.535,
+      "as_of_date": "2026-11-23",
+      "close": 15.03,
+      "box_position": 0.961538461538459,
+      "tier": "A",
+      "recent_5_return_pct": 0.401,
       "ma5_above_ma20": true,
       "ma5_rising": true,
-      "volume_growth_ratio": 4.284,
-      "watch_score": 97.7,
+      "volume_growth_ratio": 4.3,
+      "watch_score": 98.5,
       "symbol": "AES",
       "name": "AES Corporation",
       "sector": "Utilities",
       "industry": "Independent Power Producers & Energy Traders"
     },
     {
-      "period": 42,
-      "box_high": 180.19,
-      "box_low": 156.16,
-      "box_width": 0.15388063524590168,
-      "first_close": 166.88,
-      "last_close": 175.48,
-      "first_last_move": 0.05153403643336518,
-      "valid_box": true,
-      "as_of_date": "2026-11-20",
-      "close": 175.48,
-      "box_position": 0.8039950062421969,
-      "tier": "C",
-      "recent_5_return_pct": 0.349,
-      "ma5_above_ma20": true,
-      "ma5_rising": true,
-      "volume_growth_ratio": 1.228,
-      "watch_score": 92.2,
-      "symbol": "HSY",
-      "name": "Hershey Company (The)",
-      "sector": "Consumer Staples",
-      "industry": "Packaged Foods & Meats"
-    },
-    {
       "period": 63,
       "box_high": 171.91,
       "box_low": 145.32,
       "box_width": 0.1829755023396642,
-      "first_close": 163.47,
-      "last_close": 165.83,
-      "first_last_move": 0.014436899736954834,
+      "first_close": 164.04,
+      "last_close": 168.19,
+      "first_last_move": 0.02529870763228481,
       "valid_box": true,
-      "as_of_date": "2026-11-20",
-      "close": 165.83,
-      "box_position": 0.7713426100037615,
-      "tier": "C",
-      "recent_5_return_pct": 3.437,
+      "as_of_date": "2026-11-23",
+      "close": 168.19,
+      "box_position": 0.8600977811207221,
+      "tier": "B",
+      "recent_5_return_pct": 5.428,
       "ma5_above_ma20": true,
       "ma5_rising": true,
-      "volume_growth_ratio": 1.926,
-      "watch_score": 90.9,
+      "volume_growth_ratio": 1.841,
+      "watch_score": 94.4,
       "symbol": "TGT",
       "name": "Target Corporation",
       "sector": "Consumer Staples",
       "industry": "Consumer Staples Merchandise Retail"
+    },
+    {
+      "period": 63,
+      "box_high": 48.01,
+      "box_low": 42.67,
+      "box_width": 0.12514647293180214,
+      "first_close": 46.73,
+      "last_close": 47.54,
+      "first_last_move": 0.017333618660389627,
+      "valid_box": true,
+      "as_of_date": "2026-11-23",
+      "close": 47.54,
+      "box_position": 0.9119850187265919,
+      "tier": "B",
+      "recent_5_return_pct": 1.02,
+      "ma5_above_ma20": true,
+      "ma5_rising": false,
+      "volume_growth_ratio": 1.116,
+      "watch_score": 86.5,
+      "symbol": "FE",
+      "name": "퍼스트에너지",
+      "sector": "Utilities",
+      "industry": "Electric Utilities"
     }
   ],
   "lower_box_candidates": [],
   "uptrend_candidates": {
     "5d": [],
     "10d": [],
-    "20d": [
-      {
-        "period": 20,
-        "as_of_date": "2026-11-20",
-        "start_date": "2026-10-26",
-        "start_close": 56.4,
-        "close": 65.12,
-        "return_pct": 15.461,
-        "r2": 0.8511,
-        "slope_pct_per_day": 0.8073,
-        "up_days": 10,
-        "down_days": 9,
-        "ma5": 64.166,
-        "ma10": 61.894,
-        "ma20": 59.68,
-        "ma_aligned": true,
-        "volume_growth_ratio": 1.4986,
-        "up_down_volume_ratio": 1.2729,
-        "drawdown_from_20d_close_high_pct": 0.0,
-        "max_single_day_gain_pct": 8.722,
-        "quality_filters_pass": true,
-        "box_position": 0.9413134606427578,
-        "box_high": 65.75,
-        "box_period": 21,
-        "quality_score": 82.0,
-        "symbol": "TSN",
-        "name": "Tyson Foods",
-        "sector": "Consumer Staples",
-        "industry": "Packaged Foods & Meats"
-      }
-    ]
+    "20d": []
   },
   "failures": [
     {
       "symbol": "FDXF",
-      "reason": "daily bars insufficient: 122 (need 126 for 126-day scan)"
+      "reason": "daily bars insufficient: 123 (need 127 for 126-day scan)"
     },
     {
       "symbol": "HONA",
-      "reason": "daily bars insufficient: 112 (need 126 for 126-day scan)"
+      "reason": "daily bars insufficient: 113 (need 127 for 126-day scan)"
     },
     {
       "symbol": "VYLR",
-      "reason": "daily bars insufficient: 37 (need 126 for 126-day scan)"
+      "reason": "daily bars insufficient: 38 (need 127 for 126-day scan)"
     }
   ],
   "seen_signal_keys": [
@@ -2605,26 +2575,26 @@
       "market_source": "Yahoo Finance (unofficial)",
       "source": "SEC EDGAR / Yahoo Finance"
     },
-    "HSY": {
-      "sector": "Consumer Defensive",
-      "industry": "Confectioners",
-      "analyst_buy_count": 7,
-      "analyst_buy_pct": 30.4,
-      "analyst_total": 23,
-      "pe": 19.848417,
-      "price_target_usd": 180.90475,
-      "revenue_usd": 11692576000.0,
-      "operating_income_usd": 1462122000.0,
-      "net_income_usd": 883259000.0,
+    "FE": {
+      "sector": "Utilities",
+      "industry": "Utilities - Regulated Electric",
+      "analyst_buy_count": 10,
+      "analyst_buy_pct": 55.6,
+      "analyst_total": 18,
+      "pe": 23.062803,
+      "price_target_usd": 50.82143,
+      "revenue_usd": 15090000000.0,
+      "operating_income_usd": 2833000000.0,
+      "net_income_usd": 1020000000.0,
       "statement_period": "2025-12-31",
       "financial_source": "Yahoo Finance annual income statement (unofficial)",
-      "estimated_revenue_usd": 12553515720.0,
+      "estimated_revenue_usd": 16793551370.0,
       "estimate_period": "+1y",
       "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
-      "estimated_net_income_usd": 1385974285.4125,
+      "estimated_net_income_usd": 1705686041.1118,
       "estimated_net_income_method": "EPS consensus x current shares (approximation)",
       "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
-      "analyst_consensus": "Hold",
+      "analyst_consensus": "Buy",
       "market_source": "Yahoo Finance (unofficial)",
       "source": "SEC EDGAR / Yahoo Finance"
     },
@@ -2648,29 +2618,6 @@
       "estimated_net_income_method": "EPS consensus x current shares (approximation)",
       "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
       "analyst_consensus": "Buy",
-      "market_source": "Yahoo Finance (unofficial)",
-      "source": "SEC EDGAR / Yahoo Finance"
-    },
-    "TSN": {
-      "sector": "Consumer Defensive",
-      "industry": "Farm Products",
-      "analyst_buy_count": 4,
-      "analyst_buy_pct": 30.8,
-      "analyst_total": 13,
-      "pe": 50.871094,
-      "price_target_usd": 67.09091,
-      "revenue_usd": 56419000000.0,
-      "operating_income_usd": 1100000000.0,
-      "net_income_usd": 453000000.0,
-      "statement_period": "2026-09-30",
-      "financial_source": "Yahoo Finance annual income statement (unofficial)",
-      "estimated_revenue_usd": 54838320100.0,
-      "estimate_period": "+1y",
-      "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
-      "estimated_net_income_usd": 1305095561.08688,
-      "estimated_net_income_method": "EPS consensus x current shares (approximation)",
-      "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
-      "analyst_consensus": "Hold",
       "market_source": "Yahoo Finance (unofficial)",
       "source": "SEC EDGAR / Yahoo Finance"
     }
