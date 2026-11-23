@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-23T21:05:24+00:00",
-    "finished_utc": "2026-11-23T21:05:27+00:00",
-    "started_kst": "2026-11-24T06:05:24+09:00",
-    "finished_kst": "2026-11-24T06:05:27+09:00",
-    "started_et": "2026-11-23T16:05:24-05:00",
+    "started_utc": "2026-11-23T22:05:23+00:00",
+    "finished_utc": "2026-11-23T22:05:25+00:00",
+    "started_kst": "2026-11-24T07:05:23+09:00",
+    "finished_kst": "2026-11-24T07:05:25+09:00",
+    "started_et": "2026-11-23T17:05:23-05:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-23T20:49:24+00:00"
+    "historical_data_end_utc": "2026-11-23T21:49:23+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -167,7 +167,7 @@
       "recent_5_return_pct": 5.428,
       "ma5_above_ma20": true,
       "ma5_rising": true,
-      "volume_growth_ratio": 1.841,
+      "volume_growth_ratio": 1.847,
       "watch_score": 94.4,
       "symbol": "TGT",
       "name": "Target Corporation",
@@ -190,7 +190,7 @@
       "recent_5_return_pct": 1.02,
       "ma5_above_ma20": true,
       "ma5_rising": false,
-      "volume_growth_ratio": 1.116,
+      "volume_growth_ratio": 1.129,
       "watch_score": 86.5,
       "symbol": "FE",
       "name": "퍼스트에너지",

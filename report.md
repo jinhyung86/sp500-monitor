@@ -18,9 +18,9 @@
 <table><thead><tr><th>종목</th><th>회사명<br>테마</th><th>점수<br>투자의견</th><th>가격(USD)<br>목표가(USD)</th><th>기술지표</th><th>거래량<br>실적(십억 USD)</th><th>추세<br>예상(십억 USD)</th><th>기간<br>실적기준일</th></tr></thead><tbody>
 <tr><td rowspan="2">AES</td><td>AES Corporation</td><td>98.5점 · A등급</td><td>15.03</td><td rowspan="2">위치 96.2% · 상단 15.05</td><td>거래량 4.30x</td><td>5일 0.40%</td><td>126일</td></tr>
 <tr><td>유틸리티</td><td>매수 0/9 · 매수비율 0.0%</td><td>15.00 · 여력 -0.2%</td><td>12.23B / 1.97B (+16.1%) / 0.91B (+7.4%)</td><td>13.44B (+9.9%) /  / 1.70B (+12.7%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
-<tr><td rowspan="2">TGT</td><td>Target Corporation</td><td>94.4점 · B등급</td><td>168.19</td><td rowspan="2">위치 86.0% · 상단 171.91</td><td>거래량 1.84x</td><td>5일 5.43%</td><td>63일</td></tr>
+<tr><td rowspan="2">TGT</td><td>Target Corporation</td><td>94.4점 · B등급</td><td>168.19</td><td rowspan="2">위치 86.0% · 상단 171.91</td><td>거래량 1.85x</td><td>5일 5.43%</td><td>63일</td></tr>
 <tr><td>할인 유통</td><td>Buy · 매수 13/39 · 매수비율 33.3%</td><td>165.97 · 여력 -1.3%</td><td>104.78B / 5.12B (+4.9%) / 3.71B (+3.5%)</td><td>114.01B (+8.8%) /  / 4.37B (+3.8%) · 순이익 근사치(EPS×주식수)</td><td>2026-01-31 </td></tr>
-<tr><td rowspan="2">FE</td><td>퍼스트에너지</td><td>86.5점 · B등급</td><td>47.54</td><td rowspan="2">위치 91.2% · 상단 48.01</td><td>거래량 1.12x</td><td>5일 1.02%</td><td>63일</td></tr>
+<tr><td rowspan="2">FE</td><td>퍼스트에너지</td><td>86.5점 · B등급</td><td>47.54</td><td rowspan="2">위치 91.2% · 상단 48.01</td><td>거래량 1.13x</td><td>5일 1.02%</td><td>63일</td></tr>
 <tr><td>규제 전력</td><td>Buy · 매수 10/18 · 매수비율 55.6%</td><td>50.82 · 여력 6.9%</td><td>15.09B / 2.83B (+18.8%) / 1.02B (+6.8%)</td><td>16.79B (+11.3%) /  / 1.71B (+10.2%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
 </tbody></table>
 
@@ -52,8 +52,8 @@
 - VYLR: daily bars insufficient: 38 (need 127 for 126-day scan)
 
 ## 실행 결과 요약
-- 실행 시작(KST): 2026-11-24T06:05:24+09:00
-- 실행 종료(KST): 2026-11-24T06:05:27+09:00
+- 실행 시작(KST): 2026-11-24T07:05:23+09:00
+- 실행 종료(KST): 2026-11-24T07:05:25+09:00
 - 모드: after_close_daily
 - 전체 대상: 503
 - 고유 요청: 503
