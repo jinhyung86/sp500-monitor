@@ -4,10 +4,7 @@
 ## 신규 상단 돌파 신호
 
 <table><thead><tr><th>종목</th><th>회사명<br>테마</th><th>점수<br>투자의견</th><th>가격(USD)<br>목표가(USD)</th><th>기술지표</th><th>거래량<br>실적(십억 USD)</th><th>추세<br>예상(십억 USD)</th><th>기간<br>실적기준일</th></tr></thead><tbody>
-<tr><td rowspan="2">A</td><td>Agilent Technologies</td><td>37.1점 · 상단돌파</td><td>183.52</td><td rowspan="2">상단 182.99</td><td>거래량 1.65x</td><td>-</td><td>42일</td></tr>
-<tr><td>진단·연구</td><td>Buy · 매수 15/22 · 매수비율 68.2%</td><td>183.14 · 여력 -0.2%</td><td>6.95B / 1.48B (+21.3%) / 1.30B (+18.8%)</td><td>7.99B (+14.9%) /  / 1.89B (+23.7%) · 순이익 근사치(EPS×주식수)</td><td>2025-10-31 </td></tr>
-<tr><td rowspan="2">A</td><td>Agilent Technologies</td><td>33.8점 · 상단돌파</td><td>183.52</td><td rowspan="2">상단 182.99</td><td>거래량 1.65x</td><td>-</td><td>21일</td></tr>
-<tr><td>진단·연구</td><td>Buy · 매수 15/22 · 매수비율 68.2%</td><td>183.14 · 여력 -0.2%</td><td>6.95B / 1.48B (+21.3%) / 1.30B (+18.8%)</td><td>7.99B (+14.9%) /  / 1.89B (+23.7%) · 순이익 근사치(EPS×주식수)</td><td>2025-10-31 </td></tr>
+<tr><td colspan="8">없음</td></tr>
 </tbody></table>
 
 ## 박스권 하단 후보
@@ -27,7 +24,7 @@
 <tr><td>엔터테인먼트</td><td>Buy · 매수 20/25 · 매수비율 80.0%</td><td>203.96 · 여력 11.1%</td><td>25.20B / 1.23B (+4.9%) / 0.50B (+2.0%)</td><td>31.07B (+23.3%) /  / 0.44B (+1.4%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
 <tr><td rowspan="2">A</td><td>Agilent Technologies</td><td>91.5점 · C등급</td><td>183.52</td><td rowspan="2">위치 78.7% · 상단 188.99</td><td>거래량 1.25x</td><td>5일 3.49%</td><td>42일</td></tr>
 <tr><td>진단·연구</td><td>Buy · 매수 15/22 · 매수비율 68.2%</td><td>183.14 · 여력 -0.2%</td><td>6.95B / 1.48B (+21.3%) / 1.30B (+18.8%)</td><td>7.99B (+14.9%) /  / 1.89B (+23.7%) · 순이익 근사치(EPS×주식수)</td><td>2025-10-31 </td></tr>
-<tr><td rowspan="2">GIS</td><td>General Mills</td><td>90.2점 · C등급</td><td>35.59</td><td rowspan="2">위치 75.5% · 상단 37.02</td><td>거래량 1.14x</td><td>5일 3.07%</td><td>42일</td></tr>
+<tr><td rowspan="2">GIS</td><td>General Mills</td><td>90.2점 · C등급</td><td>35.59</td><td rowspan="2">위치 75.5% · 상단 37.02</td><td>거래량 1.15x</td><td>5일 3.07%</td><td>42일</td></tr>
 <tr><td>필수소비재</td><td>Hold · 매수 3/19 · 매수비율 15.8%</td><td>36.53 · 여력 2.6%</td><td>18.42B / 2.81B (+15.2%) / -0.09B (-0.5%)</td><td>17.72B (-3.8%) /  / 1.68B (+9.5%) · 순이익 근사치(EPS×주식수)</td><td>2026-05-31 </td></tr>
 <tr><td rowspan="2">KHC</td><td>Kraft Heinz</td><td>89.2점 · C등급</td><td>25.57</td><td rowspan="2">위치 73.0% · 상단 26.27</td><td>거래량 1.23x</td><td>5일 0.51%</td><td>21일</td></tr>
 <tr><td>필수소비재</td><td>Hold · 매수 2/19 · 매수비율 10.5%</td><td>25.15 · 여력 -1.7%</td><td>24.94B / 4.64B (+18.6%) / -5.85B (-23.4%)</td><td>24.45B (-2.0%) /  / 2.42B (+9.9%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
@@ -63,8 +60,8 @@
 - VYLR: daily bars insufficient: 39 (need 127 for 126-day scan)
 
 ## 실행 결과 요약
-- 실행 시작(KST): 2026-11-25T06:05:29+09:00
-- 실행 종료(KST): 2026-11-25T06:05:30+09:00
+- 실행 시작(KST): 2026-11-25T07:05:21+09:00
+- 실행 종료(KST): 2026-11-25T07:05:23+09:00
 - 모드: after_close_daily
 - 전체 대상: 503
 - 고유 요청: 503
