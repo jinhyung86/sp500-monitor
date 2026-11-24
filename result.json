@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-24T17:05:27+00:00",
-    "finished_utc": "2026-11-24T17:05:30+00:00",
-    "started_kst": "2026-11-25T02:05:27+09:00",
-    "finished_kst": "2026-11-25T02:05:30+09:00",
-    "started_et": "2026-11-24T12:05:27-05:00",
+    "started_utc": "2026-11-24T18:05:20+00:00",
+    "finished_utc": "2026-11-24T18:05:23+00:00",
+    "started_kst": "2026-11-25T03:05:20+09:00",
+    "finished_kst": "2026-11-25T03:05:23+09:00",
+    "started_et": "2026-11-24T13:05:20-05:00",
     "mode": "intraday_delayed_sip",
     "market_open_estimate": true,
-    "historical_data_end_utc": "2026-11-24T16:49:27+00:00"
+    "historical_data_end_utc": "2026-11-24T17:49:20+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -109,8 +109,8 @@
       "10d": 0,
       "20d": 0
     },
-    "candidate_price_breakouts": 6,
-    "candidate_volume_validations": 5,
+    "candidate_price_breakouts": 4,
+    "candidate_volume_validations": 3,
     "data_shortage_count": 3,
     "data_shortage_symbols": [
       "FDXF",
@@ -122,7 +122,7 @@
     "http_requests": {
       "daily": 14,
       "snapshots": 7,
-      "intraday_5m": 10
+      "intraday_5m": 6
     }
   },
   "confirmed_signals": [
@@ -135,20 +135,20 @@
       "last_close": 256.71,
       "first_last_move": 0.01764052961230478,
       "valid_box": true,
-      "price": 267.01,
+      "price": 267.0501,
       "prev_close": 256.71,
       "symbol": "BIIB",
       "name": "바이오젠",
       "mode": "intraday",
-      "last_5m_time_et": "2026-11-24T11:45-05:00",
-      "current_cum_volume": 470102.0,
+      "last_5m_time_et": "2026-11-24T12:45-05:00",
+      "current_cum_volume": 599426.0,
       "prior_session_count": 20,
-      "same_time_avg_volume": 278501.0,
-      "volume_ratio": 1.68797239507219,
+      "same_time_avg_volume": 361080.35,
+      "volume_ratio": 1.660090337233804,
       "confirmed": true,
       "strong": false,
-      "signal_key": "BIIB:21:261.0000:2026-11-24T11:45-05:00",
-      "quality_score": 60.9,
+      "signal_key": "BIIB:21:261.0000:2026-11-24T12:45-05:00",
+      "quality_score": 59.7,
       "sector": "Health Care",
       "industry": "Biotechnology"
     }
@@ -163,20 +163,20 @@
       "last_close": 256.71,
       "first_last_move": 0.01764052961230478,
       "valid_box": true,
-      "price": 267.01,
+      "price": 267.0501,
       "prev_close": 256.71,
       "symbol": "BIIB",
       "name": "바이오젠",
       "mode": "intraday",
-      "last_5m_time_et": "2026-11-24T11:45-05:00",
-      "current_cum_volume": 470102.0,
+      "last_5m_time_et": "2026-11-24T12:45-05:00",
+      "current_cum_volume": 599426.0,
       "prior_session_count": 20,
-      "same_time_avg_volume": 278501.0,
-      "volume_ratio": 1.68797239507219,
+      "same_time_avg_volume": 361080.35,
+      "volume_ratio": 1.660090337233804,
       "confirmed": true,
       "strong": false,
-      "signal_key": "BIIB:21:261.0000:2026-11-24T11:45-05:00",
-      "quality_score": 60.9,
+      "signal_key": "BIIB:21:261.0000:2026-11-24T12:45-05:00",
+      "quality_score": 59.7,
       "sector": "Health Care",
       "industry": "Biotechnology"
     }
@@ -562,6 +562,7 @@
     "BIIB:21:261.0000:2026-11-24T09:45-05:00",
     "BIIB:21:261.0000:2026-11-24T10:45-05:00",
     "BIIB:21:261.0000:2026-11-24T11:45-05:00",
+    "BIIB:21:261.0000:2026-11-24T12:45-05:00",
     "BKNG:21:168.4900:2026-11-04",
     "BKNG:21:168.4900:2026-11-04T10:45-05:00",
     "BKNG:21:168.4900:2026-11-04T11:45-05:00",
