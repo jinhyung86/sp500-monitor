@@ -4,7 +4,16 @@
 ## 신규 상단 돌파 신호
 
 <table><thead><tr><th>종목</th><th>회사명<br>테마</th><th>점수<br>투자의견</th><th>가격(USD)<br>목표가(USD)</th><th>기술지표</th><th>거래량<br>실적(십억 USD)</th><th>추세<br>예상(십억 USD)</th><th>기간<br>실적기준일</th></tr></thead><tbody>
-<tr><td colspan="8">없음</td></tr>
+<tr><td rowspan="2">A</td><td>Agilent Technologies</td><td>66.6점 · 상단돌파 · 강함</td><td>184.21</td><td rowspan="2">상단 182.99</td><td>거래량 5.21x</td><td>-</td><td>42일</td></tr>
+<tr><td>진단·연구</td><td>Buy · 매수 15/22 · 매수비율 68.2%</td><td>183.14 · 여력 -0.6%</td><td>6.95B / 1.48B (+21.3%) / 1.30B (+18.8%)</td><td>7.99B (+14.9%) /  / 1.89B (+23.7%) · 순이익 근사치(EPS×주식수)</td><td>2025-10-31 </td></tr>
+<tr><td rowspan="2">A</td><td>Agilent Technologies</td><td>63.3점 · 상단돌파 · 강함</td><td>184.21</td><td rowspan="2">상단 182.99</td><td>거래량 5.21x</td><td>-</td><td>21일</td></tr>
+<tr><td>진단·연구</td><td>Buy · 매수 15/22 · 매수비율 68.2%</td><td>183.14 · 여력 -0.6%</td><td>6.95B / 1.48B (+21.3%) / 1.30B (+18.8%)</td><td>7.99B (+14.9%) /  / 1.89B (+23.7%) · 순이익 근사치(EPS×주식수)</td><td>2025-10-31 </td></tr>
+<tr><td rowspan="2">TGT</td><td>Target Corporation</td><td>52.8점 · 상단돌파</td><td>173.69</td><td rowspan="2">상단 171.91</td><td>거래량 1.68x</td><td>-</td><td>63일</td></tr>
+<tr><td>할인 유통</td><td>Buy · 매수 13/39 · 매수비율 33.3%</td><td>165.97 · 여력 -4.4%</td><td>104.78B / 5.12B (+4.9%) / 3.71B (+3.5%)</td><td>114.01B (+8.8%) /  / 4.37B (+3.8%) · 순이익 근사치(EPS×주식수)</td><td>2026-01-31 </td></tr>
+<tr><td rowspan="2">BIIB</td><td>바이오젠</td><td>50.4점 · 상단돌파</td><td>264.83</td><td rowspan="2">상단 261.00</td><td>거래량 1.63x</td><td>-</td><td>21일</td></tr>
+<tr><td>제약</td><td>Buy · 매수 25/36 · 매수비율 69.4%</td><td>269.20 · 여력 1.6%</td><td>9.89B / 2.47B (+25.0%) / 1.29B (+13.1%)</td><td>10.77B (+8.9%) /  / 2.40B (+22.3%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
+<tr><td rowspan="2">TGT</td><td>Target Corporation</td><td>49.4점 · 상단돌파</td><td>173.69</td><td rowspan="2">상단 171.91</td><td>거래량 1.68x</td><td>-</td><td>42일</td></tr>
+<tr><td>할인 유통</td><td>Buy · 매수 13/39 · 매수비율 33.3%</td><td>165.97 · 여력 -4.4%</td><td>104.78B / 5.12B (+4.9%) / 3.71B (+3.5%)</td><td>114.01B (+8.8%) /  / 4.37B (+3.8%) · 순이익 근사치(EPS×주식수)</td><td>2026-01-31 </td></tr>
 </tbody></table>
 
 ## 박스권 하단 후보
@@ -47,19 +56,19 @@
 ※ 각 종목 첫 줄은 기술적 지표, 둘째 줄은 테마·애널리스트·재무정보입니다. 실적/예상 값은 매출·영업이익·순이익 순서이며 단위는 십억 USD입니다. 목표가 상승여력은 해당 후보 종가 기준입니다. 데이터가 없으면 공백으로 표시합니다.
 
 ## 실패/누락
-- FDXF: daily bars insufficient: 123 (need 127 for 126-day scan)
-- HONA: daily bars insufficient: 113 (need 127 for 126-day scan)
-- VYLR: daily bars insufficient: 38 (need 127 for 126-day scan)
+- FDXF: daily bars insufficient: 123 (need 126 for 126-day scan)
+- HONA: daily bars insufficient: 113 (need 126 for 126-day scan)
+- VYLR: daily bars insufficient: 38 (need 126 for 126-day scan)
 
 ## 실행 결과 요약
-- 실행 시작(KST): 2026-11-24T23:05:23+09:00
-- 실행 종료(KST): 2026-11-24T23:05:24+09:00
-- 모드: after_close_daily
+- 실행 시작(KST): 2026-11-25T00:05:28+09:00
+- 실행 종료(KST): 2026-11-25T00:05:32+09:00
+- 모드: intraday_delayed_sip
 - 전체 대상: 503
 - 고유 요청: 503
 - 상단돌파 계산 완료(21 / 42 / 63 / 126): 503 / 502 / 502 / 500
 - 하단후보 계산 완료(21 / 42 / 63 / 126): 503 / 502 / 502 / 500
-- 후보 5분봉 검증: 0
+- 후보 5분봉 검증: 3
 - 자료부족: 3
 - 미요청: 0
 

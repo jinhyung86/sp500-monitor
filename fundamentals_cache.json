@@ -1487,6 +1487,60 @@
       },
       "sec_at": 0,
       "yahoo_at": 1795208728.4826224
+    },
+    "A": {
+      "data": {
+        "sector": "Healthcare",
+        "industry": "Diagnostics & Research",
+        "analyst_buy_count": 15,
+        "analyst_buy_pct": 68.2,
+        "analyst_total": 22,
+        "pe": 36.431953,
+        "price_target_usd": 183.137,
+        "revenue_usd": 6948000000.0,
+        "operating_income_usd": 1479000000.0,
+        "net_income_usd": 1303000000.0,
+        "statement_period": "2025-10-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 7985265250.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 1894031872.63448,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795532732.2886736
+    },
+    "BIIB": {
+      "data": {
+        "sector": "Healthcare",
+        "industry": "Drug Manufacturers - General",
+        "analyst_buy_count": 25,
+        "analyst_buy_pct": 69.4,
+        "analyst_total": 36,
+        "pe": 114.71862,
+        "price_target_usd": 269.1978,
+        "revenue_usd": 9890600000.0,
+        "operating_income_usd": 2469000000.0,
+        "net_income_usd": 1292900000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 10774608840.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 2400625550.95791,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795532732.2886736
     }
   }
 }
