@@ -4,12 +4,8 @@
 ## 신규 상단 돌파 신호
 
 <table><thead><tr><th>종목</th><th>회사명<br>테마</th><th>점수<br>투자의견</th><th>가격(USD)<br>목표가(USD)</th><th>기술지표</th><th>거래량<br>실적(십억 USD)</th><th>추세<br>예상(십억 USD)</th><th>기간<br>실적기준일</th></tr></thead><tbody>
-<tr><td rowspan="2">A</td><td>Agilent Technologies</td><td>63.6점 · 상단돌파 · 강함</td><td>183.83</td><td rowspan="2">상단 182.99</td><td>거래량 3.06x</td><td>-</td><td>42일</td></tr>
-<tr><td>진단·연구</td><td>Buy · 매수 15/22 · 매수비율 68.2%</td><td>183.14 · 여력 -0.4%</td><td>6.95B / 1.48B (+21.3%) / 1.30B (+18.8%)</td><td>7.99B (+14.9%) /  / 1.89B (+23.7%) · 순이익 근사치(EPS×주식수)</td><td>2025-10-31 </td></tr>
-<tr><td rowspan="2">A</td><td>Agilent Technologies</td><td>60.2점 · 상단돌파 · 강함</td><td>183.83</td><td rowspan="2">상단 182.99</td><td>거래량 3.06x</td><td>-</td><td>21일</td></tr>
-<tr><td>진단·연구</td><td>Buy · 매수 15/22 · 매수비율 68.2%</td><td>183.14 · 여력 -0.4%</td><td>6.95B / 1.48B (+21.3%) / 1.30B (+18.8%)</td><td>7.99B (+14.9%) /  / 1.89B (+23.7%) · 순이익 근사치(EPS×주식수)</td><td>2025-10-31 </td></tr>
-<tr><td rowspan="2">BIIB</td><td>바이오젠</td><td>56.8점 · 상단돌파</td><td>265.13</td><td rowspan="2">상단 261.00</td><td>거래량 1.74x</td><td>-</td><td>21일</td></tr>
-<tr><td>제약</td><td>Buy · 매수 25/36 · 매수비율 69.4%</td><td>269.20 · 여력 1.5%</td><td>9.89B / 2.47B (+25.0%) / 1.29B (+13.1%)</td><td>10.77B (+8.9%) /  / 2.40B (+22.3%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
+<tr><td rowspan="2">BIIB</td><td>바이오젠</td><td>60.9점 · 상단돌파</td><td>267.01</td><td rowspan="2">상단 261.00</td><td>거래량 1.69x</td><td>-</td><td>21일</td></tr>
+<tr><td>제약</td><td>Buy · 매수 25/36 · 매수비율 69.4%</td><td>269.20 · 여력 0.8%</td><td>9.89B / 2.47B (+25.0%) / 1.29B (+13.1%)</td><td>10.77B (+8.9%) /  / 2.40B (+22.3%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
 </tbody></table>
 
 ## 박스권 하단 후보
@@ -57,8 +53,8 @@
 - VYLR: daily bars insufficient: 38 (need 126 for 126-day scan)
 
 ## 실행 결과 요약
-- 실행 시작(KST): 2026-11-25T01:05:20+09:00
-- 실행 종료(KST): 2026-11-25T01:05:23+09:00
+- 실행 시작(KST): 2026-11-25T02:05:27+09:00
+- 실행 종료(KST): 2026-11-25T02:05:30+09:00
 - 모드: intraday_delayed_sip
 - 전체 대상: 503
 - 고유 요청: 503
