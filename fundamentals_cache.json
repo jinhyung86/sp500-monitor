@@ -1627,7 +1627,7 @@
         "analyst_buy_count": 18,
         "analyst_buy_pct": 75.0,
         "analyst_total": 24,
-        "pe": 15.941881,
+        "pe": 15.818804,
         "price_target_usd": 116.54545,
         "revenue_usd": 23921000000.0,
         "net_income_usd": 8852000000.0,
@@ -1644,7 +1644,7 @@
         "source": "SEC EDGAR / Yahoo Finance"
       },
       "sec_at": 0,
-      "yahoo_at": 1795619127.3916056
+      "yahoo_at": 1795622728.3359663
     },
     "TJX": {
       "data": {
@@ -1672,6 +1672,33 @@
       },
       "sec_at": 0,
       "yahoo_at": 1795554330.9488385
+    },
+    "O": {
+      "data": {
+        "sector": "Real Estate",
+        "industry": "REIT - Retail",
+        "analyst_buy_count": 7,
+        "analyst_buy_pct": 28.0,
+        "analyst_total": 25,
+        "pe": 41.24315,
+        "price_target_usd": 63.77381,
+        "revenue_usd": 5749377000.0,
+        "operating_income_usd": 2593823000.0,
+        "net_income_usd": 1058590000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 6270670240.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 1507625130.16488,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Hold",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795622728.3359663
     }
   }
 }
