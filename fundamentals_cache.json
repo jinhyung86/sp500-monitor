@@ -1627,7 +1627,7 @@
         "analyst_buy_count": 18,
         "analyst_buy_pct": 75.0,
         "analyst_total": 24,
-        "pe": 15.99829,
+        "pe": 15.977778,
         "price_target_usd": 116.54545,
         "revenue_usd": 23921000000.0,
         "net_income_usd": 8852000000.0,
@@ -1644,7 +1644,7 @@
         "source": "SEC EDGAR / Yahoo Finance"
       },
       "sec_at": 0,
-      "yahoo_at": 1795633525.2512877
+      "yahoo_at": 1795637131.8424592
     },
     "TJX": {
       "data": {
@@ -1699,6 +1699,33 @@
       },
       "sec_at": 0,
       "yahoo_at": 1795622728.3359663
+    },
+    "AZO": {
+      "data": {
+        "sector": "Consumer Cyclical",
+        "industry": "Auto Parts",
+        "analyst_buy_count": 23,
+        "analyst_buy_pct": 82.1,
+        "analyst_total": 28,
+        "pe": 22.40354,
+        "price_target_usd": 3655.5833,
+        "revenue_usd": 20338555000.0,
+        "operating_income_usd": 3723314000.0,
+        "net_income_usd": 2572777000.0,
+        "statement_period": "2026-08-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 23340189660.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 3071497147.7653,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795637131.8424592
     }
   }
 }
