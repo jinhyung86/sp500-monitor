@@ -1627,7 +1627,7 @@
         "analyst_buy_count": 18,
         "analyst_buy_pct": 75.0,
         "analyst_total": 24,
-        "pe": 15.977778,
+        "pe": 15.9760685,
         "price_target_usd": 116.54545,
         "revenue_usd": 23921000000.0,
         "net_income_usd": 8852000000.0,
@@ -1644,7 +1644,7 @@
         "source": "SEC EDGAR / Yahoo Finance"
       },
       "sec_at": 0,
-      "yahoo_at": 1795637131.8424592
+      "yahoo_at": 1795640726.4007742
     },
     "TJX": {
       "data": {
@@ -1726,6 +1726,141 @@
       },
       "sec_at": 0,
       "yahoo_at": 1795637131.8424592
+    },
+    "AAPL": {
+      "data": {
+        "sector": "Technology",
+        "industry": "Consumer Electronics",
+        "analyst_buy_count": 26,
+        "analyst_buy_pct": 57.8,
+        "analyst_total": 45,
+        "pe": 39.59688,
+        "price_target_usd": 345.6313,
+        "revenue_usd": 478834000000.0,
+        "operating_income_usd": 158063000000.0,
+        "net_income_usd": 132175000000.0,
+        "statement_period": "2026-09-30",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 571120334580.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 154028486201.66,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795640726.4007742
+    },
+    "ED": {
+      "data": {
+        "sector": "Utilities",
+        "industry": "Utilities - Regulated Electric",
+        "analyst_buy_count": 3,
+        "analyst_buy_pct": 15.8,
+        "analyst_total": 19,
+        "pe": 19.321028,
+        "price_target_usd": 112.91176,
+        "revenue_usd": 16918000000.0,
+        "operating_income_usd": 3000000000.0,
+        "net_income_usd": 2023000000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 18741354910.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 2413909869.2290497,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Hold",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795640726.4007742
+    },
+    "MKC": {
+      "data": {
+        "sector": "Consumer Defensive",
+        "industry": "Packaged Foods",
+        "analyst_buy_count": 7,
+        "analyst_buy_pct": 46.7,
+        "analyst_total": 15,
+        "pe": 9.021699,
+        "price_target_usd": 54.09786,
+        "revenue_usd": 6840300000.0,
+        "operating_income_usd": 1091900000.0,
+        "net_income_usd": 789400000.0,
+        "statement_period": "2025-11-30",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 8155409640.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 818068751.0323501,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795640726.4007742
+    },
+    "WMT": {
+      "data": {
+        "sector": "Consumer Defensive",
+        "industry": "Discount Stores",
+        "analyst_buy_count": 38,
+        "analyst_buy_pct": 86.4,
+        "analyst_total": 44,
+        "pe": 47.804348,
+        "price_target_usd": 136.14635,
+        "revenue_usd": 713163000000.0,
+        "operating_income_usd": 29825000000.0,
+        "net_income_usd": 21893000000.0,
+        "statement_period": "2026-01-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 785435142800.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 25676344489.64975,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795640726.4007742
+    },
+    "WTW": {
+      "data": {
+        "sector": "Financial Services",
+        "industry": "Insurance Brokers",
+        "analyst_buy_count": 14,
+        "analyst_buy_pct": 66.7,
+        "analyst_total": 21,
+        "pe": 21.65602,
+        "price_target_usd": 378.26315,
+        "revenue_usd": 9708000000.0,
+        "operating_income_usd": 2257000000.0,
+        "net_income_usd": 1605000000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 11026273510.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 2115468949.11192,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795640726.4007742
     }
   }
 }
