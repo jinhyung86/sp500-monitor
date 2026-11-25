@@ -1,13 +1,13 @@
 {
   "run": {
-    "started_utc": "2026-11-25T22:05:22+00:00",
-    "finished_utc": "2026-11-25T22:05:24+00:00",
-    "started_kst": "2026-11-26T07:05:22+09:00",
-    "finished_kst": "2026-11-26T07:05:24+09:00",
-    "started_et": "2026-11-25T17:05:22-05:00",
+    "started_utc": "2026-11-25T23:05:21+00:00",
+    "finished_utc": "2026-11-25T23:05:23+00:00",
+    "started_kst": "2026-11-26T08:05:21+09:00",
+    "finished_kst": "2026-11-26T08:05:23+09:00",
+    "started_et": "2026-11-25T18:05:21-05:00",
     "mode": "after_close_daily",
     "market_open_estimate": false,
-    "historical_data_end_utc": "2026-11-25T21:49:22+00:00"
+    "historical_data_end_utc": "2026-11-25T22:49:21+00:00"
   },
   "sources": {
     "constituents": "wikipedia",
@@ -190,7 +190,7 @@
       "recent_5_return_pct": 1.824,
       "ma5_above_ma20": true,
       "ma5_rising": true,
-      "volume_growth_ratio": 1.143,
+      "volume_growth_ratio": 1.148,
       "watch_score": 94.1,
       "symbol": "AAPL",
       "name": "애플",
@@ -259,7 +259,7 @@
       "recent_5_return_pct": 1.075,
       "ma5_above_ma20": true,
       "ma5_rising": true,
-      "volume_growth_ratio": 1.167,
+      "volume_growth_ratio": 1.168,
       "watch_score": 89.2,
       "symbol": "ED",
       "name": "Consolidated Edison",
@@ -314,8 +314,8 @@
         "ma10": 128.539,
         "ma20": 127.0995,
         "ma_aligned": true,
-        "volume_growth_ratio": 1.321,
-        "up_down_volume_ratio": 1.2915,
+        "volume_growth_ratio": 1.3212,
+        "up_down_volume_ratio": 1.2908,
         "drawdown_from_20d_close_high_pct": 0.28,
         "max_single_day_gain_pct": 2.107,
         "quality_filters_pass": true,
