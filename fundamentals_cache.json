@@ -1627,7 +1627,7 @@
         "analyst_buy_count": 18,
         "analyst_buy_pct": 75.0,
         "analyst_total": 24,
-        "pe": 16.0567,
+        "pe": 15.974359,
         "price_target_usd": 116.54545,
         "revenue_usd": 23921000000.0,
         "net_income_usd": 8852000000.0,
@@ -1644,7 +1644,7 @@
         "source": "SEC EDGAR / Yahoo Finance"
       },
       "sec_at": 0,
-      "yahoo_at": 1795673121.1486802
+      "yahoo_at": 1795676724.4460478
     },
     "TJX": {
       "data": {
