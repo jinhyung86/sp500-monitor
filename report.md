@@ -35,7 +35,7 @@
 ### 최근 5거래일: 2종목
 
 <table><thead><tr><th>종목</th><th>회사명<br>테마</th><th>점수<br>투자의견</th><th>가격(USD)<br>목표가(USD)</th><th>기술지표</th><th>거래량<br>실적(십억 USD)</th><th>추세<br>예상(십억 USD)</th><th>기간<br>실적기준일</th></tr></thead><tbody>
-<tr><td rowspan="2">WTW</td><td>Willis Towers Watson</td><td>83.3점</td><td>수익률 6.43%</td><td rowspan="2">위치 91.4% · 상단 356.44</td><td>거래량 1.21x</td><td>일평균 +1.719%</td><td>5일</td></tr>
+<tr><td rowspan="2">WTW</td><td>Willis Towers Watson</td><td>83.4점</td><td>수익률 6.43%</td><td rowspan="2">위치 91.4% · 상단 356.44</td><td>거래량 1.21x</td><td>일평균 +1.719%</td><td>5일</td></tr>
 <tr><td>금융</td><td>Buy · 매수 14/21 · 매수비율 66.7%</td><td>378.26 · 여력 7.3%</td><td>9.71B / 2.26B (+23.2%) / 1.60B (+16.5%)</td><td>11.03B (+13.6%) /  / 2.12B (+19.2%) · 순이익 근사치(EPS×주식수)</td><td>2025-12-31 </td></tr>
 <tr><td rowspan="2">WMT</td><td>월마트</td><td>82.2점</td><td>수익률 4.68%</td><td rowspan="2">위치 91.7% · 상단 133.19</td><td>거래량 1.32x</td><td>일평균 +1.247%</td><td>5일</td></tr>
 <tr><td>할인 유통</td><td>Buy · 매수 38/44 · 매수비율 86.4%</td><td>136.15 · 여력 3.2%</td><td>713.16B / 29.82B (+4.2%) / 21.89B (+3.1%)</td><td>785.44B (+10.1%) /  / 25.68B (+3.3%) · 순이익 근사치(EPS×주식수)</td><td>2026-01-31 </td></tr>
@@ -61,8 +61,8 @@
 - VYLR: daily bars insufficient: 40 (need 127 for 126-day scan)
 
 ## 실행 결과 요약
-- 실행 시작(KST): 2026-11-26T08:05:21+09:00
-- 실행 종료(KST): 2026-11-26T08:05:23+09:00
+- 실행 시작(KST): 2026-11-26T09:05:20+09:00
+- 실행 종료(KST): 2026-11-26T09:05:22+09:00
 - 모드: after_close_daily
 - 전체 대상: 503
 - 고유 요청: 503
