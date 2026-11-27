@@ -618,7 +618,7 @@
         "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)"
       },
       "sec_at": 1794383404.9407027,
-      "yahoo_at": 1794385564.450494
+      "yahoo_at": 1795813523.3612263
     },
     "TKO": {
       "data": {
@@ -1861,6 +1861,113 @@
       },
       "sec_at": 0,
       "yahoo_at": 1795640726.4007742
+    },
+    "CB": {
+      "data": {
+        "sector": "Financial Services",
+        "industry": "Insurance - Property & Casualty",
+        "analyst_buy_count": 9,
+        "analyst_buy_pct": 36.0,
+        "analyst_total": 25,
+        "pe": 13.355064,
+        "price_target_usd": 375.6087,
+        "revenue_usd": 60071000000.0,
+        "net_income_usd": 10310000000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 51208506400.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 11260405762.45858,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795813523.3612263
+    },
+    "CTAS": {
+      "data": {
+        "sector": "Industrials",
+        "industry": "Specialty Business Services",
+        "analyst_buy_count": 10,
+        "analyst_buy_pct": 50.0,
+        "analyst_total": 20,
+        "pe": 45.084812,
+        "price_target_usd": 218.4375,
+        "revenue_usd": 11264761000.0,
+        "operating_income_usd": 2621648000.0,
+        "net_income_usd": 1999968000.0,
+        "statement_period": "2026-05-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 13167111900.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 2446363764.9692802,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795813523.3612263
+    },
+    "INVH": {
+      "data": {
+        "sector": "Real Estate",
+        "industry": "REIT - Residential",
+        "analyst_buy_count": 14,
+        "analyst_buy_pct": 56.0,
+        "analyst_total": 25,
+        "pe": 24.429825,
+        "price_target_usd": 32.54348,
+        "revenue_usd": 2729296000.0,
+        "operating_income_usd": 752396000.0,
+        "net_income_usd": 587924000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 2981058170.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 396861019.71836,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795813523.3612263
+    },
+    "VRSN": {
+      "data": {
+        "sector": "Technology",
+        "industry": "Software - Infrastructure",
+        "analyst_buy_count": 3,
+        "analyst_buy_pct": 60.0,
+        "analyst_total": 5,
+        "pe": 34.46717,
+        "price_target_usd": 339.6,
+        "revenue_usd": 1656600000.0,
+        "operating_income_usd": 1121000000.0,
+        "net_income_usd": 825700000.0,
+        "statement_period": "2025-12-31",
+        "financial_source": "Yahoo Finance annual income statement (unofficial)",
+        "estimated_revenue_usd": 1942232420.0,
+        "estimate_period": "+1y",
+        "estimate_source": "Yahoo Finance analyst revenue estimates (unofficial)",
+        "estimated_net_income_usd": 977007915.0,
+        "estimated_net_income_method": "EPS consensus x current shares (approximation)",
+        "analyst_count_source": "Yahoo Finance recommendation trend (unofficial)",
+        "analyst_consensus": "Buy",
+        "market_source": "Yahoo Finance (unofficial)",
+        "source": "SEC EDGAR / Yahoo Finance"
+      },
+      "sec_at": 0,
+      "yahoo_at": 1795813523.3612263
     }
   }
 }
